@@ -13,6 +13,28 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
+  <h3>Field Datatypes</h3>
+  <p>The <code>DEFINE FIELD</code> statement allows specify the following datatypes on the field.</p>
+  <ul>
+    <li><code>any</code></li>
+    <li><code>array</code></li>
+    <li><code>bool</code></li>
+    <li><code>datetime</code> - An ISO 8601 compliant data type that stores a date with time and time zone.</li>
+    <li><code>decimal</code> - Uses BigDecimal for storing any real number to arbitrary precision.</li>
+    <li><code>duration</code> - Store a value representing a length of time.</li>
+    <li><code>float</code></li>
+    <li><code>int</code></li>
+    <li><code>number</code> - SurrealQL will detect the type of number and store it using the optimal number of bytes. For numbers passed in as a string, this field will store the number in a BigDecimal.</li>
+    <li><code>object</code> - Store JSON like objects.</li>
+    <li><code>string</code></li>
+    <li><code>record</code> - Store references to other records.</li>
+    <li><code>geometry</code></li>
+  </ul>
+</Layout::Text>
+
+<Layout::Gap mini />
+
+<Layout::Text text-l text-f>
   <h3>Example Usage</h3>
   <p>The following expression shows the simplest way to use the <code>DEFINE FIELD</code> statement.</p>
   <Code @name="docs/surrealql/statements/define/field/name-field.sql" />
