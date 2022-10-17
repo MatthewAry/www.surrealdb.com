@@ -60,6 +60,9 @@
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.relate" @text="RELATE" selected={{begs-with (route-name) "docs.surrealql.statements.relate"}} />
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.delete" @text="DELETE" selected={{begs-with (route-name) "docs.surrealql.statements.delete"}} />
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define" @text="DEFINE" selected={{begs-with (route-name) "docs.surrealql.statements.define"}} />
+					<subs>
+						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.table" @text="DEFINE TABLE" selected={{begs-with (route-name) "docs.surrealql.statements.define.table"}} />
+					</subs>
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.remove" @text="REMOVE" selected={{begs-with (route-name) "docs.surrealql.statements.remove"}} />
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.info" @text="INFO" selected={{begs-with (route-name) "docs.surrealql.statements.info"}} />
 				</subs>

@@ -379,6 +379,11 @@ layout-helm {
 					&:before { left:45px; }
 				}
 
+				> subs > subs > a {
+					padding-left:75px;
+					&:before { left:60px; }
+				}
+
 			}
 
 		}
