@@ -22,10 +22,16 @@
 <Layout::Gap mini />
 
 <Layout::Boxes cols-3-to-2-to-1>
-		<LinkTo @route="docs.surrealql.statements.define.table">
+	<LinkTo @route="docs.surrealql.statements.define.table">
 		<Layout::Boxes::Item mini hover>
-			<h4><code>DEFINE TABLE</code> statement</h4>
+			<h4><code>DEFINE TABLE</code></h4>
 			<p>Declare the name of a table, make it schemafull or schemaless, create projections, and set table level permissions</p>
+		</Layout::Boxes::Item>
+	</LinkTo>
+	<LinkTo @route="docs.surrealql.statements.define.field">
+		<Layout::Boxes::Item mini hover>
+			<h4><code>DEFINE FIELD</code></h4>
+			<p>Declare the name of a field, specify its datatype, assert rules, permissions and more.</p>
 		</Layout::Boxes::Item>
 	</LinkTo>
 </Layout::Boxes>

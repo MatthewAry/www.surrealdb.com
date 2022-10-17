@@ -93,9 +93,12 @@ Router.map(function() {
 				this.route('update');
 				this.route('relate');
 				this.route('delete');
+
 				this.route('define', function() {
 					this.route('table');
+					this.route('field');
 				});
+
 				this.route('remove');
 				this.route('info');
 			});

@@ -1,0 +1,10 @@
+DEFINE FIELD @name ON [ TABLE ] @table
+	[ TYPE @type ]
+	[ VALUE @expression ]
+	[ ASSERT @expression ]
+	[ PERMISSIONS [ NONE | FULL
+		| FOR select @expression
+		| FOR create @expression
+		| FOR update @expression
+		| FOR delete @expression
+	] ]
