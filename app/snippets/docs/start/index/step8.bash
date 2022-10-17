@@ -1,6 +1,6 @@
 DATA="SELECT * FROM article WHERE author.age < 30 FETCH author, account;"
 curl -k -L -s --compressed POST \
-	--header "Content-Type: application/json" \
+	--header "Accept: application/json" \
 	--header "NS: test" \
 	--header "DB: test" \
 	--user "root:root" \

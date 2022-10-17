@@ -5,7 +5,7 @@ DATA="CREATE article SET
 	text = 'Donec eleifend, nunc vitae commodo accumsan, mauris est fringilla.',
 	account = (SELECT id FROM account WHERE name = 'ACME Inc' LIMIT 1);"
 curl -k -L -s --compressed POST \
-	--header "Content-Type: application/json" \
+	--header "Accept: application/json" \
 	--header "NS: test" \
 	--header "DB: test" \
 	--user "root:root" \
