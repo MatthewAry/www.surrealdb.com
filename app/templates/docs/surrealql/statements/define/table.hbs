@@ -1,7 +1,6 @@
 <Layout::Text text-l text-f>
     <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
     <h2><code>DEFINE TABLE</code> statement</h2>
-	<p>The DEFINE statement.</p>
 </Layout::Text>
 
 <Layout::Gap mini />
@@ -17,7 +16,16 @@
 	<h3>Example Usage</h3>
 	<p>The following query shows the simplest way to use the <code>DEFINE TABLE</code> statement.</p>
 	<Code @name="docs/surrealql/statements/define/table/name-table.sql" />
-	<p>The following shows how to make a projection using the <code>DEFINE TABLE</code> statement. If you're familiar with concepts found in common RDBMS systems, this would be similar to creating a <a href="https://www.postgresql.org/docs/14/tutorial-views.html" target="_blank">view</a>. </p>
+	<p>The following example uses the <code>DROP</code> portion of the <code>DEFINE TABLE</code> statement. This would be like telling the database to drop any table that has the given name and replace it with a new one of the same name.</p>
+	<Code @name="docs/surrealql/statements/define/table/drop-table.sql" />
+	<p>The following example demonstrates the <code>SCHEMAFULL</code> portion of the <code>DEFINE TABLE</code> statement. When a table is defined as schemafull, the database strictly enforces any schema definitions that are specified using the <code>DEFINE TABLE</code> statement. New fields can not be added to a <code>SCHEMAFULL</code> table unless they are defined via the <code>DEFINE FIELD</code> statement.</p>
+	<Code @name="docs/surrealql/statements/define/table/schemafull-table.sql" />
+	<p>The following example demonstrates the <code>SCHEMALESS</code> portion of the <code>DEFINE TABLE</code> statement. This allows you to explicitly state that the specified table has no schema.</p>
+	<Code @name="docs/surrealql/statements/define/table/schemaless-table.sql" />
+	<p>The following shows how to make a projection using the <code>DEFINE TABLE</code> statement. This is similar to making a view in a RDBMS.</p>
+	<Code @name="docs/surrealql/statements/define/table/projection-table.sql" />
+	<p>The following shows how to set table level <code>PERMISSIONS</code> using the <code>DEFINE TABLE</code> statement. This allows you to set independent permissions for selecting, creating, updating, and deleting data.</p>
+	<Code @name="docs/surrealql/statements/define/table/permissions-table.sql" />
 </Layout::Text>
 
 <Layout::Gap large />
