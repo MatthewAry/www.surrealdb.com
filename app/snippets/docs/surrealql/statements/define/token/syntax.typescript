@@ -1,0 +1,1 @@
+DEFINE TOKEN @name ON [ NAMESPACE | DATABASE ] TYPE @type VALUE @value

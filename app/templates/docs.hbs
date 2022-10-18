@@ -61,8 +61,15 @@
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.delete" @text="DELETE" selected={{begs-with (route-name) "docs.surrealql.statements.delete"}} />
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define" @text="DEFINE" selected={{begs-with (route-name) "docs.surrealql.statements.define"}} />
 					<subs>
+						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.namespace" @text="DEFINE NAMESPACE" selected={{begs-with (route-name) "docs.surrealql.statements.define.namespace"}} />
+						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.database" @text="DEFINE DATABASE" selected={{begs-with (route-name) "docs.surrealql.statements.define.database"}} />
+						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.login" @text="DEFINE LOGIN" selected={{begs-with (route-name) "docs.surrealql.statements.define.login"}} />
+						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.token" @text="DEFINE TOKEN" selected={{begs-with (route-name) "docs.surrealql.statements.define.token"}} />
+						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.scope" @text="DEFINE SCOPE" selected={{begs-with (route-name) "docs.surrealql.statements.define.scope"}} />
 						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.table" @text="DEFINE TABLE" selected={{begs-with (route-name) "docs.surrealql.statements.define.table"}} />
+						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.event" @text="DEFINE EVENT" selected={{begs-with (route-name) "docs.surrealql.statements.define.event"}} />
 						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.field" @text="DEFINE FIELD" selected={{begs-with (route-name) "docs.surrealql.statements.define.field"}} />
+						<Layout::Helm::Menu::Item @link="docs.surrealql.statements.define.define-index" @text="DEFINE INDEX" selected={{begs-with (route-name) "docs.surrealql.statements.define.define-index"}} />
 					</subs>
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.remove" @text="REMOVE" selected={{begs-with (route-name) "docs.surrealql.statements.remove"}} />
 					<Layout::Helm::Menu::Item @link="docs.surrealql.statements.info" @text="INFO" selected={{begs-with (route-name) "docs.surrealql.statements.info"}} />

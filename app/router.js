@@ -95,8 +95,15 @@ Router.map(function() {
 				this.route('delete');
 
 				this.route('define', function() {
+					this.route('namespace');
+					this.route('database');
+					this.route('login');
+					this.route('token');
+					this.route('scope');
 					this.route('table');
+					this.route('event');
 					this.route('field');
+					this.route('define-index');
 				});
 
 				this.route('remove');
