@@ -1,6 +1,23 @@
 <Layout::Text text-l text-f>
     <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
     <h2><code>DEFINE LOGIN</code> statement</h2>
+    <p>Use the <code>DEFINE LOGIN</code> statement to create user accounts on SurrealDB.</p>
+    <p>
+        SurrealDB has 3 different user account roles.
+        <ul>
+            <li>
+                root
+                </li>
+            <li>
+                <code>NAMESPACE</code>
+            </li>
+            <li>
+                <code>DATABASE</code>
+            </li>
+        </ul>
+        You cannot use the <code>DEFINE LOGIN</code> statement to create a <code>SCOPE</code> user.
+    </p>
+
 </Layout::Text>
 
 <Layout::Gap mini />
@@ -12,7 +29,14 @@
 
 <Layout::Gap mini />
 
-<Layout::Text text-l text-f></Layout::Text>
+<Layout::Text text-l text-f>
+    <h3>Example usage</h3>
+    <p>The following example shows how you can create a <code>NAMESPACE</code> user using the <code>DEFINE LOGIN</code> statement.</p>
+    <Code @name="docs/surrealql/statements/define/login/namespace-login.sql" />
+    <p>The following example shows how you can create a <code>DATABASE</code> user using the <code>DEFINE LOGIN</code> statement.</p>
+    <Code @name="docs/surrealql/statements/define/login/database-login.sql" />
+    
+</Layout::Text>
 
 
 <Layout::Gap large />
