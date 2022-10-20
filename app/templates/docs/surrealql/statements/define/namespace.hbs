@@ -1,7 +1,16 @@
 <Layout::Text text-l text-f>
     <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
     <h2><code>DEFINE NAMESPACE</code> statement</h2>
-    <p>SurrealDB has a multi-tenancy model which allows you to scope databases to a namespace. There is no limit to the number of databases that can be in a namespace, nor is there a limit to the number of namespaces allowed. Only users root users are authorized to create namespaces.</p>
+    <p>
+        SurrealDB has a multi-tenancy model which allows you to scope databases to a namespace. There is no limit to the number of databases
+        that can be in a namespace, nor is there a limit to the number of namespaces allowed. Only users root users are authorized to
+        create namespaces.
+    </p>
+    <p>
+        Let's say that you're using SurrealDB to create a multi-tenant SaaS application. You can guarantee that the data of each tenant will
+        be kept separate from other tenants if you put each tenant's databases into separate namespaces. In other words, this will ensure
+        that information will remain siloed so user will only have access the information in the namespace they are a member of.
+    </p>
 </Layout::Text>
 
 <Layout::Gap mini />
