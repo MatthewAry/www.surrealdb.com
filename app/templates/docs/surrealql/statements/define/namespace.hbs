@@ -1,6 +1,7 @@
 <Layout::Text text-l text-f>
     <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
     <h2><code>DEFINE NAMESPACE</code> statement</h2>
+    <p>SurrealDB has a multi-tenancy model which allows you to scope databases to a namespace. There is no limit to the number of databases that can be in a namespace, nor is there a limit to the number of namespaces allowed. Only users root users are authorized to create namespaces.</p>
 </Layout::Text>
 
 <Layout::Gap mini />
@@ -12,7 +13,11 @@
 
 <Layout::Gap mini />
 
-<Layout::Text text-l text-f></Layout::Text>
+<Layout::Text text-l text-f>
+    <h3>Example usage</h3>
+    <p>Below shows how you can create a namespace using the <code>DEFINE NAMESPACE</code> statement.</p>
+    <Code @name="docs/surrealql/statements/define/namespace/namespace.sql" />
+</Layout::Text>
 
 
 <Layout::Gap large />
