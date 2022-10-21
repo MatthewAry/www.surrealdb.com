@@ -2,7 +2,7 @@ DEFINE [
 	NAMESPACE @name
 	| DATABASE @name
 	| LOGIN @name ON [ NAMESPACE | DATABASE ] [ PASSWORD @pass | PASSHASH @hash ]
-	| TOKEN @name ON [ NAMESPACE | DATABASE ] TYPE @type VALUE @value
+	| TOKEN @name ON [ NAMESPACE | DATABASE | SCOPE @scope ] TYPE @type VALUE @value
 	| SCOPE @name
 	| TABLE @name
 		[ DROP ]
