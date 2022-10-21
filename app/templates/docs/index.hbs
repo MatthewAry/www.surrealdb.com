@@ -5,6 +5,25 @@
 
 <Layout::Gap mini />
 
+<Layout::Text text-l text-f>
+	<p>
+		The current version of <img inline src="/static/img/text.svg" alt="SurrealDB" /> is
+		{{#if (latest-version)}}
+			<Link @link="releases"><code>{{latest-version}}</code></Link>
+		{{else}}
+			<Link @link="releases"><code>...</code></Link>
+		{{/if}}
+	</p>
+</Layout::Text>
+
+<Layout::Gap mini />
+
+<Layout::Text text-l text-f>
+	<h3>Introduction</h3>
+</Layout::Text>
+
+<Layout::Gap tiny />
+
 <Layout::Boxes cols-3-to-2-to-1>
 	<LinkTo @route="docs.start.index">
 		<Layout::Boxes::Item mini hover>
@@ -26,151 +45,122 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<p>
-		The current version of <img inline src="/static/img/text.svg" alt="SurrealDB" /> is
-		{{#if (latest-version)}}
-			<Link @link="releases"><code>{{latest-version}}</code></Link>
-		{{else}}
-			<Link @link="releases"><code>...</code></Link>
-		{{/if}}
-	</p>
+	<h3>SurrealQL</h3>
 </Layout::Text>
 
-<Layout::Gap mini />
-
-<Layout::Text text-l text-f>
-    <h3>Client libraries</h3>
-	<p>Connect your application to your database with one of our official libraries. The following libraries are officially supported by SurrealDB. They are actively maintained, support new SurrealDB features, and receive bug fixes, performance enhancements, and security patches.</p>
-</Layout::Text>
-
-<Layout::Gap mini />
-
-<Layout::Text text-l text-f>
-	<h4>Server side libraries</h4>
-</Layout::Text>
-
-<Layout::Gap mini />
+<Layout::Gap tiny />
 
 <Layout::Boxes cols-3-to-2-to-1>
-	<LinkTo @route="docs.integration.libraries.nodejs">
+	<LinkTo @route="docs.surrealql">
 		<Layout::Boxes::Item mini hover>
-			<h4><i class="fab fa-node-js font-30 m-r-10"></i> Node.js</h4>
+			<h4>Overview</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.golang">
+	<LinkTo @route="docs.surrealql.datamodel">
 		<Layout::Boxes::Item mini hover>
-			<h4><i class="fab fa-golang font-30 m-r-10"></i> Golang</h4>
+			<h4>Data model</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.rust">
+	<LinkTo @route="docs.surrealql.statements">
 		<Layout::Boxes::Item mini hover>
-			<h4><i class="fab fa-rust font-30 m-r-10"></i> Rust</h4>
+			<h4>Statements</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.deno">
+	<LinkTo @route="docs.surrealql.operators">
 		<Layout::Boxes::Item mini hover>
-			<h4><i class="fab fa-js-square font-30 m-r-10"></i> Deno</h4>
+			<h4>Operators</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.python">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-python font-30 m-r-10"></i> Python</h4>
+	<LinkTo @route="docs.surrealql.parameters">
+		<Layout::Boxes::Item mini hover>
+			<h4>Parameters</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.c">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fal fa-square-c font-30 m-r-10"></i> C</h4>
+	<LinkTo @route="docs.surrealql.transactions">
+		<Layout::Boxes::Item mini hover>
+			<h4>Transactions</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.java">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-java font-30 m-r-10"></i> Java</h4>
-		</Layout::Boxes::Item>
-	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.ruby">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fal fa-gem font-30 m-r-10"></i> Ruby</h4>
-		</Layout::Boxes::Item>
-	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.php">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-php font-30 m-r-10"></i> PHP</h4>
-		</Layout::Boxes::Item>
-	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.swift">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-swift font-30 m-r-10"></i> Swift</h4>
-		</Layout::Boxes::Item>
-	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.r">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-r-project font-30 m-r-10"></i> R</h4>
-		</Layout::Boxes::Item>
-	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.dotnet">
-		<Layout::Boxes::Item mini hover faded>
-			<h4>.NET</h4>
-		</Layout::Boxes::Item>
-	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.erlang">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-erlang font-30 m-r-10"></i> Erlang</h4>
+	<LinkTo @route="docs.surrealql.functions">
+		<Layout::Boxes::Item mini hover>
+			<h4>Functions</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
 </Layout::Boxes>
 
-<Layout::Line />
+<Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h4>Client side libraries</h4>
+	<h3>Integration</h3>
 </Layout::Text>
+
+<Layout::Gap tiny />
+
+<Layout::Boxes cols-3-to-2-to-1>
+	<LinkTo @route="docs.integration">
+		<Layout::Boxes::Item mini hover>
+			<h4>Overview</h4>
+		</Layout::Boxes::Item>
+	</LinkTo>
+	<LinkTo @route="docs.integration.libraries">
+		<Layout::Boxes::Item mini hover>
+			<h4>Client libraries</h4>
+		</Layout::Boxes::Item>
+	</LinkTo>
+	<LinkTo @route="docs.integration.http">
+		<Layout::Boxes::Item mini hover>
+			<h4>HTTP & Rest</h4>
+		</Layout::Boxes::Item>
+	</LinkTo>
+	<LinkTo @route="docs.integration.websockets">
+		<Layout::Boxes::Item mini hover>
+			<h4>Websockets</h4>
+		</Layout::Boxes::Item>
+	</LinkTo>
+</Layout::Boxes>
 
 <Layout::Gap mini />
 
+<Layout::Text text-l text-f>
+	<h3>CLI tool</h3>
+</Layout::Text>
+
+<Layout::Gap tiny />
+
 <Layout::Boxes cols-3-to-2-to-1>
-	<LinkTo @route="docs.integration.libraries.webassembly">
+	<LinkTo @route="docs.cli">
 		<Layout::Boxes::Item mini hover>
-			<h4><i class="fab fa-js-square font-30 m-r-10"></i> WebAssembly</h4>
+			<h4>Overview</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.javascript">
+	<LinkTo @route="docs.cli.start">
 		<Layout::Boxes::Item mini hover>
-			<h4><i class="fab fa-js-square font-30 m-r-10"></i> JavaScript</h4>
+			<h4>Start command</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.emberjs">
+	<LinkTo @route="docs.cli.import">
 		<Layout::Boxes::Item mini hover>
-			<h4><i class="fab fa-ember font-30 m-r-10"></i> Ember.js</h4>
+			<h4>Import command</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.reactjs">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-react font-30 m-r-10"></i> React.js</h4>
+	<LinkTo @route="docs.cli.export">
+		<Layout::Boxes::Item mini hover>
+			<h4>Export command</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.angularjs">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-angular font-30 m-r-10"></i> Angular</h4>
+	<LinkTo @route="docs.cli.version">
+		<Layout::Boxes::Item mini hover>
+			<h4>Version command</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.vuejs">
-		<Layout::Boxes::Item mini hover faded>
-			<h4><i class="fab fa-vuejs font-30 m-r-10"></i> Vue.js</h4>
+	<LinkTo @route="docs.cli.sql">
+		<Layout::Boxes::Item mini hover>
+			<h4>SQL command</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.apollo">
-		<Layout::Boxes::Item mini hover faded>
-			<h4>Apollo GraphQL</h4>
-		</Layout::Boxes::Item>
-	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.dart">
-		<Layout::Boxes::Item mini hover faded>
-			<h4>Dart</h4>
-		</Layout::Boxes::Item>
-	</LinkTo>
-	<LinkTo @route="docs.integration.libraries.flutter">
-		<Layout::Boxes::Item mini hover faded>
-			<h4>Flutter</h4>
+	<LinkTo @route="docs.cli.help">
+		<Layout::Boxes::Item mini hover>
+			<h4>Help command</h4>
 		</Layout::Boxes::Item>
 	</LinkTo>
 </Layout::Boxes>
