@@ -104,6 +104,7 @@ Router.map(function() {
 					this.route('event');
 					this.route('field');
 					this.route('define-index');
+					this.route('links');
 				});
 
 				this.route('remove');

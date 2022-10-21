@@ -3,7 +3,7 @@ DEFINE [
 	| DATABASE @name
 	| LOGIN @name ON [ NAMESPACE | DATABASE ] [ PASSWORD @pass | PASSHASH @hash ]
 	| TOKEN @name ON [ NAMESPACE | DATABASE | SCOPE @scope ] TYPE @type VALUE @value
-	| SCOPE @name
+	| SCOPE @name SESSION @duration SIGNUP @expression SIGNIN @expression
 	| TABLE @name
 		[ DROP ]
 		[ SCHEMAFULL | SCHEMALESS ]
