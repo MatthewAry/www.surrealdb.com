@@ -1,6 +1,31 @@
 <Layout::Text text-l text-f>
     <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
     <h2><code>DEFINE TOKEN</code> statement</h2>
+    <p>
+        SurrealDB can work with third party OAuth providers. Let's say that your provider issues your service a JWT once it's authenticated.
+        By using the <code>DEFINE TOKEN</code> statement, you can set the public key needed to verify a JWT's authenticity.
+    </p>
+    <p>
+        You can specify what <code>TYPE</code> of cryptographic signature algorithm your token uses. The following algorithms are supported:
+        <br>
+        <code>EDDSA</code>,
+        <code>ES256</code>,
+        <code>ES384</code>,
+        <code>ES512</code>,
+        <code>HS256</code>,
+        <code>HS384</code>,
+        <code>HS512</code>,
+        <code>PS256</code>,
+        <code>PS384</code>,
+        <code>PS512</code>,
+        <code>RS256</code>,
+        <code>RS384</code>,
+        <code>RS512</code>.
+    </p>
+    <h4>Prerequisites</h4>
+    <ul>
+        <li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and/or database</LinkTo> before you can use the <code>DEFINE DATABASE</code> statement for database or namespace tokens.</li>
+    </ul>
 </Layout::Text>
 
 <Layout::Gap mini />
@@ -12,7 +37,11 @@
 
 <Layout::Gap mini />
 
-<Layout::Text text-l text-f></Layout::Text>
+<Layout::Text text-l text-f>
+	<h3>Example usage</h3>
+	<p>The following example shows how you could use the <code>DEFINE TOKEN</code> statement.</p>
+	<Code @name="docs/surrealql/statements/define/token/token.sql" />
+</Layout::Text>
 
 
 <Layout::Gap large />
