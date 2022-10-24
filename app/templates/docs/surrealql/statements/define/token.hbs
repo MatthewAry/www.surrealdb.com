@@ -46,5 +46,32 @@
 	<Code @name="docs/surrealql/statements/define/token/token.sql" />
 </Layout::Text>
 
+<Layout::Gap mini />
+
+<Layout::Text text-l text-f>
+    <h3>Using Tokens</h3>
+    <p>
+        The <code>DEFINE TOKEN</code> statement lets you specify the amount of permission granting authority you want
+        to give to an OAuth provider. You're able to specify if the provider can grant namespace, database, or scope
+        level access to token holders. For this to work, the issued tokens must contain specific fields to specify what
+        namespace, database or scope or the token bearer is authorized to act on.
+    </p>
+
+    <h4>Namespace</h4>
+    <p>The following example shows how this would work for a token to grant authorization on a namespace.</p>
+    <Code @name="docs/surrealql/statements/define/token/authorize-namespace-token.sql" />
+    <p>
+        When a token is issued by your OAuth provider, the payload should contain the following field when used to
+        authenticate with SurrealDB.
+    </p>
+    <Code @name="docs/surrealql/statements/define/token/authorize-namespace-token.json" text="JWT Payload" />
+    
+    <h4>Database</h4>
+    <p>The following example shows how this would work for a token to grant authorization on a database.</p>
+    <Code @name="docs/surrealql/statements/define/token/token.sql" />
+    <Code @name="docs/surrealql/statements/define/token/authorize-database-token.json" text="JWT Payload" />
+
+    <h4>Scope</h4>
+</Layout::Text>
 
 <Layout::Gap large />

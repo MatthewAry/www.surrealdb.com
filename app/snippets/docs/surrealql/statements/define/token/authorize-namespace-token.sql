@@ -1,10 +1,10 @@
--- Specify the namespace and database for the token
-USE NS abcum DB app_vitalsense;
+-- Specify the namespace for the token
+USE NS abcum;
 
 -- Set the name of the token
 DEFINE TOKEN token_name
-  -- Use this OAuth provider for database authorization
-  ON DATABASE
+  -- Use this OAuth provider for namespace authorization
+  ON NAMESPACE
   -- Specify the cryptographic signature algorithm used to sign the token
   TYPE HS512
   -- Specify the public key so we can verify the authenticity of the token
