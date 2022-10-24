@@ -1,6 +1,10 @@
 <Layout::Text text-l text-f>
     <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
     <h2><code>DEFINE EVENT</code> statement</h2>
+    <p>
+        Events can be triggered after any change or modification to the data in a record. Each trigger is able to see the <code>$before</code> and
+        <code>$after</code> value of the record, enabling advanced custom logic with each trigger.
+    </p>
 </Layout::Text>
 
 <Layout::Gap mini />
@@ -12,7 +16,14 @@
 
 <Layout::Gap mini />
 
-<Layout::Text text-l text-f></Layout::Text>
+<Layout::Text text-l text-f>
+    <h3>Example usage</h3>
+    <p>
+        Below is an example showing how to create an event which upon updating a user's email address will create an
+        entry recording the change on an <code>event</code> table.
+    </p>
+    <Code @name="docs/surrealql/statements/define/event/event.sql" />
+</Layout::Text>
 
 
 <Layout::Gap large />
