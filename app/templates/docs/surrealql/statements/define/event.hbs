@@ -5,6 +5,12 @@
         Events can be triggered after any change or modification to the data in a record. Each trigger is able to see the <code>$before</code> and
         <code>$after</code> value of the record, enabling advanced custom logic with each trigger.
     </p>
+
+    <h4>Requirements</h4>
+    <ul>
+        <li>You must be authenticated as a root, namespace, or database user before you can use the <code>DEFINE EVENT</code> statement.</li>
+        <li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and database</LinkTo> before you can use the <code>DEFINE EVENT</code> statement.</li>
+    </ul>
 </Layout::Text>
 
 <Layout::Gap mini />

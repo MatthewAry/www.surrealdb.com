@@ -2,20 +2,15 @@
     <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
     <h2><code>DEFINE LOGIN</code> statement</h2>
     <p>Use the <code>DEFINE LOGIN</code> statement to create user accounts on SurrealDB.</p>
+
+    <h4>Requirements</h4>
+    <ul>
+        <li>You must be authenticated as a root or Namespace user to create a Namespace level account using the <code>DEFINE LOGIN</code> statement.</li>
+        <li>You must be authenticated as a root, Namespace, or Database user to create a Database level account using the <code>DEFINE LOGIN</code> statement.</li>
+        <li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and/or database</LinkTo> before you can use the <code>DEFINE LOGIN</code> statement.</li>
+    </ul>
     <p>
-        SurrealDB has 3 different user account roles.
-        <ul>
-            <li>
-                root
-                </li>
-            <li>
-                <code>NAMESPACE</code>
-            </li>
-            <li>
-                <code>DATABASE</code>
-            </li>
-        </ul>
-        You cannot use the <code>DEFINE LOGIN</code> statement to create a <code>SCOPE</code> user.
+        Note: You cannot use the <code>DEFINE LOGIN</code> statement to create a root or <code>SCOPE</code> user.
     </p>
 
 </Layout::Text>
@@ -35,7 +30,6 @@
     <Code @name="docs/surrealql/statements/define/login/namespace-login.sql" />
     <p>The following example shows how you can create a <code>DATABASE</code> user using the <code>DEFINE LOGIN</code> statement.</p>
     <Code @name="docs/surrealql/statements/define/login/database-login.sql" />
-    
 </Layout::Text>
 
 

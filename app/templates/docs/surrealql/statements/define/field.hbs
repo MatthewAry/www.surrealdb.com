@@ -1,154 +1,169 @@
 <Layout::Text text-l text-f>
     <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
     <h2><code>DEFINE FIELD</code> statement</h2>
+    <p>
+        The <code>DEFINE FIELD</code> statement allows you to declare your field on a table by name and:
+        <ul>
+            <li>Set the field's data type.</li>
+            <li>Set the field's default value.</li>
+            <li>Set assertions to protect data consistency.</li>
+            <li>Set permissions on what operations can be performed on the field</li>
+        </ul>
+    </p>
+
+		<h4>Requirements</h4>
+    <ul>
+        <li>You must be authenticated as a root, namespace, or database user before you can use the <code>DEFINE FIELD</code> statement.</li>
+        <li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and database</LinkTo> before you can use the <code>DEFINE FIELD</code> statement.</li>
+    </ul>
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Statement syntax</h3>
+    <h3>Statement syntax</h3>
   	<Code @name="docs/surrealql/statements/define/field/syntax.typescript" text="SQL Syntax" />
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-  <h3>Example usage</h3>
-  <p>The following expression shows the simplest way to use the <code>DEFINE FIELD</code> statement.</p>
-  <Code @name="docs/surrealql/statements/define/field/name-field.sql" />
-  <h4>Defining data types</h4>
-  <h5>Simple data types</h5>
-  <Code @name="docs/surrealql/statements/define/field/type-field.sql" />
-  <h5>Array data type</h5>
-  <Code @name="docs/surrealql/statements/define/field/array-type-field.sql" />
-  <h4>Setting a default value</h4>
-  <Code @name="docs/surrealql/statements/define/field/value-field.sql" />
-  <h4>Asserting rules on fields</h4>
-  <p>You can take your field definitions even further by using asserts. Assert is a powerful feature that can be used to ensure that your data remains consistent.</p>
-  <h5>Email is required</h5>
-  <Code @name="docs/surrealql/statements/define/field/email-assert-field.sql" />
-  <h5>Array with allowed values</h5>
-  <p>By using an Access Control List as an example we can show how we can restrict what values can be stored in an array.</p>
-  <Code @name="docs/surrealql/statements/define/field/array-assert-field.sql" />
-  <h5>Use regex to validate a string</h5>
-  <Code @name="docs/surrealql/statements/define/field/constraints-field.sql" />
+    <h3>Example usage</h3>
+    <p>The following expression shows the simplest way to use the <code>DEFINE FIELD</code> statement.</p>
+    <Code @name="docs/surrealql/statements/define/field/name-field.sql" />
+    <h4>Defining data types</h4>
+    <h5>Simple data types</h5>
+    <Code @name="docs/surrealql/statements/define/field/type-field.sql" />
+    <h5>Array data type</h5>
+    <Code @name="docs/surrealql/statements/define/field/array-type-field.sql" />
+    <h4>Setting a default value</h4>
+    <Code @name="docs/surrealql/statements/define/field/value-field.sql" />
+    <h4>Asserting rules on fields</h4>
+    <p>You can take your field definitions even further by using asserts. Assert is a powerful feature that can be used to ensure that your data remains consistent.</p>
+    <h5>Email is required</h5>
+    <Code @name="docs/surrealql/statements/define/field/email-assert-field.sql" />
+    <h5>Array with allowed values</h5>
+    <p>By using an Access Control List as an example we can show how we can restrict what values can be stored in an array.</p>
+    <Code @name="docs/surrealql/statements/define/field/array-assert-field.sql" />
+    <h5>Use regex to validate a string</h5>
+    <Code @name="docs/surrealql/statements/define/field/constraints-field.sql" />
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-  <h3>Field data types</h3>
-  <p>The <code>DEFINE FIELD</code> statement allows specify the following data types on the field.</p>
-  <Layout::Table>
-    <table>
-      <thead>
-        <tr>
-          <th w-30>Type</th>
-          <th w-70>Description</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <code>any</code>
-          </td>
-          <td>
-            Use this when you explicitly don't want to specify the field's data type. The field will allow any data type supported by SurrealDB.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>array</code>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <code>bool</code>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <code>datetime</code>
-          </td>
-          <td>
-            An ISO 8601 compliant data type that stores a date with time and time zone.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>decimal</code>
-          </td>
-          <td>
-            Uses BigDecimal for storing any real number with arbitrary precision.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>duration</code>
-          </td>
-          <td>
-            Store a value representing a length of time. Can be added or subtracted from datetimes or other durations.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>float</code>
-          </td>
-          <td>
-            Store a value in a 64 bit float.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>int</code>
-          </td>
-          <td>
-            Store a value in a 64 bit integer.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>number</code>
-          </td>
-          <td>
-            Store numbers without specifying the type. SurrealQL will detect the type of number and store it using the minimal number of bytes. For numbers passed in as a string, this field will store the number in a BigDecimal.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>object</code>
-          </td>
-          <td>
-            Store JSON formatted objects with no limit to object depth or nesting.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>string</code>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <code>record</code>
-          </td>
-          <td>
-            Store a reference to another record. The value must be a Record ID.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <code>geometry</code>
-          </td>
-          <td>
-            <a href="https://www.rfc-editor.org/rfc/rfc7946" target="_blank" title="Link to RFC 7946">RFC 7946</a> compliant data type for storing geometry in the <a href="https://geojson.org/" target="_blank" title="Link to the GeoJson website">GeoJson format</a>.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </Layout::Table>
+    <h3>Field data types</h3>
+    <p>The <code>DEFINE FIELD</code> statement allows specify the following data types on the field.</p>
+    <Layout::Table>
+        <table>
+            <thead>
+                <tr>
+                    <th w-30>Type</th>
+                    <th w-70>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <code>any</code>
+                    </td>
+                    <td>
+                        Use this when you explicitly don't want to specify the field's data type. The field will allow any data type supported by SurrealDB.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>array</code>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>bool</code>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>datetime</code>
+                    </td>
+                    <td>
+                        An ISO 8601 compliant data type that stores a date with time and time zone.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>decimal</code>
+                    </td>
+                    <td>
+                        Uses BigDecimal for storing any real number with arbitrary precision.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>duration</code>
+                    </td>
+                    <td>
+                        Store a value representing a length of time. Can be added or subtracted from datetimes or other durations.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>float</code>
+                    </td>
+                    <td>
+                        Store a value in a 64 bit float.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>int</code>
+                    </td>
+                    <td>
+                        Store a value in a 64 bit integer.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>number</code>
+                    </td>
+                    <td>
+                        Store numbers without specifying the type. SurrealQL will detect the type of number and store it using the minimal number of bytes. For numbers passed in as a string, this field will store the number in a BigDecimal.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>object</code>
+                    </td>
+                    <td>
+                        Store JSON formatted objects with no limit to object depth or nesting.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>string</code>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>record</code>
+                    </td>
+                    <td>
+                        Store a reference to another record. The value must be a Record ID.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <code>geometry</code>
+                    </td>
+                    <td>
+                        <a href="https://www.rfc-editor.org/rfc/rfc7946" target="_blank" title="Link to RFC 7946">RFC 7946</a> compliant data type for storing geometry in the <a href="https://geojson.org/" target="_blank" title="Link to the GeoJson website">GeoJson format</a>.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </Layout::Table>
 </Layout::Text>
 
 <Layout::Gap large />
