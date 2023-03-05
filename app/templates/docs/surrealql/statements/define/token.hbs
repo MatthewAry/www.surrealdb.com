@@ -1,42 +1,48 @@
-<Layout::Text text-l text-f>
-    <h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.statements.define">Back to <code>DEFINE</code></Link></h5>
-    <h2><code>DEFINE TOKEN</code> statement</h2>
-    <p>
-        SurrealDB can work with third-party OAuth providers. Let's say that your provider issues your service a JWT once it's authenticated.
-        By using the <code>DEFINE TOKEN</code> statement, you can set the public key needed to verify a JWT's authenticity.
-    </p>
-    <p>
-        You can specify what <code>TYPE</code> of cryptographic signature algorithm your token uses. The following algorithms are supported:
-        <br>
-        <code>EDDSA</code>,
-        <code>ES256</code>,
-        <code>ES384</code>,
-        <code>ES512</code>,
-        <code>HS256</code>,
-        <code>HS384</code>,
-        <code>HS512</code>,
-        <code>PS256</code>,
-        <code>PS384</code>,
-        <code>PS512</code>,
-        <code>RS256</code>,
-        <code>RS384</code>,
-        <code>RS512</code>.
-    </p>
+<Crumb>
+	<Crumb::Item @link="docs">Documentation</Crumb::Item>
+	<Crumb::Item @link="docs.surrealql">SurrealQL</Crumb::Item>
+	<Crumb::Item @link="docs.surrealql.statements">Statements</Crumb::Item>
+	<Crumb::Item @link="docs.surrealql.statements.define"><code>DEFINE</code> statement</Crumb::Item>
+	<Crumb::Item @link="docs.surrealql.statements.define.token"><code>TOKEN</code></Crumb::Item>
+</Crumb>
 
-    <h4>Requirements</h4>
-    <ul>
-        <li>To <code>DEFINE TOKEN ... ON NAMESPACE ...</code> you must have root or namespace level access.</li>
-        <li>To <code>DEFINE TOKEN ... ON DATABASE ...</code> you must have root, namespace, or database level access.</li>
-        <li>To <code>DEFINE TOKEN ... ON SCOPE ...</code> you must have root, namespace, or database level access.</li>
-        <li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and/or database</LinkTo> before you can use the <code>DEFINE DATABASE</code> statement for database or namespace tokens.</li>
-    </ul>
+<Layout::Text text-l text-f>
+	<h2><code>DEFINE TOKEN</code> statement</h2>
+	<p>
+		SurrealDB can work with third-party OAuth providers. Let's say that your provider issues your service a JWT once it's authenticated.
+		By using the <code>DEFINE TOKEN</code> statement, you can set the public key needed to verify a JWT's authenticity.
+	</p>
+	<p>
+		You can specify what <code>TYPE</code> of cryptographic signature algorithm your token uses. The following algorithms are supported:
+		<br>
+		<code>EDDSA</code>,
+		<code>ES256</code>,
+		<code>ES384</code>,
+		<code>ES512</code>,
+		<code>HS256</code>,
+		<code>HS384</code>,
+		<code>HS512</code>,
+		<code>PS256</code>,
+		<code>PS384</code>,
+		<code>PS512</code>,
+		<code>RS256</code>,
+		<code>RS384</code>,
+		<code>RS512</code>.
+	</p>
+	<h4>Requirements</h4>
+	<ul>
+		<li>To <code>DEFINE TOKEN ... ON NAMESPACE ...</code> you must have root or namespace level access.</li>
+		<li>To <code>DEFINE TOKEN ... ON DATABASE ...</code> you must have root, namespace, or database level access.</li>
+		<li>To <code>DEFINE TOKEN ... ON SCOPE ...</code> you must have root, namespace, or database level access.</li>
+		<li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and/or database</LinkTo> before you can use the <code>DEFINE DATABASE</code> statement for database or namespace tokens.</li>
+	</ul>
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
 	<h3>Statement syntax</h3>
-  	<Code @name="docs/surrealql/statements/define/token/syntax.typescript" text="SQL Syntax" />
+	<Code @name="docs/surrealql/statements/define/token/syntax.typescript" text="SQL Syntax" />
 </Layout::Text>
 
 <Layout::Gap mini />
@@ -50,39 +56,34 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-    <h3>Using Tokens</h3>
-    <p>
-        The <code>DEFINE TOKEN</code> statement lets you specify the amount of permission granting authority you want
-        to give to an OAuth provider. You're able to specify if the provider can grant namespace, database, or scope
-        level access to token holders. For this to work, the issued tokens must contain specific fields to specify what
-        namespace, database or scope or the token bearer is authorized to act on.
-    </p>
 
-    <h4>Namespace</h4>
-    <p>The following example shows how this would work for a token to grant authorization on a namespace.</p>
-    <Code @name="docs/surrealql/statements/define/token/authorize-namespace-token.sql" />
-    <p>
-        When a token is issued by your OAuth provider, the payload should contain the following field when used to
-        authenticate with SurrealDB.
-    </p>
-    <Code @name="docs/surrealql/statements/define/token/authorize-namespace-token.json" text="JWT Payload" />
-    
-    <h4>Database</h4>
-    <p>The following example shows how this would work for a token to grant authorization on a database.</p>
-    <Code @name="docs/surrealql/statements/define/token/token.sql" />
-    <Code @name="docs/surrealql/statements/define/token/authorize-database-token.json" text="JWT Payload" />
+	<h3>Using Tokens</h3>
+	<p>
+		The <code>DEFINE TOKEN</code> statement lets you specify the amount of permission granting authority you want
+		to give to an OAuth provider. You're able to specify if the provider can grant namespace, database, or scope
+		level access to token holders. For this to work, the issued tokens must contain specific fields to specify what
+		namespace, database or scope or the token bearer is authorized to act on.
+	</p>
 
-    <h4>Scope</h4>
-    <p>The following example shows how this would work for a token to grant authorization on a scope.</p>
-    <Code @name="docs/surrealql/statements/define/token/authorize-scope-token.sql" />
-    <Code @name="docs/surrealql/statements/define/token/authorize-scope-token.json" text="JWT Payload" />
-    <p>
-        Documentation on using tokens with scopes is a work in progress. A guide will be coming soon! In the
-        meantime, please <a href="https://discord.gg/surrealdb" target="_blank">join our Discord server</a> to learn more.
-        <ul>
-            <li>On Discord: <a href="https://discord.com/channels/902568124350599239/1025048139968815194/1025055707952844863" target="_blank">Using tokens, scopes, and permissions</a></li>
-        </ul>
-    </p>
+	<h4>Namespace</h4>
+	<p>The following example shows how this would work for a token to grant authorization on a namespace.</p>
+	<Code @name="docs/surrealql/statements/define/token/authorize-namespace-token.sql" />
+	<p>
+		When a token is issued by your OAuth provider, the payload should contain the following field when used to
+		authenticate with SurrealDB.
+	</p>
+	<Code @name="docs/surrealql/statements/define/token/authorize-namespace-token.json" text="JWT Payload" />
+
+	<h4>Database</h4>
+	<p>The following example shows how this would work for a token to grant authorization on a database.</p>
+	<Code @name="docs/surrealql/statements/define/token/token.sql" />
+	<Code @name="docs/surrealql/statements/define/token/authorize-database-token.json" text="JWT Payload" />
+
+	<h4>Scope</h4>
+	<p>The following example shows how this would work for a token to grant authorization on a scope.</p>
+	<Code @name="docs/surrealql/statements/define/token/authorize-scope-token.sql" />
+	<Code @name="docs/surrealql/statements/define/token/authorize-scope-token.json" text="JWT Payload" />
+
 </Layout::Text>
 
 <Layout::Gap large />
