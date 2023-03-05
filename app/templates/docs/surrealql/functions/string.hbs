@@ -1,5 +1,11 @@
+<Crumb>
+	<Crumb::Item @link="docs">Documentation</Crumb::Item>
+	<Crumb::Item @link="docs.surrealql">SurrealQL</Crumb::Item>
+	<Crumb::Item @link="docs.surrealql.functions">Functions</Crumb::Item>
+	<Crumb::Item @link="docs.surrealql.functions.string">String functions</Crumb::Item>
+</Crumb>
+
 <Layout::Text text-l text-f>
-	<h5><i class="fas fa-arrow-left"></i> &nbsp; <Link @link="docs.surrealql.functions.index">Back to overview</Link></h5>
     <h2>String functions</h2>
 	<p>These functions can be used when working with and manipulating text and string values.</p>
 </Layout::Text>
@@ -145,7 +151,7 @@
 
 	<Layout::Text text-l text-f>
 		<h3><code>string::concat</code></h3>
-		<p>The <code>string::concat</code> function checks whether two values are not equal.</p>
+		<p>The <code>string::concat</code> function concatenates strings together.</p>
 		<Code @name="docs-surrealql-functions-string-concat.sql" text="API Definition">
 			string::concat(string...) -> string
 		</Code>
@@ -209,7 +215,7 @@
 
 	<Layout::Text text-l text-f>
 		<h3><code>string::join</code></h3>
-		<p>The <code>string::join</code> function checks whether a string ends with another string.</p>
+		<p>The <code>string::join</code> function joins strings together with a delimiter.</p>
 		<Code @name="docs-surrealql-functions-string-join.sql" text="API Definition">
 			string::join(string, string...) -> string
 		</Code>

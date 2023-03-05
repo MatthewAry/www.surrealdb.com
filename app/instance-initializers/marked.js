@@ -35,6 +35,8 @@ export default {
 					return Prism.highlight(code, Prism.languages.python, 'python');
 				case 'rust':
 					return Prism.highlight(code, Prism.languages.rust, 'rust');
+				case 'rs':
+					return Prism.highlight(code, Prism.languages.rust, 'rust');
 				case 'shell':
 					return Prism.highlight(code, Prism.languages.shell, 'shell');
 				case 'sql':

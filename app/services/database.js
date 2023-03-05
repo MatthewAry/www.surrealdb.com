@@ -2,6 +2,7 @@ import Service from '@ember/service';
 import { inject } from '@ember/service';
 
 const tables = [
+	'job',
 	'post',
 ];
 

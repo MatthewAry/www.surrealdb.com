@@ -4,7 +4,7 @@
 	<meta name="description" content="We have led and delivered large-scale software and design projects in multiple startups and high-growth environments.">
 </Meta::Tags>
 
-<Layout::Hero about>
+<Layout::Hero @logo={{true}}>
 	<h1>
 		<img inline src="/static/img/text.svg" alt="SurrealDB" />
 		<br>
@@ -12,7 +12,12 @@
 		<br>
 		unreal, fantastic
 	</h1>
-	<p>SurrealDB is a powerful multi-model database, built for the cloud, and designed to improve the development process of traditional and modern applications. SurrealDB’s premise is that developers should be able to build secure, modern, collaborative applications without needing to build complicated backend APIs and database layers, and without being forced into using a single data model or cloud platform.</p>
+	<p>
+		SurrealDB is a powerful multi-model database, built for the cloud, and designed to improve the development
+		process of traditional and modern applications. SurrealDB’s premise is that developers should be able to build
+		secure, modern, collaborative applications without needing to build complicated backend APIs and database
+		layers, and without being forced into using a single data model or cloud platform.
+	</p>
 </Layout::Hero>
 
 <section>
@@ -27,7 +32,10 @@
 
 	<Layout::Blocks cols-1 as |block|>
 		<block>
-			<p>We have led and delivered large-scale software and design projects in multiple startups and high-growth environments.</p>
+			<p>
+				We have led and delivered large-scale software and design projects in multiple startups and high-growth
+				environments.
+			</p>
 		</block>
 	</Layout::Blocks>
 
@@ -42,8 +50,14 @@
 			</h4>
 			<p>
 				<li>University of Oxford, Software Engineering, MSc.</li>
-				<li>Distinction Masters Thesis focused on highly-performant key-value data stores for use within graph databases and SurrealDB.</li>
-				<li>15 years’ experience as a full-stack engineer architecting, and developing, advanced cloud applications with a focus on distributed databases and highly-available architectures.</li>
+				<li>
+					Distinction Masters Thesis focused on highly-performant key-value data stores for use within graph
+					databases and SurrealDB.
+				</li>
+				<li>
+					15 years’ experience as a full-stack engineer architecting, and developing, advanced cloud
+					applications with a focus on distributed databases and highly-available architectures.
+				</li>
 			</p>
 			<a href="https://www.linkedin.com/in/tobiemorganhitchcock/" rel="noopener noreferrer" target="_blank">
 				<Ascua::Tooltip @side="n" @show="hover" @hide="hover">
@@ -96,7 +110,13 @@
 
 	<Layout::Gap mini />
 
-	<Section::Timeline />
+	<Layout::Timeline>
+		{{#each this.model as |item|}}
+			<Layout::Timeline::Item @item={{item}} />
+			<clear></clear>
+		{{/each}}
+		<img src="/static/img/assets/icon/halficon.png" alt="SurrealDB" />
+	</Layout::Timeline>
 
 </section>
 

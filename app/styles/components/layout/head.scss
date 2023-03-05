@@ -8,34 +8,12 @@ layout-head {
 	padding:120px 0 100px 0;
 	background-repeat:no-repeat;
 	background-position:50% 40%;
-	background-image:url("/static/img/home/honeycomb.png");
 
-	&[press] {
-		padding:120px 0 300px 0;
-		background-position:50% 140%;
-		background-size:1028px 373px;
-		background-image:url("/static/img/press/main.png");
-
+	&[careers] {
+		padding:120px 0 0 0;
 		@include media(max-width-768) {
-			padding:0px 0 250px 0;
-			background-size:100%;
+			padding:0 0 50px 0;
 		}
-
-		@include media(max-width-750) {
-			background-size:771px 279.75px;
-			background-position:50% 170%;
-		}
-	}
-
-	&[why] {
-
-		background-size:1270px 767px;
-		background-image:url("/static/img/why/why.png");
-
-		@include media(max-width-1024) {
-			background-image:none;
-		}
-
 	}
 
 	@include media(max-width-768) {

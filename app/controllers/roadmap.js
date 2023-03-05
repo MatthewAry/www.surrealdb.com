@@ -6,12 +6,74 @@ export default class extends Controller {
 	@cache get model() {
 		return [
 			{
+				goal: 'Q4 2023',
+				name: 'SurrealDB Private Cloud',
+				text: 'The second SurrealDB Cloud launch will be a highly-available, highly-scalable, single-tenant, private cloud deployment option. SurrealDB Public Cloud will be available in a number of Amazon Web Services regions globally. Pricing will be based on cluster size, and cluster run time.',
+			},
+			{
+				goal: 'Q2 2023',
+				name: 'SurrealDB Public Cloud',
+				text: 'The first SurrealDB Cloud launch will be a highly-available, highly-scalable, multi-tenant, serverless cloud, with a pay-as-you-go fee structure. SurrealDB Public Cloud will be available in a number of regions globally. Pricing will be based on storage, concurrent connections, and query run time.',
+			},
+			{
+				goal: 'Q2 2023',
+				name: 'SurrealDB 1.0.0-RC',
+				tags: [
+					'Table indexes and unique constraints',
+					'Full text indexing and filtering',
+					'Live queries and record changes',
+					'SurrealDB user-interface dashboard',
+				]
+			},
+			{
+				time: new Date('2023-03-15'),
+				name: 'SurrealDB 1.0.0-beta.9',
+				tags: [
+					'Custom global parameters',
+					'Custom procedures and functions',
+					'Rust client and embedded library API',
+					'Deployment to WebAssembly',
+				]
+			},
+			{
+				time: new Date('2022-09-30'),
+				name: 'SurrealDB 1.0.0-beta.8',
+				tags: [
+					'Support for deep-merge record updates',
+					'Dynamic expressions in complex Record IDs',
+					'Embedded Record IDs in CREATE and RELATE statements',
+				]
+			},
+			{
+				time: new Date('2022-08-29'),
+				name: 'SurrealDB 1.0.0-beta.7',
+				tags: [
+					'Support for Windows operating system',
+					'Complex Record IDs with arrays and objects',
+					'Record ID range queries for time-series',
+					'Single-node on-disk storage with support for multiple concurrent writers and readers',
+				]
+			},
+			{
+				time: new Date('2022-08-13'),
+				name: 'SurrealDB 1.0.0-beta.6',
+				tags: [
+					'Command-line REPL',
+					'Environment variable support',
+				]
+			},
+			{
+				time: new Date('2022-07-28'),
+				name: 'SurrealDB 1.0.0-beta.4',
+				tags: [
+					'Add server strict mode',
+				]
+			},
+			{
 				time: new Date('2022-07-11'),
-				name: 'SurrealDB 1.0-beta',
-				text: 'The beta version of SurrealDB will support a large amount of functionality, with the ability to run in-memory, on a single node, or in a highly-available, highly-scalable distributed environment. A highly-performant query language will enable use of many different data types, and javascript functions can be used for more complex functions and triggers.',
+				name: 'SurrealDB 1.0.0-beta.1',
 				tags: [
 					'In-memory storage',
-					'Single-node on-disk storage with support for multiple concurrent writers and readers',
 					'Distributed highly-available storage',
 					'SurrealQL advanced query language',
 					'Schemafull or schemaless',
@@ -29,27 +91,6 @@ export default class extends Controller {
 					'Command-line tool',
 					'Support for amd64, arm64 on Linux and Darwin',
 				]
-			},
-			{
-				time: new Date('2021-07-01'),
-				name: 'Codebase source made available',
-				text: 'The decision is made to make the SurrealDB sourcecode public, making it available to other developers and organisations. Having learnt a great deal about building a future-ready database, the decision is made to re-build SurrealDB using Rust, in order to enforce data sharing guarantees.',
-			},
-			{
-				time: new Date('2017-07-01'),
-				text: 'SurrealDB is used within a Software-as-a-Service system for the first time, offering a complete Backend-as-a-Service for realtime, collaborative applications, with support for structured and unstructured datasets, and relational, document, and graph querying semantics.',
-			},
-			{
-				time: new Date('2016-02-01'),
-				text: 'Development begins on SurrealDB with the intention of creating a scalable cloud graph database, built using Golang.',
-			},
-			{
-				time: new Date('2015-09-01'),
-				text: 'Conceptualisation and planning for the SurrealDB database requirements begins. Inspiration for SurrealDB features were taken from a range of databases including MySQL, OrientDB, CouchDB, InfluxDB, DynamoDB, MongoDB, RethinkDB, CockroachDB, Neo4j, and Firebase.',
-			},
-			{
-				time: new Date('2015-06-01'),
-				text: 'After years of building cloud-based Software-as-a-Service systems, with realtime APIs, complicated security permissions, and multiple separate database backends, Tobie questions whether there is a platform for building and scaling applications quicker, while still allowing for the storage and querying of data in a structured yet flexible manner.',
 			},
 		];
 	}

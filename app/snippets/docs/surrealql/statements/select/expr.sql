@@ -18,3 +18,6 @@ SELECT { weekly: false, monthly: true } AS `marketing settings` FROM user;
 
 -- Use the result of a subquery as a returned field
 SELECT *, (SELECT * FROM events WHERE type = 'activity' LIMIT 5) AS history FROM user;
+
+-- Use the parent instance's field in a subquery
+SELECT *, (SELECT * FROM events WHERE host == $parent.id) AS self_hosted FROM user;

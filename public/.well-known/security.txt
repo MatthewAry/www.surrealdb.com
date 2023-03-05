@@ -1,5 +1,6 @@
 Contact: mailto:security@surrealdb.com
-Expires: 2022-12-31T00:00:00.000Z
+Expires: 2023-07-01T00:00:00.000Z
+Last-Updated: 2023-02-28T18:00:00.000Z
 Preferred-Languages: en
 Canonical: https://surrealdb.com/.well-known/security.txt
 Policy: https://surrealdb.com/legal/security

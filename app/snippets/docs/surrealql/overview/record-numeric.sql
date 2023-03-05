@@ -1,1 +1,1 @@
-CREATE temperature:17493 SET time = time::now(), celcius = 37.5;
+CREATE temperature:17493 SET time = time::now(), celsius = 37.5;

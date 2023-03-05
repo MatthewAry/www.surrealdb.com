@@ -7,10 +7,10 @@ export default class extends Route {
 
 	redirect() {
 		if (this.fastboot.isFastBoot) {
-			this.fastboot.response.headers.set('location', 'https://discord.gg/f9qZ7FCHAa');
+			this.fastboot.response.headers.set('location', 'https://discord.gg/surrealdb');
 			this.fastboot.response.statusCode = 302;
 		} else {
-			window.location.replace('https://discord.gg/f9qZ7FCHAa');
+			window.location.replace('https://discord.gg/surrealdb');
 		}
 	}
 

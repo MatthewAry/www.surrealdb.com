@@ -10,44 +10,6 @@ layout-hero {
 	background-position:600px 0px;
 	background-image:url("/static/img/home/honeycomb.png");
 
-	&[about] {
-
-		top:-120px;
-		width:100%;
-		display:block;
-		position:relative;
-		padding:120px 0 50px;
-		margin-bottom:-120px;
-		background-size:auto 70%;
-		background-repeat:no-repeat;
-		background-position:calc(50% + 500px) 100%;
-		background-image:url("/static/img/about/main.png");
-
-		@include media(max-width-1024) {
-			background-image:none;
-		}
-
-	}
-
-	&[roadmap] {
-
-		top:-120px;
-		width:100%;
-		display:block;
-		position:relative;
-		padding:120px 0 50px;
-		margin-bottom:-120px;
-		background-size:auto 100%;
-		background-repeat:no-repeat;
-		background-position:calc(50% + 750px) 50%;
-		background-image:url("/static/img/roadmap/main.png");
-
-		@include media(max-width-1024) {
-			background-image:none;
-		}
-
-	}
-
 	@include media(max-width-768) {
 		top:0px;
 		padding:0px 0 50px 0;

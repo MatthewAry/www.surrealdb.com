@@ -5,7 +5,7 @@ layout-table {
 	overflow:hidden;
 	text-align:left;
 	position:relative;
-	border-radius:12px;
+	border-radius:16px;
 	margin:0 auto 0 auto;
 
 	table {
@@ -22,25 +22,52 @@ layout-table {
 		border-collapse:collapse;
 	}
 
-	table > thead {
-		font-weight:bold;
-		border-collapse:collapse;
+	table > thead > tr {
+
+		@include media(max-width-768) {
+			display:block;
+			padding:15px 0;
+			border-bottom:2px solid var(--border-color);
+		}
+
+	}
+
+	table > tbody > tr {
+
+		@include media(max-width-768) {
+			display:block;
+			padding:15px 0;
+			border-bottom:2px solid var(--border-color);
+		}
+
 	}
 
 	table > thead > tr > th {
+
 		padding:15px;
 		border-bottom:2px solid var(--border-color);
 		&:not([align]) { text-align:left; }
-		&:first-child { padding-left:30px; }
-		&:last-child { padding-right:30px; }
+
+		@include media(max-width-768) {
+			display:block;
+			padding:5px 0;
+			border-bottom:none;
+		}
+
 	}
 
 	table > tbody > tr > td {
+
 		padding:15px;
 		border-bottom:2px solid var(--border-color);
 		&:not([align]) { text-align:left; }
-		&:first-child { padding-left:30px; }
-		&:last-child { padding-right:30px; }
+
+		@include media(max-width-768) {
+			display:block;
+			padding:5px 0;
+			border-bottom:none;
+		}
+
 	}
 
 	table > tbody > tr:last-child > td {
@@ -54,11 +81,31 @@ layout-table {
 		}
 
 		table > thead > tr > th {
-			border-left:2px solid var(--border-color);
+
+			@include media(max-width-768) {
+				padding:5px 30px;
+			}
+
+			@include media(min-width-768) {
+				border-left:2px solid var(--border-color);
+				&:first-child { padding-left:30px; }
+				&:last-child { padding-right:30px; }
+			}
+
 		}
 
 		table > tbody > tr > td {
-			border-left:2px solid var(--border-color);
+
+			@include media(max-width-768) {
+				padding:5px 30px;
+			}
+
+			@include media(min-width-768) {
+				border-left:2px solid var(--border-color);
+				&:first-child { padding-left:30px; }
+				&:last-child { padding-right:30px; }
+			}
+
 		}
 
 	}

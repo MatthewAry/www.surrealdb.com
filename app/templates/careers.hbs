@@ -1,0 +1,89 @@
+<Meta::Tags @image="https://surrealdb.com/static/img/preview/careers.jpg">
+	<title>SurrealDB | Careers | The ultimate serverless multi-model database</title>
+	<meta name="title" property="og:title" content="SurrealDB | Careers">
+	<meta name="description" content="Join the fastest-growing database company of all time">
+</Meta::Tags>
+
+<Layout::Head careers>
+	<Layout::Text text-m>
+		<h1>
+			<img inline src="/static/img/text.svg" alt="SurrealDB" /> <span gradient>Careers</span>
+			<br>
+			Join the fastest-growing database company of all time
+		</h1>
+		<p>We are a startup with an ambitious mission to build the ultimate multi-model database for tomorrow’s applications.</p>
+		<Layout::Timeline>
+			<img careers src="/static/img/careers/icon.png" alt="SurrealDB 3D" />
+		</Layout::Timeline>
+	</Layout::Text>
+</Layout::Head>
+
+<section>
+
+	<Layout::Gap large />
+
+	<Layout::Text text-m>
+		<h3>We are seeking to <span gradient>hire the best</span> - people who care deeply about the work they do, and care about the people with whom they create and promote the product.</h3>
+	</Layout::Text>
+
+	<Layout::Gap large />
+
+	<Layout::Text text-m id="positions">
+		<h2>Our <span gradient>perks</span> and <span gradient>benefits</span></h2>
+	</Layout::Text>
+
+	<Layout::Gap mini />
+
+	<Layout::Boxes cols-3-to-2-to-1>
+		<Layout::Boxes::Item @tick={{true}} @label="Balanced work life" />
+		<Layout::Boxes::Item @tick={{true}} @label="Competitive salary and equity" />
+		<Layout::Boxes::Item @tick={{true}} @label="401(k) Plan (US)" />
+		<Layout::Boxes::Item @tick={{true}} @label="5 weeks paid vacation" />
+		<Layout::Boxes::Item @tick={{true}} @label="Parental leave" />
+		<Layout::Boxes::Item @tick={{true}} @label="Laptop, screen, and accessories" />
+		<Layout::Boxes::Item @tick={{true}} @label="Regular team events and offsites" />
+		<Layout::Boxes::Item @tick={{true}} @label="Health insurance" />
+	</Layout::Boxes>
+
+	<Layout::Gap large />
+
+	<Layout::Text text-m>
+		<h3>Do you want to join our team? Then we'd <span gradient>love</span> to hear from you!</h3>
+	</Layout::Text>
+
+	<Layout::Gap large />
+
+</section>
+
+{{#if this.jobs.length}}
+
+	<section>
+
+		<Layout::Gap small />
+
+		<Layout::Text text-l id="positions">
+			<h2>Open positions</h2>
+		</Layout::Text>
+
+		<Layout::Gap mini />
+
+		<Layout::Table>
+			<table>
+				<tbody>
+					{{#each this.jobs as |job|}}
+						<tr>
+							<td><b>{{job.title}}</b></td>
+							<td>{{job.location}}</td>
+							<td>{{job.type}}</td>
+							<td><Link @link={{job.url}}><l pink>Apply</l></Link></td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</Layout::Table>
+
+		<Layout::Gap small />
+
+	</section>
+
+{{/if}}

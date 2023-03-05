@@ -1,1 +1,1 @@
-cargo install surrealdb
+cargo add surrealdb

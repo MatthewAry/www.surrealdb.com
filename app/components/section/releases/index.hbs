@@ -1,0 +1,132 @@
+<Layout::Helm l-c>
+
+	<Layout::Helm::Menu>
+		<div>
+			<a {{on "click" (scroll-to top=0 smooth=true)}}>
+				<i class="fas fa-arrow-up"></i>
+				<span>Back to top</span>
+			</a>
+		</div>
+		<nav>
+			{{#each this.model as |item|}}
+				<Layout::Helm::Menu::Item @text={{item.link}} @link="#{{item.hash}}" selected={{is-waypoint item.hash}} />
+			{{/each}}
+		</nav>
+	</Layout::Helm::Menu>
+
+	<Layout::Helm::Main>
+
+		{{#each this.model as |item idx|}}
+
+			<section {{waypoint item.hash}}>
+
+				{{#if (ne idx 0)}}
+					<Layout::Gap small />
+				{{/if}}
+
+				<Layout::Text text-l>
+
+					<h3>{{item.name}}</h3>
+
+					{{#if item.time}}
+						<p>
+							{{#if (gt item.time (now))}}
+								Planned {{date-format item.time "DD MMMM, YYYY"}}
+							{{else}}
+								{{date-format item.time "DD MMMM, YYYY"}}
+							{{/if}}
+						</p>
+					{{/if}}
+
+				</Layout::Text>
+
+				<Layout::Gap mini />
+
+				{{#if item.text}}
+
+					<Layout::Text text-l>
+						<ul>
+							{{#each item.text as |item|}}
+								{{#if item.text}}
+									<li>
+										{{#if (eq item.category "scripting")}}
+											<Nudge::Scripting />
+										{{/if}}
+										{{#if (eq item.category "performance")}}
+											<Nudge::Performance />
+										{{/if}}
+										{{markdown item.text inline=true}}
+									</li>
+								{{else}}
+									<li>{{markdown item inline=true}}</li>
+								{{/if}}
+							{{/each}}
+						</ul>
+					</Layout::Text>
+
+				{{/if}}
+
+				{{#if item.data}}
+
+					{{#each item.data as |sect idx|}}
+
+						{{#if sect.name}}
+							<Layout::Text text-l>
+								<p>{{sect.name}}</p>
+							</Layout::Text>
+						{{/if}}
+
+						<Layout::Text text-l>
+							<ul>
+								{{#each sect.text as |item|}}
+									{{#if item.text}}
+										<li>
+											{{#if (eq item.category "bug")}}
+												<Nudge::Bug />
+											{{/if}}
+											{{#if (eq item.category "script")}}
+												<Nudge::Script />
+											{{/if}}
+											{{#if (eq item.category "performance")}}
+												<Nudge::Performance />
+											{{/if}}
+											{{markdown item.text inline=true}}
+										</li>
+									{{else}}
+										<li>{{markdown item inline=true}}</li>
+									{{/if}}
+								{{/each}}
+							</ul>
+						</Layout::Text>
+
+						{{#if (ne idx item.text.length)}}
+							<Layout::Gap tiny />
+						{{/if}}
+
+					{{/each}}
+
+				{{/if}}
+
+				{{#if item.path}}
+
+					{{#if (is-component item.path)}}
+
+						<Layout::Gap mini />
+
+						{{#let (component item.path) as |component|}}
+							<component />
+						{{/let}}
+
+					{{/if}}
+
+				{{/if}}
+
+				<Layout::Gap small />
+
+			</section>
+
+		{{/each}}
+
+	</Layout::Helm::Main>
+
+</Layout::Helm>

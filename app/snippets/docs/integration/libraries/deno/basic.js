@@ -1,11 +1,9 @@
-import Surreal from "https://deno.land/x/surrealdb@v0.2.0/mod.ts";
+import Surreal from "https://deno.land/x/surrealdb/mod.ts";
 
 const db = new Surreal('http://127.0.0.1:8000/rpc');
 
 async function main() {
-
 	try {
-
 		// Signin as a namespace, database, or root user
 		await db.signin({
 			user: 'root',
@@ -40,11 +38,8 @@ async function main() {
 		});
 
 	} catch (e) {
-
 		console.error('ERROR', e);
-
 	}
-
 }
 
 main();

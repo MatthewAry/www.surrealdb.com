@@ -1,119 +1,143 @@
 layout-timeline {
 
-	dosplay:block;
-	min-height:600px;
+	display: block;
+	min-height: 600px;
 
 	&:after {
-		clear:both;
-		content:"";
-		display:table;
+		clear: both;
+		content: "";
+		display: table;
 	}
 
 	img {
 
-		float:none;
-		width:auto;
-		height:250px;
-		margin:0 auto;
-  		display:block;
+		float: none;
+		width: auto;
+		height: 250px;
+		margin: 0 auto;
+		display: block;
 
 		@include media(max-width-1000) {
-			float:left;
-			height:150px;
-			margin-left:-120px;
+			float: left;
+			height: 150px;
+			margin-left: -120px;
 		}
 
 		@include media(max-width-750) {
-			margin-bottom:-50px;
+			margin-bottom: -50px;
+		}
+
+		&[careers] {
+
+			float: none;
+			width: auto;
+			height: 400px;
+			margin: 0 auto;
+			display: block;
+
+			@include media(max-width-750) {
+				float: left;
+				height: 200px;
+				margin-bottom: -50px;
+			}
 		}
 
 	}
 
 	layout-timeline-item {
 
-		width:50%;
-		display:block;
-		cursor:pointer;
-		padding-bottom:30px;
-		border:1px solid var(--border-color);
+		width: 50%;
+		display: block;
+		cursor: pointer;
+		padding-bottom: 30px;
+		border: 1px solid var(--border-color);
 
 		&:nth-of-type(odd) {
 
-			right:0px;
-			float:left;
-			text-align:right;
-			position:relative;
-			padding-right:45px;
-			border-width:0 1px 0 0;
+			right: 0px;
+			float: left;
+			text-align: right;
+			position: relative;
+			padding-right: 45px;
+			border-width: 0 1px 0 0;
 
-			h3, h4, p {
-				margin-left:20%;
+			h3,
+			h4,
+			p {
+				margin-left: 20%;
 			}
 
 			arr {
-				right:-40px;
+				right: -40px;
 			}
 
 			hex {
-				right:-54px;
+				right: -54px;
 			}
 
 		}
 
 		&:nth-of-type(even) {
 
-			left:-1px;
-			float:right;
-			text-align:left;
-			position:relative;
-			padding-left:45px;
-			border-width:0 0 0 1px;
+			left: -1px;
+			float: right;
+			text-align: left;
+			position: relative;
+			padding-left: 45px;
+			border-width: 0 0 0 1px;
 
-			h3, h4, p {
-				margin-right:20%;
+			h3,
+			h4,
+			p {
+				margin-right: 20%;
 			}
 
 			arr {
-				left:-40px;
+				left: -40px;
 			}
 
 			hex {
-				left:-54px;
+				left: -54px;
 			}
 
 		}
 
-		&:nth-of-type(odd), &:nth-of-type(even) {
+		&:nth-of-type(odd),
+		&:nth-of-type(even) {
 
 			@include media(max-width-1024) {
 
-				h3, h4, p {
-					margin:0;
+				h3,
+				h4,
+				p {
+					margin: 0;
 				}
 
 			}
 
 			@include media(max-width-1000) {
 
-				left:0;
-				width:100%;
-				float:none;
-				text-align:left;
-				margin-left:8px;
-				position:relative;
-				padding-left:45px;
-				border-width:0 0 0 1px;
+				left: 0;
+				width: 100%;
+				float: none;
+				text-align: left;
+				margin-left: 8px;
+				position: relative;
+				padding-left: 45px;
+				border-width: 0 0 0 1px;
 
-				h3, h4, p {
-					margin:0;
+				h3,
+				h4,
+				p {
+					margin: 0;
 				}
 
 				arr {
-					left:-40px;
+					left: -40px;
 				}
 
 				hex {
-					left:-54px;
+					left: -54px;
 				}
 
 			}
@@ -122,107 +146,112 @@ layout-timeline {
 
 		&[planned] {
 
-			h3, h4, p {
-				// opacity:0.5;
+			h3,
+			h4,
+			p {
+				opacity: 0.5;
 			}
 
 			&:hover {
-				h3, h4, p {
-					opacity:1;
+
+				h3,
+				h4,
+				p {
+					opacity: 1;
 				}
 			}
 
 		}
 
-		> div {
+		>div {
 
-			position:relative;
+			position: relative;
 
 			h3 {
 
-				max-width:80%;
-				font-size:16px;
-				letter-spacing:0px;
-				transition:opacity 0.5s;
+				max-width: 80%;
+				font-size: 16px;
+				letter-spacing: 0px;
+				transition: opacity 0.5s;
 
 				&:not(:last-child) {
-					margin-bottom:15px;
+					margin-bottom: 15px;
 				}
 
 				@include media(max-width-1024) {
-					max-width:95%;
+					max-width: 95%;
 				}
 
 			}
 
 			h4 {
 
-				max-width:80%;
-				font-size:14px;
-				letter-spacing:0px;
-				transition:opacity 0.5s;
+				max-width: 80%;
+				font-size: 14px;
+				letter-spacing: 0px;
+				transition: opacity 0.5s;
 
 				&:not(:last-child) {
-					margin-bottom:10px;
+					margin-bottom: 10px;
 				}
 
 				@include media(max-width-1024) {
-					max-width:95%;
+					max-width: 95%;
 				}
 
 			}
 
 			p:nth-of-type(1) {
 
-				max-width:80%;
-				font-size:14px;
-				line-height:1.5;
-				letter-spacing:0px;
-				transition:opacity 0.5s;
-				color:var(--faint-color);
+				max-width: 80%;
+				font-size: 14px;
+				line-height: 1.5;
+				letter-spacing: 0px;
+				transition: opacity 0.5s;
+				color: var(--faint-color);
 
 				&:not(:last-child) {
-					margin-bottom:5px;
+					margin-bottom: 5px;
 				}
 
 				&:nth-of-type(2) {
-					color:var(--border-color);
+					color: var(--border-color);
 				}
 
 				@include media(max-width-1024) {
-					max-width:95%;
+					max-width: 95%;
 				}
 
 			}
 
 			p:nth-of-type(2) {
 
-				max-width:80%;
-				font-size:14px;
-				line-height:1.5;
-				letter-spacing:0px;
-				transition:opacity 0.5s;
-				color:var(--border-color);
+				max-width: 80%;
+				font-size: 14px;
+				line-height: 1.5;
+				letter-spacing: 0px;
+				transition: opacity 0.5s;
+				color: var(--border-color);
 
 				&:not(:last-child) {
-					margin-bottom:5px;
+					margin-bottom: 5px;
 				}
 
 				@include media(max-width-1024) {
-					max-width:95%;
+					max-width: 95%;
 				}
 
 				sep:last-of-type {
-					display:none;
+					display: none;
 				}
 
 				span {
 
-					transition:color 0.5s;
+					transition: color 0.5s;
 
 					&:hover {
-						color:var(--faint-color);
-						text-decoration:underline;
+						color: var(--faint-color);
+						text-decoration: underline;
 					}
 
 				}
@@ -231,54 +260,54 @@ layout-timeline {
 
 			arr {
 
-				top:27px;
-				width:30px;
-				position:absolute;
-				display:inline-block;
-				border-bottom:1px solid var(--faint-color);
+				top: 27px;
+				width: 30px;
+				position: absolute;
+				display: inline-block;
+				border-bottom: 1px solid var(--faint-color);
 
 			}
 
 			hex {
 
-				top:20px;
-				width:16px;
-				height:16px;
-				font-size:16px;
-				cursor:pointer;
-				position:relative;
-				display:inline-block;
-				transition:color 0.5s;
-				color:var(--faint-color);
+				top: 20px;
+				width: 16px;
+				height: 16px;
+				font-size: 16px;
+				cursor: pointer;
+				position: relative;
+				display: inline-block;
+				transition: color 0.5s;
+				color: var(--faint-color);
 
 				&:hover {
-					color:var(--hover-color);
+					color: var(--hover-color);
 				}
 
 				svg {
 
-					top:0px;
-					left:0px;
-					width:16px;
-					height:16px;
-					stroke-width:1;
-					position:absolute;
-					margin-right:-150px;
-					fill:var(--back-color);
-					stroke:var(--faint-color);
+					top: 0px;
+					left: 0px;
+					width: 16px;
+					height: 16px;
+					stroke-width: 1;
+					position: absolute;
+					margin-right: -150px;
+					fill: var(--back-color);
+					stroke: var(--faint-color);
 
 					&:nth-child(1) {
-						top:50%;
-						margin-top:-8px;
+						top: 50%;
+						margin-top: -8px;
 					}
 
 					&:nth-child(2) {
-						top:50%;
-						fill:none;
-						margin-top:-8px;
-						stroke-width:0px;
-						transition:fill 0.5s;
-						fill:var(--hover-color);
+						top: 50%;
+						fill: none;
+						margin-top: -8px;
+						stroke-width: 0px;
+						transition: fill 0.5s;
+						fill: var(--hover-color);
 					}
 
 				}
