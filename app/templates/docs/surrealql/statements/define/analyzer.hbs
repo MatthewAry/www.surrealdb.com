@@ -12,7 +12,7 @@
 		In the context of a database, an analyzer plays a crucial role in text processing and searching.
 		It is defined by its name, a set of tokenizers, and a collection of filters.
 	</p>
-	<Docs::Heading @level="4">Requirements</Docs::Heading>
+	<Docs::Heading @level="4" @id="requirements">Requirements</Docs::Heading>
 	<ul>
 		<li>You must be authenticated as a root, namespace, or database user before you can use the <code>DEFINE INDEX</code> statement.</li>
 		<li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and database</LinkTo> before you can use the <code>DEFINE INDEX</code> statement.</li>
@@ -22,7 +22,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
+	<Docs::Heading @level="4" @id="syntax">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/analyzer/syntax.typescript" text="SQL Syntax" />
 </Layout::Text>
 
@@ -62,7 +62,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="3">Example usage</Docs::Heading>
+	<Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 	<p>This example creates an analyzer that splits tokens on blank characters and removes diacritical marks.</p>
 	<Code @name="docs/surrealql/statements/define/analyzer/analyzer-ascii.surql" />
 	<p>This command statement creates an analyzer specifically designed for processing English texts.</p>

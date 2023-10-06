@@ -13,7 +13,7 @@
 		the field's data type, set a default value, apply assertions to protect data consistency, and set permissions
 		specifying what operations can be performed on the field.
 	</p>
-	<Docs::Heading @level="4">Requirements</Docs::Heading>
+	<Docs::Heading @level="4" @id="requirements">Requirements</Docs::Heading>
 	<ul>
 		<li>You must be authenticated as a root, namespace, or database user before you can use the <code>DEFINE FIELD</code> statement.</li>
 		<li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and database</LinkTo> before you can use the <code>DEFINE FIELD</code> statement.</li>
@@ -23,59 +23,59 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
+	<Docs::Heading @level="4" @id="syntax">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/field/syntax.typescript" text="SurQL Syntax" />
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-    <Docs::Heading @level="3">Example usage</Docs::Heading>
+    <Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 	<p>The following expression shows the simplest way to use the <code>DEFINE FIELD</code> statement.</p>
 	<Code @name="docs/surrealql/statements/define/field/name-field.surql" />
 
-	<Docs::Heading @level="4">Defining data types</Docs::Heading>
+	<Docs::Heading @level="4" @id="define-data-types">Defining data types</Docs::Heading>
 	<p>Note: A list of supported data types can be found at the bottom of this page.</p>
-	<Docs::Heading @level="5">Simple data types</Docs::Heading>
+	<Docs::Heading @level="5" @id="simple-data-types">Simple data types</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/field/type-field.surql" />
 
-	<Docs::Heading @level="5">Flexible data types</Docs::Heading>
+	<Docs::Heading @level="5" @id="flexible-data-types">Flexible data types</Docs::Heading>
 	<p>
 		Flexible types allow you to have <code>SCHEMALESS</code> functionality on a <code>SCHEMAFULL</code> table.
 		This is especially useful for working with nested objects.
 	</p>
 	<Code @name="docs/surrealql/statements/define/field/type-flexible.surql" />
 
-	<Docs::Heading @level="5">Array data type</Docs::Heading>
+	<Docs::Heading @level="5" @id="array-data-types">Array data type</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/field/array-type-field.surql" />
 
-	<Docs::Heading @level="5">Array with allowed values</Docs::Heading>
+	<Docs::Heading @level="5" @id="array-with-allowed-values">Array with allowed values</Docs::Heading>
 	<p>By using an Access Control List as an example we can show how we can restrict what values can be stored in an array.</p>
 	<Code @name="docs/surrealql/statements/define/field/array-assert-field.surql" />
 
-	<Docs::Heading @level="4">Making a field optional</Docs::Heading>
+	<Docs::Heading @level="4" @id="making-a-field-optional">Making a field optional</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/field/optional-field.surql" />
 
-	<Docs::Heading @level="4">Setting a default value</Docs::Heading>
+	<Docs::Heading @level="4" @id="setting-a-default-value">Setting a default value</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/field/default-field.surql" />
 
-	<Docs::Heading @level="4">Alter a passed value</Docs::Heading>
+	<Docs::Heading @level="4" @id="alter-a-passed-value">Alter a passed value</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/field/value-field.surql" />
 
-	<Docs::Heading @level="4">Asserting rules on fields</Docs::Heading>
+	<Docs::Heading @level="4" @id="asserting-rules-on-fields">Asserting rules on fields</Docs::Heading>
 	<p>You can take your field definitions even further by using asserts. Assert is a powerful feature that can be used to ensure that your data remains consistent.</p>
 
-	<Docs::Heading @level="5">Email is required</Docs::Heading>
+	<Docs::Heading @level="5" @id="email-is-required">Email is required</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/field/email-assert-field.surql" />
 
-	<Docs::Heading @level="5">Use regex to validate a string</Docs::Heading>
+	<Docs::Heading @level="5" @id="use-regex-to-validate-a-string">Use regex to validate a string</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/field/constraints-field.surql" />
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="3">Supported Data Types</Docs::Heading>
+	<Docs::Heading @level="3" @id="">Supported Data Types</Docs::Heading>
 	<Docs::SurrealQl::Types />
 </Layout::Text>
 

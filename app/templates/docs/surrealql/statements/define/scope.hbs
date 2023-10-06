@@ -11,7 +11,7 @@
 	<p>
 		Setting scope access allows SurrealDB to operate as a web database. With scopes you can set authentication and access rules which enable fine-grained access to tables and fields.
 	</p>
-	<Docs::Heading @level="4">Requirements</Docs::Heading>
+	<Docs::Heading @level="4" @id="requirements">Requirements</Docs::Heading>
 	<ul>
 		<li>To use<code>DEFINE SCOPE</code> you must have root, namespace, or database level access.</li>
 		<li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and database</LinkTo> before you can use the <code>DEFINE SCOPE</code> statement.</li>
@@ -21,14 +21,14 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
+	<Docs::Heading @level="4" @id="syntax">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/scope/syntax.typescript" text="SQL Syntax" />
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="3">Example usage</Docs::Heading>
+	<Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 	<p>Below shows how you can create a scope using the <code>DEFINE SCOPE</code> statement.</p>
 	<Code @name="docs/surrealql/statements/define/scope/scope.surql" />
 </Layout::Text>

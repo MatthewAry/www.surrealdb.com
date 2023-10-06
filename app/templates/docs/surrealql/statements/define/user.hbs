@@ -13,7 +13,7 @@
 		While existing logins still function, the <code>DEFINE LOGIN</code> statement has been replaced with <code>DEFINE USER</code>.
 	</blockquote>
 
-	<Docs::Heading @level="4">Requirements</Docs::Heading>
+	<Docs::Heading @level="4" @id="requirements">Requirements</Docs::Heading>
 	<ul>
 		<li>You must be authenticated with a user that has enough permissions. Only the <code>OWNER</code> built-in role grants permissions to create users.</li>
 		<li>You must be authenticated with a user that has permissions on the level where you are creating the user:
@@ -33,14 +33,14 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
+	<Docs::Heading @level="4" @id="syntax">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/user/syntax.typescript" text="SQL Syntax" />
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="3">Example usage</Docs::Heading>
+	<Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 	<p>The following example shows how you can create a <code>ROOT</code> user using the <code>DEFINE USER</code> statement.</p>
 	<Code @name="docs/surrealql/statements/define/user/root-user.surql" />
 	<p>The following example shows how you can create a <code>NAMESPACE</code> user using the <code>DEFINE USER</code> statement.</p>

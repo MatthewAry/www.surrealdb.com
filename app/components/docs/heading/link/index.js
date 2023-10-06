@@ -9,7 +9,8 @@ export default class extends Component {
 	@action
 	copyLink(event) {
 		event.preventDefault();
-		navigator.clipboard.writeText(event.target.href);
+		console.log(event);
+		navigator.clipboard.writeText(event.target.parentElement.href);
 		this.isTooltipVisible = true;
 		setTimeout(() => {
 			this.isTooltipVisible = false;

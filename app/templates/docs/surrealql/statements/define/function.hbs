@@ -11,7 +11,7 @@
 	<p>
 		The <code>DEFINE FUNCTION</code> statement allows you to define custom functions that can be reused throughout a database.
 	</p>
-	<Docs::Heading @level="4">Requirements</Docs::Heading>
+	<Docs::Heading @level="4" @id="requirements">Requirements</Docs::Heading>
 	<ul>
 		<li>You must be authenticated as a root, namespace, or database user before you can use the <code>DEFINE FUNCTION</code> statement.</li>
 		<li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace and database</LinkTo> before you can use the <code>DEFINE FUNCTION</code> statement.</li>
@@ -21,13 +21,13 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
+	<Docs::Heading @level="4" @id="syntax">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/function/syntax.typescript" text="SQL Syntax" />
 </Layout::Text>
 
 <Layout::Gap mini />
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="3">Example usage</Docs::Heading>
+	<Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 	<p>Below shows how you can define a custom function using the <code>DEFINE FUNCTION</code> statement, and how to call it.</p>
 	<Code @name="docs/surrealql/statements/define/function/greet.surql" />
 	<br />
