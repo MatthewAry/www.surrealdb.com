@@ -13,7 +13,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Command options</h3>
+	<Docs::Heading @level="4">Command options</Docs::Heading>
 	<Layout::Table filled>
 		<table>
 			<thead>
@@ -98,7 +98,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Example usage</h3>
+	<Docs::Heading @level="3">Example usage</Docs::Heading>
 	<p>To start a terminal-based REPL and run or pipe queries to a local or remote SurrealDB database, in a terminal run the <Ascua::Prism::Inline @language="shell" @code="surreal sql" /> command with the required arguments.</p>
 	<p>Once you see the <code>&gt;</code> character you can type your SurrealQL query, followed by the <code>enter</code> key. The command has support for <code>&uarr;</code> and <code>&darr;</code> arrows for selecting previous SQL statements, and stores the statement history in a <code>history.txt</code> file. To exit the REPL use the <code>ctrl + c</code> or <code>ctrl + d</code> key combinations.</p>
 	<codes vertical>
@@ -118,7 +118,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Command help</h3>
+	<Docs::Heading @level="4">Command help</Docs::Heading>
 	<p>To see the help information and usage instructions, in a terminal run the <Ascua::Prism::Inline @language="shell" @code="surreal sql --help" /> command without any further arguments. This command gives general information on the arguments, inputs, and additional options for the <code>sql</code> command.</p>
 	<codes vertical>
 		<Code @name="docs-cli-help-sql.shell" text="Command line">

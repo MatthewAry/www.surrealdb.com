@@ -13,7 +13,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Statement syntax</h3>
+	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/delete/syntax.typescript" text="SQL Syntax" />
 </Layout::Text>
 
@@ -21,13 +21,13 @@
 
 <Layout::Text text-l text-f>
 
-	<h3>Example usage</h3>
+	<Docs::Heading @level="3">Example usage</Docs::Heading>
 	<h4>Basic usage</h4>
 	<p>The following query shows basic usage of the <code>DELETE</code> statement, which is used to delete records from a table or a graph edge. </p>
 	<p> Deleting records can be done in multiple ways:</p>
 	<Code @name="docs/surrealql/statements/delete/simple.surql" />
 
-	<h4>Deleting records based on conditions</h4>
+	<Docs::Heading @level="5">Deleting records based on conditions</Docs::Heading>
 	<p>The delete statement supports conditional matching of records using a <code>WHERE</code> clause. If the
 		expression in the <code>WHERE</code> clause evaluates to true, then the respective record will be deleted.</p>
 	<Code @name="docs/surrealql/statements/delete/where.surql" />
@@ -37,7 +37,7 @@
 		document that is deleted.</p>
 	<Code @name="docs/surrealql/statements/delete/return.surql" />
 
-	<h4> Using <code>TIMEOUT</code> duration records based on conditions</h4>
+	<Docs::Heading @level="5">Using <code>TIMEOUT</code> duration records based on conditions</Docs::Heading>
 
 	<p>When processing a large result set with many interconnected records, it is possible to use the
 		<code>TIMEOUT</code> keywords to specify a timeout duration for the statement. If the statement continues beyond
@@ -46,7 +46,7 @@
 	</p>
 	<Code @name="docs/surrealql/statements/delete/timeout.surql" />
 
-	<h4> Deleting graph edges</h4>
+	<Docs::Heading @level="5">Deleting graph edges</Docs::Heading>
 	 <p>You can also delete graph edges between two records in the database by using the <code>DELETE</code> statement. </p> <p>For example the graph edge below:</p>
 	<codes vertical>
 

@@ -12,7 +12,7 @@
 		The <code>DEFINE DATABASE</code> statement allows you to instantiate a named database, enabling you to specify
 		security and configuration options.
 	</p>
-	<h4>Requirements</h4>
+	<Docs::Heading @level="4">Requirements</Docs::Heading>
 	<ul>
 		<li>You must be authenticated as a root or namespace user before you can use the <code>DEFINE DATABASE</code> statement.</li>
 		<li><LinkTo @route="docs.surrealql.statements.use">You must select your namespace</LinkTo> before you can use the <code>DEFINE DATABASE</code> statement.</li>
@@ -22,13 +22,13 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Statement syntax</h3>
+	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/define/database/syntax.typescript" text="SQL Syntax" />
 </Layout::Text>
 
 <Layout::Gap mini />
 <Layout::Text text-l text-f>
-	<h3>Example usage</h3>
+	<Docs::Heading @level="3">Example usage</Docs::Heading>
 	<p>Below shows how you can create a database using the <code>DEFINE DATABASE</code> statement.</p>
 	<Code @name="docs/surrealql/statements/define/database/database.surql" />
 </Layout::Text>

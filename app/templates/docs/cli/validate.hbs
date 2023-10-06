@@ -13,7 +13,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Command options</h3>
+	<Docs::Heading @level="4">Command options</Docs::Heading>
 	<Layout::Table filled>
 		<table>
 			<thead>
@@ -40,7 +40,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Example usage</h3>
+	<Docs::Heading @level="3">Example usage</Docs::Heading>
 	<p>To perform validation on a SurrealQL local file, in a terminal run the <Ascua::Prism::Inline @language="shell" @code="surreal validate" /> command with the required argument.</p>
 	<codes vertical>
 		<Code @name="docs-cli-validate-main.shell" text="Command line">
@@ -52,7 +52,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Command help</h3>
+	<Docs::Heading @level="4">Command help</Docs::Heading>
 	<p>To see the help information and usage instructions, in a terminal run the <Ascua::Prism::Inline @language="shell" @code="surreal validate --help" /> command without any further arguments. This command gives general information on the arguments, inputs, and additional options for the <code>validate</code> command.</p>
 	<codes vertical>
 		<Code @name="docs-cli-help-validate.shell" text="Command line">

@@ -17,7 +17,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Statement syntax</h3>
+	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/live-select/syntax.typescript" text="Surql Syntax" />
 </Layout::Text>
 
@@ -25,17 +25,17 @@
 
 <Layout::Text text-l text-f>
 
-	<h3>Example usage</h3>
+	<Docs::Heading @level="3">Example usage</Docs::Heading>
 
-	<h4>Basic usage</h4>
+	<Docs::Heading @level="5">Basic usage</Docs::Heading>
 	<p>By default, SurrealDB will push the entire record over the websocket when created or updated, and just the record's ID when deleted.</p>
 	<Code @name="docs/surrealql/statements/live-select/simple.surql" />
 
-	<h4>Diff</h4>
+	<Docs::Heading @level="5">Diff</Docs::Heading>
 	<p>When using the <code>DIFF</code> mode, updates will be sent in the form of an array with <Link @link="https://jsonpatch.com">JSON Patch</Link> messages.</p>
 	<Code @name="docs/surrealql/statements/live-select/diff.surql" />
 
-	<h4>Filter the live query</h4>
+	<Docs::Heading @level="5">Filter the live query</Docs::Heading>
 	<p>You can optionally apply filters with the <code>WHERE</code> clause.</p>
 	<Code @name="docs/surrealql/statements/live-select/filtered.surql" />
 </Layout::Text>

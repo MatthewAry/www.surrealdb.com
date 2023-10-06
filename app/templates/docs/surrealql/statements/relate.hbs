@@ -41,7 +41,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Statement syntax</h3>
+	<Docs::Heading @level="4">Statement syntax</Docs::Heading>
 	<Code @name="docs/surrealql/statements/relate/syntax.typescript" text="Surql Syntax" />
 </Layout::Text>
 
@@ -49,8 +49,8 @@
 
 <Layout::Text text-l text-f>
 
-	<h3>Example usage</h3>
-	<h4>Basic usage</h4>
+	<Docs::Heading @level="3">Example usage</Docs::Heading>
+	<Docs::Heading @level="5">Basic usage</Docs::Heading>
 	<p>The following query shows the basic structure of the <code>RELATE</code> statement, which creates a relationship
 		between a record in the person table and a record in the article table.</p>
 	<p>For table names we prioritise readability, such that normal tables are singular, person instead of persons, but
@@ -89,14 +89,14 @@
 	</p>
 	<Code @name="docs/surrealql/statements/relate/unique.surql" />
 
-	<h4>Adding data using <code>SET</code> and <code>CONTENT</code></h4>
+	<Docs::Heading @level="5">Adding data using <code>SET</code> and <code>CONTENT</code></Docs::Heading>
 	<p>
 		Let's look at the two ways you can add record data in the <code>RELATE</code> statement.<br>
 		Both of these queries will produce the same result.
 	</p>
 	<Code @name="docs/surrealql/statements/relate/content.surql" />
 
-	<h4>Creating a single relation with the <code>ONLY</code> keyword</h4>
+	<Docs::Heading @level="5">Creating a single relation with the <code>ONLY</code> keyword</Docs::Heading>
 	<p>
 		Using the ONLY keyword, just an object for the relation in question will be returned.
 		This, instead of an array with a single object.
@@ -105,7 +105,7 @@
 
 
 
-	<h4>Basics of querying graphs</h4>
+	<Docs::Heading @level="5">Basics of querying graphs</Docs::Heading>
 	<p>Let's look at how the above gets queried, for more examples see the
 		<Link @link="docs.surrealql.statements.select"><code>SELECT</code>docs</Link>.
 	</p>
@@ -128,13 +128,13 @@
 		purchase?
 	</p>
 
-	<h4>Using <code>LET</code> parameters in <code>RELATE</code> statements</h4>
+	<Docs::Heading @level="5">Using <code>LET</code> parameters in <code>RELATE</code> statements</Docs::Heading>
 	<p>You can also use
 		<Link @link="docs.surrealql.statements.let">parameters</Link> to specify the record IDs.
 	</p>
 	<Code @name="docs/surrealql/statements/relate/parameters.surql" />
 
-	<h4>Using the <code>RETURN</code> clause</h4>
+	<Docs::Heading @level="5">Using the <code>RETURN</code> clause</Docs::Heading>
 	<p>By default, the relate statement returns the record value once the changes have been made. To change the return
 		value of each record, specify a <code>RETURN</code> clause, specifying either <code>NONE</code>,
 		<code>BEFORE</code>, <code>AFTER</code>, <code>DIFF</code>, or a comma-separated list of specific fields to
@@ -142,21 +142,21 @@
 	</p>
 	<Code @name="docs/surrealql/statements/relate/return.surql" />
 
-	<h4>The <code>TIMEOUT</code> clause</h4>
+	<Docs::Heading @level="5">The <code>TIMEOUT</code> clause</Docs::Heading>
 	<p>When processing a large result set with many interconnected records, it is possible to use the
 		<code>TIMEOUT</code> keyword to specify a timeout duration for the statement. If the statement continues beyond
 		this duration, then the transaction will fail, and the statement will return an error.
 	</p>
 	<Code @name="docs/surrealql/statements/select/timeout.surql" />
 
-	<h4>The <code>PARALLEL</code> clause</h4>
+	<Docs::Heading @level="5">The <code>PARALLEL</code> clause</Docs::Heading>
 	<p>When processing a large result set with many interconnected records, it is possible to specify the
 		<code>PARALLEL</code> keyword to signify that edges and remote records should be fetched and processed in
 		parallel.
 	</p>
 	<Code @name="docs/surrealql/statements/select/parallel.surql" />
 
-	<h4> Deleting graph edges</h4>
+	<Docs::Heading @level="5"> Deleting graph edges</Docs::Heading>
 	 <p>You can also graph edges between two records in the database by using the <code>DELETE</code> statement. </p> <p>For example the graph edge below:</p>
 	<codes vertical>
 

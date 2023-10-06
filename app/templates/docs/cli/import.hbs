@@ -13,7 +13,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Command options</h3>
+	<Docs::Heading @level="4">Command options</Docs::Heading>
 	<Layout::Table filled>
 		<table>
 			<thead>
@@ -66,7 +66,7 @@
 		</table>
 	</Layout::Table>
 	<Layout::Gap tiny />
-	<h5>Positional argument</h5>
+	<Docs::Heading @level="4">Positional argument</Docs::Heading>
 	<Layout::Table filled>
 		<table>
 			<thead>
@@ -91,7 +91,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Example usage</h3>
+	<Docs::Heading @level="3">Example usage</Docs::Heading>
 	<p>To perform a SurrealQL database import from a local file, in a terminal run the <Ascua::Prism::Inline @language="shell" @code="surreal import" /> command with the required arguments.</p>
 	<codes vertical>
 		<Code @name="docs-cli-import-main.shell" text="Command line">
@@ -104,7 +104,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Command help</h3>
+	<Docs::Heading @level="4">Command help</Docs::Heading>
 	<p>To see the help information and usage instructions, in a terminal run the <Ascua::Prism::Inline @language="shell" @code="surreal import --help" /> command without any further arguments. This command gives general information on the arguments, inputs, and additional options for the <code>import</code> command.</p>
 	<codes vertical>
 		<Code @name="docs-cli-help-import.shell" text="Command line">
