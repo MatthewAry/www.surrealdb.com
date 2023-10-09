@@ -390,10 +390,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "and"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>&&</code> or <code>AND</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="and"><code>&&</code> or <code>AND</code></Docs::Heading>
 		<p>Checks whether both of two values are truthy.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-and-input.surql">
@@ -409,10 +409,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "or"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>||</code> or <code>OR</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="or"><code>||</code> or <code>OR</code></Docs::Heading>
 		<p>Checks whether either of two values are truthy.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-or-input.surql">
@@ -428,10 +428,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "nco"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>??</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="nco"><code>??</code></Docs::Heading>
 		<p>Check whether either of two values are truthy and not <code>NULL</code>.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-nco-input.surql">
@@ -447,10 +447,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "tco"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>?:</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="tco"><code>?:</code></Docs::Heading>
 		<p>Check whether either of two values are truthy.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-tco-input.surql">
@@ -466,10 +466,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "equal"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>=</code> or <code>IS</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="equal"><code>=</code> or <code>IS</code></Docs::Heading>
 		<p>Check whether two values are equal.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-equal-input-1.surql">
@@ -541,10 +541,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "notequal"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>!=</code> or <code>IS NOT</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="notequal"><code>!=</code> or <code>IS NOT</code></Docs::Heading>
 		<p>Check whether two values are not equal.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-notequal-input-1.surql">
@@ -576,10 +576,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "exact"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>==</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="exact"><code>==</code></Docs::Heading>
 		<p>Check whether two values are exact. This operator also checks that each value has the same type.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-exact-input-1.surql">
@@ -611,10 +611,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "anyequal"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>?=</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="anyequal"><code>?=</code></Docs::Heading>
 		<p>Check whether any value in an array equals another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-anyequal-input.surql">
@@ -630,10 +630,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "allequal"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>*=</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="allequal"><code>*=</code></Docs::Heading>
 		<p>Check whether all values in an array equals another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-allequal-input.surql">
@@ -649,10 +649,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "match"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>~</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="match"><code>~</code></Docs::Heading>
 		<p>Compare two values for equality using fuzzy matching.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-match-input-1.surql">
@@ -680,10 +680,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "notmatch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>!~</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="notmatch"><code>!~</code></Docs::Heading>
 		<p>Compare two values for inequality using fuzzy matching.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-notmatch-input-1.surql">
@@ -705,10 +705,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "anymatch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>?~</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="anymatch"><code>?~</code></Docs::Heading>
 		<p>Check whether any value in a set is equal to a value using fuzzy matching.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-anymatch-input-1.surql">
@@ -730,10 +730,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "allmatch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>*~</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="allmatch"><code>*~</code></Docs::Heading>
 		<p>Check whether all values in a set are equal to a value using fuzzy matching.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-allmatch-input-1.surql">
@@ -755,10 +755,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "lessthan"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>&lt;</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="lessthan"><code>&lt;</code></Docs::Heading>
 		<p>Check whether a value is less than another value.</p>
 		<codes vertical>
 			<Code @name="docs/surrealql/operators/lessthan.surql" />
@@ -772,10 +772,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "lessthanorequal"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>&lt;=</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="lessthanorequal"><code>&lt;=</code></Docs::Heading>
 		<p>Check whether a value is less than or equal to another value.</p>
 		<codes vertical>
 			<Code @name="docs/surrealql/operators/lessthanorequal.surql" />
@@ -789,10 +789,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "greaterthan"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>&gt;</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="greaterthan"><code>&gt;</code></Docs::Heading>
 		<p>Check whether a value is less than another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-greaterthan-input.surql">
@@ -808,10 +808,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "greaterthanorequal"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>&gt;=</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="greaterthanorequal"><code>&gt;=</code></Docs::Heading>
 		<p>Check whether a value is less than or equal to another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-greaterthanorequal-input.surql">
@@ -827,10 +827,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "add"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>+</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="add"><code>+</code></Docs::Heading>
 		<p>Adds a value to another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-add-input-1.surql">
@@ -870,10 +870,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "sub"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>-</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="sub"><code>-</code></Docs::Heading>
 		<p>Subtracts a value from another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-sub-input-1.surql">
@@ -905,10 +905,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "mul"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>*</code> or <code>×</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="mul"><code>*</code> or <code>×</code></Docs::Heading>
 		<p>Multiplies a value by another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-mul-input.surql">
@@ -924,10 +924,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "div"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>/</code> or <code>÷</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="div"><code>/</code> or <code>÷</code></Docs::Heading>
 		<p>Divides a value with another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-div-input-1.surql">
@@ -943,10 +943,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "pow"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>**</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="pow"><code>**</code></Docs::Heading>
 		<p>Raises a base value by another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-pow-input-1.surql">
@@ -962,10 +962,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "contains"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>CONTAINS</code> or <code>∋</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="contains"><code>CONTAINS</code> or <code>∋</code></Docs::Heading>
 		<p>Check whether a value contains another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-contains-input-1.surql">
@@ -1004,10 +1004,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "contains-not"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>CONTAINSNOT</code> or <code>∌</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="contains-not"><code>CONTAINSNOT</code> or <code>∌</code></Docs::Heading>
 		<p>Check whether a value does not contain another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-containsnot-input-1.surql">
@@ -1046,10 +1046,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "contains-all"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>CONTAINSALL</code> or <code>⊇</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="contains-all"><code>CONTAINSALL</code> or <code>⊇</code></Docs::Heading>
 		<p>Check whether a value contains all of multiple values.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-containsall-input.surql">
@@ -1065,10 +1065,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "contains-any"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>CONTAINSANY</code> or <code>⊃</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="contains-any"><code>CONTAINSANY</code> or <code>⊃</code></Docs::Heading>
 		<p>Check whether a value contains any of multiple values.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-containsany-input.surql">
@@ -1084,10 +1084,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "contains-none"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>CONTAINSNONE</code> or <code>⊅</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="contains-none"><code>CONTAINSNONE</code> or <code>⊅</code></Docs::Heading>
 		<p>Check whether a value does not contain any of multiple values.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-containsnone-input.surql">
@@ -1103,10 +1103,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "inside"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>INSIDE</code> or <code>∈</code> or <code>IN</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="inside"><code>INSIDE</code> or <code>∈</code> or <code>IN</code></Docs::Heading>
 		<p>Check whether a value is contained within another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-inside-input-1.surql">
@@ -1145,10 +1145,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "not-inside"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>NOTINSIDE</code> or <code>∉</code> or <code>NOT IN</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="not-inside"><code>NOTINSIDE</code> or <code>∉</code> or <code>NOT IN</code></Docs::Heading>
 		<p>Check whether a value is not contained within another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-notinside-input-1.surql">
@@ -1187,10 +1187,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "all-inside"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>ALLINSIDE</code> or <code>⊆</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="all-inside"><code>ALLINSIDE</code> or <code>⊆</code></Docs::Heading>
 		<p>Check whether all of multiple values are contained within another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-allinside-input.surql">
@@ -1206,10 +1206,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "any-inside"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>ANYINSIDE</code> or <code>⊂</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="any-inside"><code>ANYINSIDE</code> or <code>⊂</code></Docs::Heading>
 		<p>Check whether any of multiple values are contained within another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-anyinside-input.surql">
@@ -1225,10 +1225,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "none-inside"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>NONEINSIDE</code> or <code>⊄</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="none-inside"><code>NONEINSIDE</code> or <code>⊄</code></Docs::Heading>
 		<p>Check whether none of multiple values are contained within another value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-noneinside-input.surql">
@@ -1244,10 +1244,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "outside"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>OUTSIDE</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="outside"><code>OUTSIDE</code></Docs::Heading>
 		<p>Check whether a geometry value is outside another geometry value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-outside-input.surql">
@@ -1270,10 +1270,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "intersects"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>INTERSECTS</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="intersects"><code>INTERSECTS</code></Docs::Heading>
 		<p>Check whether a geometry value intersects another geometry value.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-intersects-input.surql">
@@ -1303,10 +1303,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "matches"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>MATCHES</code></h3>
+		<Docs::Heading @level="4"  @mt0="true" @id="matches"><code>MATCHES</code></Docs::Heading>
 		<p>Checks whether the terms are found in a full-text indexed field.</p>
 		<codes vertical>
 			<Code @name="docs-surrealql-operators-matches-input.surql">

@@ -353,6 +353,9 @@ $doc-heading-styles: (
 	.copy-tooltip__show {
 		opacity: 1;
 	}
+	&.mt-0 {
+		margin-top: 0 !important;
+	}
 }
 
 g {
