@@ -12,7 +12,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Defining parameters within SurrealQL</h3>
+	<Docs::Heading @level="4" @id="in-surrealql">Defining parameters within SurrealQL</Docs::Heading>
 	<p>To define a parameter in SurrealQL, use the <Link @link="docs.surrealql.statements.let"><Ascua::Prism::Inline @language="surql" @code="LET" /></Link> statement. The name of the parameter should begin with a <code>$</code> character.</p>
 	<Code @name="docs/surrealql/statements/let/simple.surql" />
 </Layout::Text>
@@ -20,7 +20,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Defining parameters within client libraries</h3>
+	<Docs::Heading @level="4" @id="in-client-libraries">Defining parameters within client libraries</Docs::Heading>
 	<p>SurrealDB's client libraries allow parameters to be passed in as JSON values, which are then converted to SurrealDB data types when the query is run. The following example show a variable being used within a SurrealQL query from the JavaScript library.</p>
 	<Code @name="docs-surrealql-parameters-javascript.js" text="JavaScript library">
 		let people = await surreal.query("SELECT * FROM article WHERE status INSIDE $status", {
@@ -32,7 +32,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Reserved variable names</h3>
+	<Docs::Heading @level="4" @id="reserved-variable-names">Reserved variable names</Docs::Heading>
 	<p>SurrealDB uses predefined variables. For that purpose, you can use those variables inside your query but you cannot declare new parameters using one of the following name:</p>
 	<Layout::Table filled>
 		<table>
@@ -90,7 +90,7 @@
 						<code>$parent</code>
 					</td>
 					<td>Represents the parent record in a subquery</td>
-				</tr>			
+				</tr>
 				<tr>
 					<td>
 						<a href="/docs/surrealql/statements/define/event#specific-events">
