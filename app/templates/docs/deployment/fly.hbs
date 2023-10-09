@@ -8,13 +8,15 @@
 	<h2><Devicon @size="50" @type="fly" /> Deploy on Fly.io</h2>
 	<p>This document is based on a guide by one of our community members. <Link @link="https://tutorials.surrealdb.com/community/launch-instance-on-flyio.html">You can find it here</Link>.</p>
 
-	<h3>Requirements</h3>
+	<Docs::Heading @level="3" @id="requirements">Requirements</Docs::Heading>
 	<ul>
 		<li><Link @link="https://fly.io/docs/hands-on/install-flyctl">Make sure that you have <code>flyctl</code> installed.</Link></li>
 		<li>Use either <Link @link="https://fly.io/docs/hands-on/sign-up"><code>flyctl auth signup</code></Link> or <Link @link="https://fly.io/docs/hands-on/sign-in"><code>flyctl auth login</code></Link> to authenticate your client.</li>
 	</ul>
 
-	<h3>Get started</h3>
+	<Layout::Gap mini />
+
+	<Docs::Heading @level="3" @id="get-started">Get started</Docs::Heading>
 	<p>We will create a working directory for our deployment. In it, we will store a <code>Dockerfile</code> and a <code>fly.toml</code> config file.</p>
 	<Code @name="docs/deployment/fly.io/create-working-directory.sh" text="Create working directory" />
 
@@ -25,7 +27,7 @@
 	</p>
 	<Code @name="docs/deployment/fly.io/Dockerfile.docker" text="Dockerfile" />
 
-	<h4>Generate fly.toml</h4>
+	<Docs::Heading @level="4" @id="generate">Generate fly.toml</Docs::Heading>
 	<p>
 		We will generate most of the content for the <code>fly.toml</code> configuration file using the <code>fly launch</code> utility.
 		Please answer the questions with the guidelines given below.
@@ -49,7 +51,7 @@
 		</li>
 	</ul>
 
-	<h4>Create volume for persistent storage</h4>
+	<Docs::Heading @level="4" @id="volume">Create volume for persistent storage</Docs::Heading>
 	<p>
 		For this demo, we'll create a single volume with a size of 1 GB.
 		Make sure to set it to the same region that you chose earlier!
@@ -64,14 +66,14 @@
 	</p>
 	<Code @name="docs/deployment/fly.io/fly-toml-add-volume.toml" text="Assign the volume to instance" />
 
-	<h4>Configure root authentication details</h4>
+	<Docs::Heading @level="4" @id="authentication">Configure root authentication details</Docs::Heading>
 	<p>
 		We will store the username and password for the root user in secrets.
 		Feel free to pass on any other options here. You can use <code>surreal start -h</code> to see which environment variables can be passed to surreal.
 	</p>
 	<Code @name="docs/deployment/fly.io/set-root-authentication.sh" text="Configure username & password" />
 
-	<h3>Deploy the instance</h3>
+	<Docs::Heading @level="4" @id="deploy">Deploy the instance</Docs::Heading>
 	<p>
 		Everything has been configured now, and we can deploy our instance securely with a single command:
 	</p>
