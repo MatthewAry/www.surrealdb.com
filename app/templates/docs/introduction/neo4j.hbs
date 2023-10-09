@@ -11,14 +11,14 @@
 
 <Layout::Gap mini />
 
-<h3>Introduction</h3>
+<Docs::Heading @level="3" @id="introduction">Introduction</Docs::Heading>
 <p>
     As a multi-model database, SurrealDB offers a lot of flexibility.
     Our SQL-like query language SurrealQL is a good example of this, where we often have more than one way to achieve the same result, depending on developer preference.
     In this mapping guide, we will focus on the syntax that most closely resembles the Cypher query language.
 </p>
 
-<h3>Concepts mapping</h3>
+<Docs::Heading @level="3" @id="concepts-mapping">Concepts mapping</Docs::Heading>
 <p>
     For more in-depth explanations of SurrealDB concepts, see the <Link @link="docs.introduction.concepts">concepts page.</Link>
 </p>
@@ -69,19 +69,19 @@
 
 <Layout::Gap small />
 
-<h3>Syntax mapping</h3>
+<Docs::Heading @level="3" @id="syntax-mapping">Syntax mapping</Docs::Heading>
 <p>
     Let's get you up to speed with SurrealQL syntax with some CRUD examples.
 </p>
 
-<h3>Create</h3>
+<Docs::Heading @level="4" @id="create">Create</Docs::Heading>
 <p>
     As Neo4j is schemaless, only the SurrealQL schemaless approach is shown below.
     For a schemafull option see the <Link @link="docs.surrealql.statements.define.table">define table</Link> page.
 </p>
 <p>
     For more SurrealQL examples,
-    see the <Link @link="docs.surrealql.statements.create">create</Link>, 
+    see the <Link @link="docs.surrealql.statements.create">create</Link>,
     <Link @link="docs.surrealql.statements.insert">insert</Link>
     and <Link @link="docs.surrealql.statements.relate">relate</Link> pages.
 </p>
@@ -152,7 +152,7 @@
 
 <Layout::Gap small />
 
-<h3>Read</h3>
+<Docs::Heading @level="4" @id="read">Read</Docs::Heading>
 <p>
     For more SurrealQL examples,
     see the <Link @link="docs.surrealql.statements.select">select</Link>,
@@ -297,7 +297,7 @@
 
 <Layout::Gap small />
 
-<h3>Update</h3>
+<Docs::Heading @level="4" @id="update">Update</Docs::Heading>
 <p>
     For more SurrealQL examples,
     see the <Link @link="docs.surrealql.statements.update">update</Link> page.
@@ -314,9 +314,9 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-update.surql">
-                        MATCH (p:Person) 
-                        WHERE p.name = "Jane" 
-                        SET p.last_name = 'Doe' 
+                        MATCH (p:Person)
+                        WHERE p.name = "Jane"
+                        SET p.last_name = 'Doe'
                         RETURN p
                     </Code>
 				</td>
@@ -331,8 +331,8 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-update-many.surql">
-                        MATCH (p:Person)  
-                        WHERE p.name = "Jane"  
+                        MATCH (p:Person)
+                        WHERE p.name = "Jane"
                         REMOVE p.last_name
                         RETURN p
                     </Code>
@@ -351,7 +351,7 @@
 
 <Layout::Gap small />
 
-<h3>Delete</h3>
+<Docs::Heading @level="4" @id="delete">Delete</Docs::Heading>
 <p>
     For more SurrealQL examples,
     see the <Link @link="docs.surrealql.statements.delete">delete</Link>
@@ -369,8 +369,8 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-delete.surql">
-                        MATCH (p:Person) 
-                        WHERE p.name = "Jane" 
+                        MATCH (p:Person)
+                        WHERE p.name = "Jane"
                         DELETE p
                     </Code>
 				</td>
@@ -384,7 +384,7 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-delete-all.surql">
-                        MATCH (p:Person) 
+                        MATCH (p:Person)
                         DELETE p
                     </Code>
 				</td>
@@ -398,7 +398,7 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-cypher-remove.surql">
-                        MATCH (p:Person) 
+                        MATCH (p:Person)
                         DELETE p
                     </Code>
 				</td>

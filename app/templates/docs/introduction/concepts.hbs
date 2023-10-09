@@ -12,28 +12,28 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Traditional database or backend layer</h3>
+	<Docs::Heading @level="3" @id="traditional-or-backend-layer">Traditional database or backend layer</Docs::Heading>
 	<p>SurrealDB can be used either as a traditional database platform, with backend languages and frameworks including Golang, Python, Rust, C, Java, .Net, Node.js, and PHP. Alternatively, you can use SurrealDB as a complete backend platform, connecting directly to it from frontend languages and frameworks including JavaScript, <Link @link="https://webassembly.org/">WebAssembly</Link>, <Link @link="https://react.dev/">React.js</Link>, <Link @link="https://nextjs.org/">Next.js</Link>, and <Link @link="https://emberjs.com/">Ember.js</Link>. In this mode, permissions can be defined on a table, record, and field level, allow for granular data access patterns for multiple different types of users.</p>
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Relational, document, or graph</h3>
+	<Docs::Heading @level="3" @id="models">Relational, document, or graph</Docs::Heading>
 	<p>SurrealDB is, at its core, a document database. Each record is stored on an underlying key-value store storage engine, with the ability to store arbitrary arrays, objects, and many other types of data. However, SurrealDB isn't just a document database. Because of the way that SurrealDB handles Record IDs and the fetching of individual records from the underlying key-value storage engine, it can be used to store time-series ordered data, and highly-connected graph data. With the addition of an SQL-like query language (named <Link @link="docs.surrealql">SurrealQL</Link>), it is easy to create, update, and read data from across the database.</p>
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Single-node or distributed</h3>
+	<Docs::Heading @level="3" @id="modes">Single-node or distributed</Docs::Heading>
 	<p>SurrealDB is designed to be run in many different ways, and environments. Due to the <Link @link="docs.introduction.architecture">separation of the storage and compute</Link> layers, SurrealDB can be run in embedded mode, as a vertically-scalable, single-node database server, or as a horizontally-scalable, multi-node, distributed cluster. In embedded mode, SurrealDB can be run with an in-memory storage engine, in a web browser it can persist data using <Link @link="https://web.dev/indexeddb/">IndexedDB</Link>, or it can persist data using the file-based <Link @link="https://rocksdb.org">RocksDB</Link> storage engine. As a database server, SurrealDB can currently be configured to store data using <Link @link="https://rocksdb.org">RocksDB</Link>, <Link @link="https://tikv.org">TiKV</Link>, or <Link @link="https://www.foundationdb.org">FoundationDB</Link>.</p>
 </Layout::Text>
 
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>System structure</h3>
+	<Docs::Heading @level="3" @id="system">System structure</Docs::Heading>
 	<p>
 		SurrealDB works similarly to other traditional relational databases, and document databases, with a few slight differences.
 		SurrealDB is designed and developed to be a multi-tenant database platform with a high-level <Link @link="docs.surrealql.statements.define.namespace"> <code>namespace</code></Link>

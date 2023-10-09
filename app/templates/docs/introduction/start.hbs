@@ -16,13 +16,13 @@
 <Layout::Gap small />
 
 <Layout::Text text-l text-f>
-	<h3>Start the database</h3>
+	<Docs::Heading @level="3" @id="start-db">Start the database</Docs::Heading>
 	<p>First ensure that your database is set up correctly. To do so, run:</p>
 	<Code @name="docs/start/index/version.shell" />
 	<p>To start your database, run the start command specific to your machine.</p>
-    <h4>macOS or Linux</h4>
+    <Docs::Heading @level="4" @id="macos-linux">macOS or Linux</Docs::Heading>
 	<Code @name="docs/start/index/linux.shell" />
-    <h4>Windows</h4>
+    <Docs::Heading @level="4" @id="windows">Windows</Docs::Heading>
 	<Code @name="docs/start/index/windows.shell" />
 
 	<p>Here's what each segment of this command does:</p>
@@ -50,7 +50,7 @@
 <Layout::Gap small />
 
 <Layout::Text text-l text-f>
-	<h3>Using SurrealQL</h3>
+	<Docs::Heading @level="3" @id="using-SurrealQL">Using SurrealQL</Docs::Heading>
 	<p>Using <Link @link="docs.surrealql">SurrealQL</Link>, you can query data from your SurrealDB database. While this is not a
 	requirement for getting started, it is helpful to familiarise yourself with some commands.</p>
 	<p>Once you have your database running, head over to <Link @link="https://surrealist.app/">Surrealist.app</Link>. Before you can start using Surrealist you will have to input the credentials for your session, which include the <code>Endpoint URL</code>, <code>Namespace</code>, <code>Database</code>, <code>Username</code>, and <code>Password</code>. By default these fields are empty and you can set them to the values below. However, these values can be set to your preference.</p>
@@ -81,7 +81,7 @@
 <Layout::Gap small />
 
 <Layout::Text text-l text-f>
-	<h3><code>CREATE</code></h3>
+	<Docs::Heading @level="4" @id="CREATE"><code>CREATE</code></Docs::Heading>
 	<p>The create command is used to add records to the database.</p>
 	<codes vertical>
 		<Code @name="docs/start/index/step3.surql" text="SQL" />
@@ -103,7 +103,7 @@
 <Layout::Gap small />
 
 <Layout::Text text-l text-f>
-	<h3>Querying data with <code>SELECT</code></h3>
+	<Docs::Heading @level="4" @id="select">Querying data with <code>SELECT</code></Docs::Heading>
 	<p> The querying functionality in SurrealDB works similarly to a traditional SQL, but with many of the
 	added benefits of NoSQL query languages. To retrieve data, we will use a <code>SELECT</code> query. You can query all the articles in your records and this will also return the record links.</p>
 	<codes vertical>
@@ -125,7 +125,7 @@
 <Layout::Gap small />
 
 <Layout::Text text-l text-f>
-	<h3><code>UPDATE</code></h3>
+	<Docs::Heading @level="4" @id="update"><code>UPDATE</code></Docs::Heading>
 	<p> Similar to UPDATE in SQL you can also update specific IDs, for example say you wanted to update the first name of the
 	author you can do so:</p>
 	<codes vertical>
@@ -140,7 +140,7 @@
 <Layout::Gap small />
 
 <Layout::Text text-l text-f>
-	<h3><code>DELETE</code></h3>
+	<Docs::Heading @level="4" @id="delete"><code>DELETE</code></Docs::Heading>
 	<p> You can also delete specific records <code>DELETE</code> <code>person:david</code>. You could also delete a record with specific conditions:</p>
 	<codes vertical>
 		<Code @name="docs/start/index/step11.surql" text="SQL" />
@@ -150,7 +150,7 @@
 <Layout::Gap small />
 
 <Layout::Text text-l text-f>
-	<h3><code>REMOVE</code></h3>
+	<Docs::Heading @level="4" @id="remove"><code>REMOVE</code></Docs::Heading>
 	<p> You can also remove a specific table using the <code>REMOVE TABLE</code>:</p>
 	<codes vertical>
 		<Code @name="docs/start/index/step12.surql" text="SQL" />
@@ -163,7 +163,7 @@
 <Layout::Gap small />
 
 <Layout::Text text-l text-f>
-	<h3>Learn more</h3>
+	<Docs::Heading @level="4" @id="learn-more">Learn more</Docs::Heading>
 	<p>By completing this guide you have successfully set up a SurrealDB database and ran some SurrealQL queries. To learn more
 	about <Link @link="docs.surrealql">SurrealQL, refer to the SurrealQL guides</Link>.</p>
 </Layout::Text>

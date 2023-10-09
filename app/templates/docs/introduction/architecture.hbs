@@ -13,7 +13,7 @@
 
 <Layout::Text text-l text-f>
 
-	<h3>Query layer</h3>
+	<Docs::Heading @level="3" @id="query-layer">Query layer</Docs::Heading>
 
 	<p>The SurrealDB query layer (otherwise known as the compute layer) handles queries from the client, analysing which records need to be selected, created, updated, or deleted. To begin with, the query engine runs the SurrealQL query through a <code>parser</code>, returning a parsed query definition. The parsed query is then run through the <code>executor</code> which breaks up each statement within the query, managing those transactions which should be run within the same transaction. Next, each statement is run through the <code>iterator</code> which determines which data should be fetched from the key-value storage engine, and handles index query planning, grouping, ordering, and limiting. Finally, each record is passed through the <code>document</code> processor, processing permissions, and determining which data is merged, altered, and stored on disk.</p>
 
@@ -23,19 +23,19 @@
 
 <Layout::Text text-l text-f>
 
-	<h3>Storage layer</h3>
+	<Docs::Heading @level="3" @id="storage-layer">Storage layer</Docs::Heading>
 
 	<p>The storage layer handles the storage of the data for the query layer. Each storage layer implementation stores data in an ordered list, handling storage on disk, or sharding across a cluster. SurrealDB can use a number of underlying storage engines - some support concurrent readers, and some support concurrent readers and writers. Each storage engine must support a transaction-based approach, with the ability to support reading and writing of individual keys, and key ranges within each transaction.</p>
 
-	<h4>RocksDB</h4>
+	<Docs::Heading @level="4" @id="rocksdb">RocksDB</Docs::Heading>
 
 	<p>In embedded mode, SurrealDB uses <Link @link="https://rocksdb.org">RocksDB</Link> to store data on disk. RocksDB is a high performance embedded database for key-value data. It is originally a fork of Google's LevelDB optimized to exploit many CPU cores, and make efficient use of fast storage, such as solid-state drives and high-speed disk drives. It is based on a log-structured merge-tree data structure.</p>
 
-	<h4>TiKV</h4>
+	<Docs::Heading @level="4" @id="tikv">TiKV</Docs::Heading>
 
 	<p>In distributed mode, SurrealDB can be configured to use <Link @link="https://tikv.org">TiKV</Link> to store data. TiKV is a highly scalable, low latency, and easy to use key-value datastore. TiKV supports raw and transaction-based querying with ACID compliance, and support for multiple concurrent readers and writers. The design of TiKV is inspired by distributed systems from Google, such as BigTable, Spanner, and Percolator, and some of the latest achievements in academia in recent years, such as the Raft consensus algorithm.</p>
 
-	<h4>IndexedDB</h4>
+	<Docs::Heading @level="4" @id="indexeddb">IndexedDB</Docs::Heading>
 
 	<p>When running in a web browser, SurrealDB can be configured to use <Link @link="https://web.dev/indexeddb/">IndexedDB</Link> to store and persist data within the web browser. SurrealDB first serializes both keys and values into a <Link @link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array">Uint8Array</Link>, utilizing IndexedDB as a binary key-value store - offering good performance, and with the ability to offer all of the functionality and features that SurrealDB offers when running in alternative ways.</p>
 

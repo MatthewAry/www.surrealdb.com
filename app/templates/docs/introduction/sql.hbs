@@ -11,14 +11,14 @@
 
 <Layout::Gap mini />
 
-<h3>Introduction</h3>
+<Docs::Heading @level="3" @id="introduction">Introduction</Docs::Heading>
 <p>
     As a multi-model database, SurrealDB offers a lot of flexibility.
     Our SQL-like query language SurrealQL is a good example of this, where we often have more than one way to achieve the same result, depending on developer preference.
     In this mapping guide, we will focus on the syntax that most closely resembles the ANSI Structured Query Language (SQL).
 </p>
 
-<h3>Concepts mapping</h3>
+<Docs::Heading @level="3" @id="concepts-mapping">Concepts mapping</Docs::Heading>
 <p>
     For more in-depth explanations of SurrealDB concepts, see the <Link @link="docs.introduction.concepts">concepts page.</Link>
 </p>
@@ -69,19 +69,19 @@
 
 <Layout::Gap small />
 
-<h3>Syntax mapping</h3>
+<Docs::Heading @level="3" @id="syntax-mapping">Syntax mapping</Docs::Heading>
 <p>
     Let's get you up to speed with SurrealQL syntax with some CRUD examples.
 </p>
 
-<h3>Create</h3>
+<Docs::Heading @level="4" @id="create">Create</Docs::Heading>
 <p>
     As relational databases are schemafull, only the SurrealQL schemafull approach is shown below.
     For a schemaless option see the <Link @link="docs.surrealql.statements.define.table">define table</Link> page.
 </p>
 <p>
-    For more SurrealQL examples, 
-    see the <Link @link="docs.surrealql.statements.create">create</Link> 
+    For more SurrealQL examples,
+    see the <Link @link="docs.surrealql.statements.create">create</Link>
     and <Link @link="docs.surrealql.statements.insert">insert</Link> pages.
 </p>
 
@@ -135,7 +135,7 @@
 				</td>
 				<td>
                     <Code @name="docs-surrealql-index-name.surql">
-                        DEFINE INDEX idx_name 
+                        DEFINE INDEX idx_name
                         ON TABLE person COLUMNS name
                     </Code>
                 </td>
@@ -147,10 +147,10 @@
 
 <Layout::Gap small />
 
-<h3>Read</h3>
+<Docs::Heading @level="4" @id="read">Read</Docs::Heading>
 <p>
-    For more SurrealQL examples, 
-    see the <Link @link="docs.surrealql.statements.select">select</Link>, 
+    For more SurrealQL examples,
+    see the <Link @link="docs.surrealql.statements.select">select</Link>,
     <Link @link="docs.surrealql.statements.live-select">live select</Link>
     and <Link @link="docs.surrealql.statements.return">return</Link> pages.
 </p>
@@ -180,13 +180,13 @@
 			<tr>
 				<td>
                     <Code @name="docs-surrealql-sql-find-person.sql">
-                        SELECT name 
+                        SELECT name
                         FROM person
                     </Code>
 				</td>
 				<td>
                     <Code @name="docs-surrealql-select-name.surql">
-                        SELECT name 
+                        SELECT name
                         FROM person
                     </Code>
                 </td>
@@ -294,9 +294,9 @@
 
 <Layout::Gap small />
 
-<h3>Update</h3>
+<Docs::Heading @level="4" @id="update">Update</Docs::Heading>
 <p>
-    For more SurrealQL examples, 
+    For more SurrealQL examples,
     see the <Link @link="docs.surrealql.statements.update">update</Link> page.
 </p>
 <Layout::Table filled>
@@ -347,7 +347,7 @@
 				</td>
 				<td>
                     <Code @name="docs-surrealql-update-remove-column.surql">
-                        REMOVE FIELD last_name 
+                        REMOVE FIELD last_name
                         ON TABLE person
                     </Code>
                 </td>
@@ -358,10 +358,10 @@
 
 <Layout::Gap small />
 
-<h3>Delete</h3>
+<Docs::Heading @level="4" @id="delete">Delete</Docs::Heading>
 <p>
-    For more SurrealQL examples, 
-    see the <Link @link="docs.surrealql.statements.delete">delete</Link> 
+    For more SurrealQL examples,
+    see the <Link @link="docs.surrealql.statements.delete">delete</Link>
     and <Link @link="docs.surrealql.statements.remove">remove</Link> pages.
 </p>
 <Layout::Table filled>
@@ -377,13 +377,13 @@
 				<td>
                     <Code @name="docs-surrealql-sql-delete.sql">
                         DELETE FROM person
-                        WHERE name = "Jane" 
+                        WHERE name = "Jane"
                     </Code>
 				</td>
 				<td>
                     <Code @name="docs-surrealql-delete-person.surql">
                         DELETE person
-                        WHERE name = "Jane" 
+                        WHERE name = "Jane"
                     </Code>
                 </td>
 			</tr>
@@ -397,7 +397,7 @@
                     <Code @name="docs-surrealql-delete-all.surql">
                         DELETE person
                     </Code>
-                </td> 
+                </td>
 			</tr>
 			<tr>
 				<td>
