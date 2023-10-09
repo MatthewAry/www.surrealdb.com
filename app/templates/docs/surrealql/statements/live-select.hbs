@@ -27,15 +27,15 @@
 
 	<Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 
-	<Docs::Heading @level="5">Basic usage</Docs::Heading>
+	<Docs::Heading @level="4" @id="basic-usage">Basic usage</Docs::Heading>
 	<p>By default, SurrealDB will push the entire record over the websocket when created or updated, and just the record's ID when deleted.</p>
 	<Code @name="docs/surrealql/statements/live-select/simple.surql" />
 
-	<Docs::Heading @level="5">Diff</Docs::Heading>
+	<Docs::Heading @level="4" @id="diff">Diff</Docs::Heading>
 	<p>When using the <code>DIFF</code> mode, updates will be sent in the form of an array with <Link @link="https://jsonpatch.com">JSON Patch</Link> messages.</p>
 	<Code @name="docs/surrealql/statements/live-select/diff.surql" />
 
-	<Docs::Heading @level="5">Filter the live query</Docs::Heading>
+	<Docs::Heading @level="4" @id="filter-live-query">Filter the live query</Docs::Heading>
 	<p>You can optionally apply filters with the <code>WHERE</code> clause.</p>
 	<Code @name="docs/surrealql/statements/live-select/filtered.surql" />
 </Layout::Text>

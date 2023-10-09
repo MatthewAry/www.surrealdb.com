@@ -23,11 +23,11 @@
 
 	<Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 
-	<Docs::Heading @level="5">Basic usage</Docs::Heading>
+	<Docs::Heading @level="4" @id="basic-usage">Basic usage</Docs::Heading>
 	<p>The <code>RETURN</code> statement can return anything from simple values to the result of queries.</p>
 	<Code @name="docs/surrealql/statements/return/simple.surql" />
 
-	<Docs::Heading @level="5">Transaction return value</Docs::Heading>
+	<Docs::Heading @level="4" @id="transaction-return">Transaction return value</Docs::Heading>
 	<p><code>RETURN</code> statements can set the result of any transaction. This includes transactions, blocks and functions.</p>
 	<Code @name="docs/surrealql/statements/return/transaction.surql" text="Transaction return value" />
 	<Layout::Gap tiny />
@@ -35,7 +35,7 @@
 	<Layout::Gap tiny />
 	<Code @name="docs/surrealql/statements/return/function.surql" text="Function return value" />
 
-	<Docs::Heading @level="5">Return does not break</Docs::Heading>
+	<Docs::Heading @level="4" @id="no-break">Return does not break</Docs::Heading>
 	<p>Do keep in mind that the <code>RETURN</code> statement does not break out of a block or a transaction.</p>
 	<Code @name="docs/surrealql/statements/return/return-does-not-break.surql"/>
 

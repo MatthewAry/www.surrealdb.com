@@ -32,14 +32,14 @@
 	<Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 	<p>The <code>INFO</code> command outputs information about the setup of the SurrealDB system. There are a number of different <code>INFO</code> commands for retrieving the configuration at the different levels of the database.</p>
 
-	<Docs::Heading @level="5">System information</Docs::Heading>
+	<Docs::Heading @level="4">System information</Docs::Heading>
 	<p>The top-level <code>KV</code> command returns information regarding the namespaces which exists within the SurrealDB system.</p>
 	<blockquote yellow text="Info">You must be authenticated as a top-level root user to execute this command.</blockquote>
 	<Code @name="docs-surrealql-statements-info-kv.surql">
 		INFO FOR KV;
 	</Code>
 
-	<Docs::Heading @level="5">Namespace information</Docs::Heading>
+	<Docs::Heading @level="4" @id="namespace-information">Namespace information</Docs::Heading>
 	<p>The <code>NS</code> or <code>NAMESPACE</code> command returns information regarding the users, tokens, and databases under a specific Namespace.</p>
 	<blockquote yellow text="Info">You must be authenticated as a top-level root user, or a namespace user to execute this command.</blockquote>
 	<blockquote yellow text="Info">You must have a <code>NAMESPACE</code> selected before running this command.</blockquote>
@@ -47,7 +47,7 @@
 		INFO FOR NS;
 	</Code>
 
-	<Docs::Heading @level="5">Database information</Docs::Heading>
+	<Docs::Heading @level="4" @id="database-information">Database information</Docs::Heading>
 	<p>The <code>DB</code> or <code>DATABASE</code> command returns information regarding the users, tokens, and scopes, and tables under a specific Database.</p>
 	<blockquote yellow text="Info">You must be authenticated as a top-level root user, a namespace user, or a database user to execute this command.</blockquote>
 	<blockquote yellow text="Info">You must have a <code>NAMESPACE</code> and a <code>DATABASE</code> selected before running this command.</blockquote>
@@ -55,7 +55,7 @@
 		INFO FOR DB;
 	</Code>
 
-	<Docs::Heading @level="5">Scope information</Docs::Heading>
+	<Docs::Heading @level="4" @id="scope-information">Scope information</Docs::Heading>
 	<p>The <code>SCOPE</code> command returns information regarding the tokens configured under a specific Scope.</p>
 	<blockquote yellow text="Info">You must be authenticated as a top-level root user, a namespace user, or a database user to execute this command.</blockquote>
 	<blockquote yellow text="Info">You must have a <code>NAMESPACE</code> and a <code>DATABASE</code> selected before running this command.</blockquote>
@@ -63,7 +63,7 @@
 		INFO FOR SCOPE user;
 	</Code>
 
-	<Docs::Heading @level="5">Table information</Docs::Heading>
+	<Docs::Heading @level="4" @id="table-information">Table information</Docs::Heading>
 	<p>The <code>TABLE</code> command returns information regarding the events, fields, indexes, and foreign table configurations on a specific Table.</p>
 	<blockquote yellow text="Info">You must be authenticated as a top-level root user, a namespace user, or a database user to execute this command.</blockquote>
 	<blockquote yellow text="Info">You must have a <code>NAMESPACE</code> and a <code>DATABASE</code> selected before running this command.</blockquote>

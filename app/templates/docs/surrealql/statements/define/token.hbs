@@ -52,13 +52,10 @@
 	<Docs::Heading @level="3" @id="examples">Example usage</Docs::Heading>
 	<p>The following example shows how you could use the <code>DEFINE TOKEN</code> statement.</p>
 	<Code @name="docs/surrealql/statements/define/token/token.surql" />
-</Layout::Text>
 
-<Layout::Gap mini />
+    <Layout::Gap mini />
 
-<Layout::Text text-l text-f>
-
-	<h3>Using Tokens</h3>
+	<Docs::Heading @level="4" @id="using-tokens">Using Tokens</Docs::Heading>
 	<p>
 		The <code>DEFINE TOKEN</code> statement lets you specify the amount of permission granting authority you want
 		to give to an OAuth provider. You're able to specify if the provider can grant namespace, database, or scope
@@ -66,7 +63,7 @@
 		namespace, database or scope or the token bearer is authorized to act on.
 	</p>
 
-	<h4>Namespace</h4>
+	<Docs::Heading @level="4" @id="namespace">Namespace</Docs::Heading>
 	<p>The following example shows how this would work for a token to grant authorization on a namespace.</p>
 	<Code @name="docs/surrealql/statements/define/token/authorize-namespace-token.surql" />
 	<p>
@@ -75,12 +72,12 @@
 	</p>
 	<Code @name="docs/surrealql/statements/define/token/authorize-namespace-token.json" text="JWT Payload" />
 
-	<h4>Database</h4>
+	<Docs::Heading @level="4" @id="database">Database</Docs::Heading>
 	<p>The following example shows how this would work for a token to grant authorization on a database.</p>
 	<Code @name="docs/surrealql/statements/define/token/token.surql" />
 	<Code @name="docs/surrealql/statements/define/token/authorize-database-token.json" text="JWT Payload" />
 
-	<h4>Scope</h4>
+	<Docs::Heading @level="4" @id="scope">Scope</Docs::Heading>
 	<p>The following example shows how this would work for a token to grant authorization on a scope.</p>
 	<Code @name="docs/surrealql/statements/define/token/authorize-scope-token.surql" />
 	<Code @name="docs/surrealql/statements/define/token/authorize-scope-token.json" text="JWT Payload" />

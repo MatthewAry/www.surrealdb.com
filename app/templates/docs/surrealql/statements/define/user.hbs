@@ -52,50 +52,50 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Roles</h3>
+	<Docs::Heading @level="3" @id="roles">Roles</Docs::Heading>
 	<p>Currently, only the built-in roles <code>OWNER</code>, <code>EDITOR</code> and <code>VIEWER</code> are available.</p>
+	<Layout::Gap tiny />
+
+	<Layout::Table filled>
+		<table>
+			<thead>
+				<tr>
+					<th w-20>Role</th>
+					<th w-80>Description</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<code>OWNER</code>
+					</td>
+					<td>
+						Can view and edit any resource on the user's level or below, including user and token (IAM) resources.
+						<br>It also grants full permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<code>EDITOR</code>
+					</td>
+					<td>
+						Can view and edit any resource on the user's level or below, but not users or token (IAM) resources
+						<br>It also grants full permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<code>VIEWER</code>
+					</td>
+					<td>
+						Grants permissions to view any resource on the user's level or below, but not edit.
+						<br>It also grants view permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</Layout::Table>
 </Layout::Text>
 
-<Layout::Gap tiny />
-
-<Layout::Table filled>
-	<table>
-		<thead>
-			<tr>
-				<th w-20>Role</th>
-				<th w-80>Description</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>
-					<code>OWNER</code>
-				</td>
-				<td>
-					Can view and edit any resource on the user's level or below, including user and token (IAM) resources.
-					<br>It also grants full permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<code>EDITOR</code>
-				</td>
-				<td>
-					Can view and edit any resource on the user's level or below, but not users or token (IAM) resources
-					<br>It also grants full permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<code>VIEWER</code>
-				</td>
-				<td>
-					Grants permissions to view any resource on the user's level or below, but not edit.
-					<br>It also grants view permissions for child resources that support the `PERMISSIONS` clause (tables, fields, etc.)
-				</td>
-			</tr>
-		</tbody>
-	</table>
-</Layout::Table>
 
 <Layout::Gap large />
