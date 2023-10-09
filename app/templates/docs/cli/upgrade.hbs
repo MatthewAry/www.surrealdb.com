@@ -13,7 +13,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="4">Command options</Docs::Heading>
+	<Docs::Heading @level="4" @id="command-options">Command options</Docs::Heading>
 	<Layout::Table filled>
 		<table>
 			<thead>
@@ -62,7 +62,7 @@
 		</Code>
 	</codes>
 
-	<Docs::Heading @level="4">Global install</Docs::Heading>
+	<Docs::Heading @level="4" @id="global-install">Global install</Docs::Heading>
 	<p>If SurrealDB is installed globally on your system, you might need to run the upgrade command with elevated permissions.</p>
 	<codes vertical>
 		<Code @name="docs-cli-upgrade-sudo.shell" text="Command line">
@@ -70,7 +70,7 @@
 		</Code>
 	</codes>
 
-	<Docs::Heading @level="4">Install nightly</Docs::Heading>
+	<Docs::Heading @level="4" @id="nightly">Install nightly</Docs::Heading>
 	<p>Use the <code>--nightly</code> flag to upgrade to the latest nightly version of SurrealDB.</p>
 	<codes vertical>
 		<Code @name="docs-cli-upgrade-nightly.shell" text="Command line">
@@ -78,7 +78,7 @@
 		</Code>
 	</codes>
 
-	<Docs::Heading @level="4">Install specific version</Docs::Heading>
+	<Docs::Heading @level="4" @id="specific-version">Install specific version</Docs::Heading>
 	<p>Use the <code>--version</code> flag to upgrade to the a specific version of SurrealDB.</p>
 	<codes vertical>
 		<Code @name="docs-cli-upgrade-specific-version.shell" text="Command line">
@@ -90,7 +90,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<Docs::Heading @level="4">Command help</Docs::Heading>
+	<Docs::Heading @level="4" @id="command-help">Command help</Docs::Heading>
 	<p>To see the help information and usage instructions, in a terminal run the <Ascua::Prism::Inline @language="shell" @code="surreal upgrade --help" /> command without any further arguments. This command gives general information on the arguments, inputs, and additional options for the <code>upgrade</code> command.</p>
 	<codes vertical>
 		<Code @name="docs-cli-help-upgrade.shell" text="Command line">
