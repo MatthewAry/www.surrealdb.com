@@ -15,8 +15,8 @@
 
 <Layout::Line />
 
-<Layout::Text text-l text-f {{waypoint "system-users"}}>
-	<h2>System users</h2>
+<Layout::Text text-l text-f>
+	<Docs::Heading @level="3" @id="system-users">System users</Docs::Heading>
 	<p><strong>System users</strong> is the term we use to describe users defined directly on SurrealDB by the administrator. Same concept as any other database.</p>
 	<p>
 		Users may belong to different levels (root, namespace or database) and have different roles assigned to limit what they can do to the system.
@@ -30,49 +30,43 @@
 
 	<Layout::gap tiny />
 
-	<h3>Example: Define a Root-level user</h3>
+	<Docs::Heading @level="4" @id="example-root-user">Example: Define a Root-level user</Docs::Heading>
 	<p>Root-level users have visibility into all namespaces and databases, which means that their permissions apply to all of those levels.</p>
 	<p>In this example we will create a root-level user <code>john</code> with a password and the <code>OWNER</code> role:</p>
 
 	<Code @name="docs/security/system-users/root-define.surql" text="Define user" />
-
-	<Layout::gap tiny />
-
-	<h4>Sign in using the new user</h4>
+	<Docs::Heading @level="5" @id="ex1-sign-in-new-user">Sign in using the new user</Docs::Heading>
 	<p>Examples using the JavaScript SDK or a raw HTTP request.</p>
 
-	<h5>JavaScript SDK</h5>
+	<Docs::Heading @level="6" @id="ex1-javascript">JavaScript SDK</Docs::Heading>
 	<Code @name="docs/security/system-users/root-signin.js" />
 
-	<h5>HTTP Request</h5>
+	<Docs::Heading @level="6" @id="ex1-http">HTTP Request</Docs::Heading>
 	<Code @name="docs/security/system-users/root-signin.bash" />
 
 	<Layout::gap tiny />
 
-	<h3>Example: Define a Database-level user</h3>
+	<Docs::Heading @level="4" @id="example-db-user">Example: Define a Database-level user</Docs::Heading>
 	<p>Database-level users have visibility into all resources that belong to the database where the user is defined.</p>
 	<p>In this example we will create a database-level user <code>mary</code> with a password and the <code>EDITOR</code> role:</p>
 
 	<Code @name="docs/security/system-users/database-define.surql" text="Define user" />
-
-	<Layout::gap tiny />
-
-	<h4>Sign in using the new user</h4>
+	<Docs::Heading @level="5" @id="ex2-sign-in-new-user">Sign in using the new user</Docs::Heading>
 	<p>Examples using the JavaScript SDK or a raw HTTP request.</p>
 	<p>Notice how we need to pass along <code>NS</code> and <code>DB</code> properties here, to let SurrealDB know where the user is defined.</p>
 
-	<h5>JavaScript SDK</h5>
+	<Docs::Heading @level="6" @id="ex2-javascript">JavaScript SDK</Docs::Heading>
 	<Code @name="docs/security/system-users/database-signin.js" />
 
-	<h5>HTTP Request</h5>
+	<Docs::Heading @level="6" @id="ex2-http">HTTP Request</Docs::Heading>
 	<Code @name="docs/security/system-users/database-signin.bash" />
 </Layout::Text>
 
 <Layout::Gap tiny />
 <Layout::Line />
 
-<Layout::Text text-l text-f {{waypoint "scope-users"}}>
-    <h2>Scope users</h2>
+<Layout::Text text-l text-f>
+    <Docs::Heading @level="3" @id="scope-users">Scope users</Docs::Heading>
 	<p><strong>Scope</strong> is the term we use to describe the mechanism SurrealDB offers to define your own signin and signup logic. This feature contributes to making SurrealDB an all-in-one BaaS (Backend-as-a-Service).</p>
 	<p>
 		Scopes are defined with the <Link @link="docs.surrealql.statements.define.scope">DEFINE SCOPE</Link> statement. A scope is configured with the following config:
@@ -88,10 +82,10 @@
 
 	<Layout::gap tiny />
 
-	<h3>Example: Setup scope authentication</h3>
+	<Docs::Heading @level="4" @id="example-scope-auth">Example: Setup scope authentication</Docs::Heading>
 	<p>We will go over one of the many ways you can set up scope authentication. Given you can define your own logic, there is not a single way to do it. Feel free to modify where needed!</p>
 
-	<h4>Define the User table and fields</h4>
+	<Docs::Heading @level="5" @id="ex3-define-user-table">Define the User table and fields</Docs::Heading>
 	<p>Typically, you would define a user table where new records are created every time a user signs up.</p>
 	<p>In the following code snippet we will define the <code>user</code> table and a few <code>fields</code> that enforce the following:</p>
 	<ul>
@@ -103,7 +97,7 @@
 
 	<Layout::gap tiny />
 
-	<h4>Define the User scope</h4>
+	<Docs::Heading @level="5" @id="ex3-define-user-scope">Define the User scope</Docs::Heading>
 	<p>Define the <code>user</code> scope: allow users to signin and signup by using the table and fields defined in the previous step</p>
 	<p>The scope is configured like this:</p>
 	<ul>
@@ -113,28 +107,24 @@
 	</ul>
 	<Code @name="docs/security/scope-authentication/user-scope.surql" text="Scope definition" />
 
-	<Layout::gap tiny />
-
-	<h4>Sign up to the scope</h4>
+	<Docs::Heading @level="5" @id="ex3-sign-up-scope">Sign up to the scope</Docs::Heading>
 	<p>Now that the scope is defined, we can start using it.</p>
 	<p>Examples using the JavaScript SDK or a raw HTTP request.</p>
 
-	<h5>JavaScript SDK</h5>
+	<Docs::Heading @level="6" @id="ex3-javascript">JavaScript SDK</Docs::Heading>
 	<Code @name="docs/security/scope-authentication/user-signup.js" />
 
-	<h5>HTTP Request</h5>
+	<Docs::Heading @level="6" @id="ex3-http">HTTP Request</Docs::Heading>
 	<Code @name="docs/security/scope-authentication/user-signup.bash" />
 
-	<Layout::gap tiny />
-
-	<h4>Sign in to the scope</h4>
+	<Docs::Heading @level="5" @id="ex3-sign-in-scope">Sign in to the scope</Docs::Heading>
 	<p>Once a user has signed up, it can now sign in when needed.</p>
 	<p>Examples using the JavaScript SDK or a raw HTTP request.</p>
 
-	<h5>JavaScript SDK</h5>
+	<Docs::Heading @level="6" @id="ex3-2-javascript">JavaScript SDK</Docs::Heading>
 	<Code @name="docs/security/scope-authentication/user-signin.js" />
 
-	<h5>HTTP Request</h5>
+	<Docs::Heading @level="6" @id="ex3-2-http">HTTP Request</Docs::Heading>
 	<Code @name="docs/security/scope-authentication/user-signin.bash" />
 </Layout::Text>
 

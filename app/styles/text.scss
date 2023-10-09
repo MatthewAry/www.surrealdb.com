@@ -287,16 +287,17 @@ $doc-heading-styles: (
     font-weight: 500,
   ),
   h4: (
-    font-size: 2.125rem,
+    font-size: 2.25rem,
     font-weight: 500,
   ),
   h5: (
-    font-size: 1.5rem,
+    font-size: 1.75rem,
     font-weight: 500,
   ),
   h6: (
     font-size: 1.25rem,
     font-weight: 500,
+	letter-spacing: .0125em,
   ),
 );
 
@@ -306,6 +307,7 @@ $doc-heading-styles: (
 		@each $property, $value in $styles {
 			#{$property}: $value;
 		}
+
     }
   }
 }

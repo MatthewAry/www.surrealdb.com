@@ -18,9 +18,9 @@
 
 <Layout::Line />
 
-<Layout::Text text-l text-f {{waypoint "full-list"}}>
-	<h2>Capabilities list</h2>
-	<h4>List of options for allowing capabilities:</h4>
+<Layout::Text text-l text-f>
+	<Docs::Heading @level="3" @id="full-list">Capabilities list</Docs::Heading>
+	<Docs::Heading @level="5" @id="allow-options">List of options for allowing capabilities:</Docs::Heading>
 	<Layout::Table filled>
 		<table>
 			<thead>
@@ -71,7 +71,7 @@
 		</table>
 	</Layout::Table>
 	<p></p>
-	<h4>List of options for denying capabilities:</h4>
+	<Docs::Heading @level="5" @id="deny-options">List of options for denying capabilities:</Docs::Heading>
 	<Layout::Table filled>
 		<table>
 			<thead>
@@ -131,8 +131,8 @@
 
 <Layout::Line />
 
-<Layout::Text text-l text-f {{waypoint "guest-access"}}>
-	<h2>Guest access</h2>
+<Layout::Text text-l text-f>
+	<Docs::Heading @level="3" @id="guest-access">Guest access</Docs::Heading>
 	<p>
 		Guest access is used when you want to expose certain parts of a database to non-authenticated users.
 		It's useful when you want to serve datasets publicly and still require authentication for the rest of the system.
@@ -144,8 +144,8 @@
 
 <Layout::Line />
 
-<Layout::Text text-l text-f {{waypoint "functions"}}>
-	<h2>Functions</h2>
+<Layout::Text text-l text-f>
+	<Docs::Heading @level="3" @id="functions">Functions</Docs::Heading>
 	<p>
 		SurrealDB offers <Link @link="docs.surrealql.functions">built-in functions</Link> to perform common operations like string manipulation, math, etc.
 		Users can also define <Link @link="docs.surrealql.statements.define.function">their own functions</Link> with custom logic.
@@ -160,8 +160,8 @@
 
 <Layout::Line />
 
-<Layout::Text text-l text-f {{waypoint "net"}}>
-	<h2>Network</h2>
+<Layout::Text text-l text-f>
+	<Docs::Heading @level="3" @id="net">Network</Docs::Heading>
 	<p>
 		SurrealDB offers <Link @link="docs.surrealql.functions">http functions</Link> that can access external network endpoints.
 	</p>
