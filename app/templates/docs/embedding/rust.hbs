@@ -24,7 +24,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Install the SDK</h3>
+	<Docs::Heading @level="3" @id="install-sdk">Install the SDK</Docs::Heading>
 	<p>First, create a new project using <code>cargo new</code> and add the SurrealDB crate to your dependencies:</p>
 	<Code @name="docs-integration-libraries-rust-crate.bash">
 		cargo add surrealdb
@@ -42,7 +42,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Connect to SurrealDB</h3>
+	<Docs::Heading @level="3" @id="connect-to-SurrealDB">Connect to SurrealDB</Docs::Heading>
 	<p>Open <code>src/main.rs</code> and replace everything in there with the following code to try out some basic
 		operations using the SurrealDB SDK with an embedded database. Look at
 		<Link @link="docs.integration.sdks.rust">integrations to connect to a database.
@@ -59,7 +59,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>SDK methods</h3>
+	<Docs::Heading @level="3" @id="SDK-methods">SDK methods</Docs::Heading>
 	<p>The Rust SDK comes with a number of built-in functions.</p>
 </Layout::Text>
 
@@ -180,12 +180,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "init" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="init">
 			<Ascua::Prism::Inline @language="rust" @code="Surreal::init()" />
-		</h3>
+		</Docs::Heading>
 		<p>The <code>DB</code> static singleton ensures that a single database instance is available across very large
 			or complicated applications. With the singleton, only one connection to the database is instantiated, and
 			the database connection does not have to be shared across components or controllers.</p>
@@ -196,12 +196,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "connect" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="connect">
 			<Ascua::Prism::Inline @language="rust" @code="db.connect(endpoint)" />
-		</h3>
+		</Docs::Heading>
 		<p>Connects to a local or remote database endpoint.</p>
 		<Layout::Table>
 			<table>
@@ -231,12 +231,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "new" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="new">
 			<Ascua::Prism::Inline @language="rust" @code="Surreal::new::<T>(endpoint)" />
-		</h3>
+		</Docs::Heading>
 		<p>Connects to a local or remote database endpoint.</p>
 		<Layout::Table>
 			<table>
@@ -266,12 +266,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "use" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="use">
 			<Ascua::Prism::Inline @language="rust" @code="db.use_ns(ns).use_db(db)" />
-		</h3>
+		</Docs::Heading>
 		<p>Switch to a specific namespace and database.</p>
 		<Layout::Table>
 			<table>
@@ -312,12 +312,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "set" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="set">
 			<Ascua::Prism::Inline @language="rust" @code="db.set(key, val)" />
-		</h3>
+		</Docs::Heading>
 		<p>Assigns a value as a parameter for this connection.</p>
 		<Layout::Table>
 			<table>
@@ -356,12 +356,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "query" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="query">
 			<Ascua::Prism::Inline @language="rust" @code="db.query(sql).bind(vars)" />
-		</h3>
+		</Docs::Heading>
 		<p>Runs a set of SurrealQL statements against the database.</p>
 		<Layout::Table>
 			<table>
@@ -400,12 +400,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "select" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="select">
 			<Ascua::Prism::Inline @language="rust" @code="db.select(resource)" />
-		</h3>
+		</Docs::Heading>
 		<p>Selects all records in a table, or a specific record, from the database.</p>
 		<Layout::Table>
 			<table>
@@ -439,12 +439,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "create" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="create">
 			<Ascua::Prism::Inline @language="rust" @code="db.create(resource).content(data)" />
-		</h3>
+		</Docs::Heading>
 		<p>Creates a record in the database.</p>
 		<Layout::Table>
 			<table>
@@ -487,12 +487,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "update" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="update">
 			<Ascua::Prism::Inline @language="rust" @code="db.update(resource).content(data)" />
-		</h3>
+		</Docs::Heading>
 		<p>Updates all records in a table, or a specific record, in the database.</p>
 		<blockquote yellow text="Note">This function replaces the current document / record data with the specified
 			data.</blockquote>
@@ -537,12 +537,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "change" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="merge">
 			<Ascua::Prism::Inline @language="rust" @code="db.update(resource).merge(data)" />
-		</h3>
+		</Docs::Heading>
 		<p>Modifies all records in a table, or a specific record, in the database.</p>
 		<blockquote yellow text="Note">This function merges the current document / record data with the specified data.
 		</blockquote>
@@ -587,12 +587,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "modify" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="patch">
 			<Ascua::Prism::Inline @language="rust" @code="db.update(resource).patch(data)" />
-		</h3>
+		</Docs::Heading>
 		<p>Applies
 			<Link @link="https://jsonpatch.com">JSON Patch</Link> changes to all records, or a specific record, in the
 			database.
@@ -642,12 +642,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "delete" }}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="4" @mt0="true" @id="delete">
 			<Ascua::Prism::Inline @language="rust" @code="db.delete(resource)" />
-		</h3>
+		</Docs::Heading>
 		<p>Deletes all records in a table, or a specific record, from the database.</p>
 		<Layout::Table>
 			<table>
