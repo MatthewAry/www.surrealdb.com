@@ -24,7 +24,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Install the SDK</h3>
+	<Docs::Heading @level="3" @id="install-sdk">Install the SDK</Docs::Heading>
 	<p>
 		You can add the SDK to your project like you would any standard dependency.
 	</p>
@@ -60,7 +60,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Connect</h3>
+	<Docs::Heading @level="3" @id="connect-example">Connect</Docs::Heading>
 	<p>Below is a snippet of code that demonstrates how you can connect to SurrealDB.</p>
 	<Code @name="docs/integration/libraries/java/basic.java"/>
 </Layout::Text>
@@ -68,7 +68,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>SDK methods</h3>
+	<Docs::Heading @level="3" @id="methods">SDK methods</Docs::Heading>
 	<p>The Java SDK comes with a number of built-in functions.</p>
 </Layout::Text>
 
@@ -258,12 +258,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "conninit"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="conninit">
 			<Ascua::Prism::Inline @language="java" @code="new SurrealWebSocketConnection(host, port, tls)" />
-		</h3>
+		</Docs::Heading>
 		<p>Initiates a connection instance that can be used to make a connection to a SurrealDB instance.</p>
 		<Layout::Table>
 			<table>
@@ -310,12 +310,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "connect"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="connect">
 			<Ascua::Prism::Inline @language="java" @code="SurrealWebSocketConnection.connect(timeout)" />
-		</h3>
+		</Docs::Heading>
 		<p>Connects to the SurrealDB instance within the timeout of seconds.</p>
 		<Layout::Table>
 			<table>
@@ -344,12 +344,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "init"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="init">
 			<Ascua::Prism::Inline @language="java" @code="new SyncSurrealDriver(conn)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Creates an instance of the synchronous driver.
 			There is an asynchronous counterpart - AsyncSurrealDriver that fills the same functionality.
@@ -381,12 +381,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signin"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signin">
 			<Ascua::Prism::Inline @language="java" @code="driver.signIn(user, pass)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Sign in to the database.
 			This is a necessary step before using the database.
@@ -427,13 +427,13 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signup"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signup">
 			<Ascua::Prism::Inline @language="java"
 								  @code="driver.signUp(namespace, database, scope, email, password)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Signs up a user to a specific authentication scope.
 		</p>
@@ -500,12 +500,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "authenticate"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="authenticate">
 			<Ascua::Prism::Inline @language="java" @code="driver.authenticate(token)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Authenticates the current connection with a JWT token.
 		</p>
@@ -536,12 +536,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "invalidate"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="invalidate">
 			<Ascua::Prism::Inline @language="java" @code="driver.invalidate()" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Invalidates the authentication for the current connection.
 		</p>
@@ -551,12 +551,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "use"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="use">
 			<Ascua::Prism::Inline @language="java" @code="driver.use(namespace, database)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Switch to a specific namespace and database.
 		</p>
@@ -596,12 +596,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "let"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="let">
 			<Ascua::Prism::Inline @language="java" @code="driver.let(key, value)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Set a variable that can be used throughout the database session.
 		</p>
@@ -641,12 +641,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "query"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="query">
 			<Ascua::Prism::Inline @language="java" @code="driver.query(query, args, rowType)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Runs a set of SurrealQL statements against the database.
 		</p>
@@ -695,12 +695,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "select"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="select">
 			<Ascua::Prism::Inline @language="java" @code="driver.select(thing, rowType)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Selects all records in a table, or a specific record.
 		</p>
@@ -740,12 +740,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "create"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="create">
 			<Ascua::Prism::Inline @language="java" @code="driver.create(thing, data)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Creates a record in the database.
 		</p>
@@ -785,12 +785,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "update"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="update">
 			<Ascua::Prism::Inline @language="java" @code="driver.update(thing, data)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Updates all records in a table, or a specific record.
 		</p>
@@ -830,12 +830,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "change"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="change">
 			<Ascua::Prism::Inline @language="java" @code="driver.change(thing, data, rowType)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Change all records in a table, or a specific record.
 		</p>
@@ -884,12 +884,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "patch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="patch">
 			<Ascua::Prism::Inline @language="java" @code="driver.patch(thing, patches)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Patch all records in a table, or a specific record.
 		</p>
@@ -929,12 +929,12 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "delete"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>
+		<Docs::Heading @level="5" @mt0="true" @id="delete">
 			<Ascua::Prism::Inline @language="java" @code="driver.delete(thing)" />
-		</h3>
+		</Docs::Heading>
 		<p>
 			Deletes all records, or a specific record.
 		</p>

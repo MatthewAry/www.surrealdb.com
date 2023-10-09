@@ -171,10 +171,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "use"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>use</code> <code>[ ns, db ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="use"><code>use</code> <code>[ ns, db ]</code> method</Docs::Heading>
 		<p>This method specifies the namespace and database for the current connection</p>
 		<Layout::Table>
 			<table>
@@ -212,10 +212,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "info"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>info</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="info"><code>info</code> method</Docs::Heading>
 		<p>This method returns the record of an authenticated scope user.</p>
 		<h4>Example message</h4>
 		<Code @name="docs/integration/websocket/text/req-info.json" @language="json" />
@@ -228,10 +228,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signup"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>signup</code> <code>[ NS, DB, SC, ... ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signup"><code>signup</code> <code>[ NS, DB, SC, ... ]</code> method</Docs::Heading>
 		<p>This method allows you to signup a user against a scope&apos;s <code>SIGNUP</code> method</p>
 		<Layout::Table>
 			<table>
@@ -282,10 +282,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signin"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>signin</code> <code>[ NS, DB, SC, ... ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signin"><code>signin</code> <code>[ NS, DB, SC, ... ]</code> method</Docs::Heading>
 		<p>This method allows you to signin a root, NS, DB or SC user against SurrealDB</p>
 		<Layout::Table>
 			<table>
@@ -365,10 +365,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "authenticate"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>authenticate</code> <code>[ token ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="authenticate"><code>authenticate</code> <code>[ token ]</code> method</Docs::Heading>
 		<p>This method allows you to authenticate a user against SurrealDB with a token</p>
 		<Layout::Table>
 			<table>
@@ -399,10 +399,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "invalidate"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>invalidate</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="invalidate"><code>invalidate</code> method</Docs::Heading>
 		<p>This method will invalidate the user&apos;s session for the current connection</p>
 		<h4>Example message</h4>
 		<Code @name="docs/integration/websocket/text/req-invalidate.json" @language="json" />
@@ -414,10 +414,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "let"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>let</code> <code>[ name, value ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="let"><code>let</code> <code>[ name, value ]</code> method</Docs::Heading>
 		<p>This method stores a variable on the current connection</p>
 		<Layout::Table>
 			<table>
@@ -455,10 +455,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "unset"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>unset</code> <code>[ name ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="unset"><code>unset</code> <code>[ name ]</code> method</Docs::Heading>
 		<p>This method removes a variable from the current connection</p>
 		<Layout::Table>
 			<table>
@@ -489,10 +489,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "live"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>live</code> <code>[ table ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="live"><code>live</code> <code>[ table ]</code> method</Docs::Heading>
 		<p>This methods initiates a live query for a specified table name</p>
 		<blockquote yellow text="Information">
 			For more advanced live queries where filters are needed, use the <a href="#query">Query</a> method to initiate a custom live query.
@@ -536,10 +536,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "kill"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>kill</code> <code>[ queryUuid ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="kill"><code>kill</code> <code>[ queryUuid ]</code> method</Docs::Heading>
 		<p>This methods kills an active live query</p>
 		<Layout::Table>
 			<table>
@@ -570,10 +570,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "query"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>query</code> <code>[ sql, vars ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="query"><code>query</code> <code>[ sql, vars ]</code> method</Docs::Heading>
 		<p>This method executes a custom query against SurrealDB</p>
 		<Layout::Table>
 			<table>
@@ -611,10 +611,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "select"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>select</code> <code>[ thing ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="select"><code>select</code> <code>[ thing ]</code> method</Docs::Heading>
 		<p>This method selects either all records in a table or a single record</p>
 		<Layout::Table>
 			<table>
@@ -645,10 +645,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "create"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>create</code> <code>[ thing, data ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="create"><code>create</code> <code>[ thing, data ]</code> method</Docs::Heading>
 		<p>This method creates a record either with a random or specified ID</p>
 		<Layout::Table>
 			<table>
@@ -686,10 +686,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "insert"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>insert</code> <code>[ thing, data ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="insert"><code>insert</code> <code>[ thing, data ]</code> method</Docs::Heading>
 		<p>This method inserts one or multiple records in a table</p>
 		<Layout::Table>
 			<table>
@@ -736,10 +736,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "update"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>update</code> <code>[ thing, data ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="update"><code>update</code> <code>[ thing, data ]</code> method</Docs::Heading>
 		<p>This method replaces either all records in a table or a single record with specified data</p>
 		<blockquote yellow text="Note">This function replaces the current document / record data with the specified data. If no replacement data is passed it will simply trigger an update.</blockquote>
 		<Layout::Table>
@@ -778,10 +778,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "merge"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>merge</code> <code>[ thing, data ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="merge"><code>merge</code> <code>[ thing, data ]</code> method</Docs::Heading>
 		<p>This method merges specified data into either all records in a table or a single record</p>
 		<blockquote yellow text="Note">This function merges the current document / record data with the specified data. If no merge data is passed it will simply trigger an update.</blockquote>
 		<Layout::Table>
@@ -820,10 +820,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "patch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>patch</code> <code>[ thing, patches, diff ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="patch"><code>patch</code> <code>[ thing, patches, diff ]</code> method</Docs::Heading>
 		<p>This method patches either all records in a table or a single record with specified patches</p>
 		<blockquote yellow text="Note">This function patches the current document / record data with the specified <Link @link="https://jsonpatch.com">JSON Patch</Link> data.</blockquote>
 		<Layout::Table>
@@ -869,10 +869,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "delete"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>delete</code> <code>[ thing ]</code> method</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="delete"><code>delete</code> <code>[ thing ]</code> method</Docs::Heading>
 		<p>This method deletes either all records in a table or a single record</p>
 		<Layout::Table>
 			<table>

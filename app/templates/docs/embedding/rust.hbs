@@ -183,7 +183,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="init">
+		<Docs::Heading @level="5" @mt0="true" @id="init">
 			<Ascua::Prism::Inline @language="rust" @code="Surreal::init()" />
 		</Docs::Heading>
 		<p>The <code>DB</code> static singleton ensures that a single database instance is available across very large
@@ -199,7 +199,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="connect">
+		<Docs::Heading @level="5" @mt0="true" @id="connect">
 			<Ascua::Prism::Inline @language="rust" @code="db.connect(endpoint)" />
 		</Docs::Heading>
 		<p>Connects to a local or remote database endpoint.</p>
@@ -234,7 +234,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="new">
+		<Docs::Heading @level="5" @mt0="true" @id="new">
 			<Ascua::Prism::Inline @language="rust" @code="Surreal::new::<T>(endpoint)" />
 		</Docs::Heading>
 		<p>Connects to a local or remote database endpoint.</p>
@@ -269,7 +269,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="use">
+		<Docs::Heading @level="5" @mt0="true" @id="use">
 			<Ascua::Prism::Inline @language="rust" @code="db.use_ns(ns).use_db(db)" />
 		</Docs::Heading>
 		<p>Switch to a specific namespace and database.</p>
@@ -315,7 +315,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="set">
+		<Docs::Heading @level="5" @mt0="true" @id="set">
 			<Ascua::Prism::Inline @language="rust" @code="db.set(key, val)" />
 		</Docs::Heading>
 		<p>Assigns a value as a parameter for this connection.</p>
@@ -359,7 +359,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="query">
+		<Docs::Heading @level="5" @mt0="true" @id="query">
 			<Ascua::Prism::Inline @language="rust" @code="db.query(sql).bind(vars)" />
 		</Docs::Heading>
 		<p>Runs a set of SurrealQL statements against the database.</p>
@@ -403,7 +403,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="select">
+		<Docs::Heading @level="5" @mt0="true" @id="select">
 			<Ascua::Prism::Inline @language="rust" @code="db.select(resource)" />
 		</Docs::Heading>
 		<p>Selects all records in a table, or a specific record, from the database.</p>
@@ -442,7 +442,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="create">
+		<Docs::Heading @level="5" @mt0="true" @id="create">
 			<Ascua::Prism::Inline @language="rust" @code="db.create(resource).content(data)" />
 		</Docs::Heading>
 		<p>Creates a record in the database.</p>
@@ -490,7 +490,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="update">
+		<Docs::Heading @level="5" @mt0="true" @id="update">
 			<Ascua::Prism::Inline @language="rust" @code="db.update(resource).content(data)" />
 		</Docs::Heading>
 		<p>Updates all records in a table, or a specific record, in the database.</p>
@@ -540,7 +540,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="merge">
+		<Docs::Heading @level="5" @mt0="true" @id="merge">
 			<Ascua::Prism::Inline @language="rust" @code="db.update(resource).merge(data)" />
 		</Docs::Heading>
 		<p>Modifies all records in a table, or a specific record, in the database.</p>
@@ -590,7 +590,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="patch">
+		<Docs::Heading @level="5" @mt0="true" @id="patch">
 			<Ascua::Prism::Inline @language="rust" @code="db.update(resource).patch(data)" />
 		</Docs::Heading>
 		<p>Applies
@@ -645,7 +645,7 @@
 <Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<Docs::Heading @level="4" @mt0="true" @id="delete">
+		<Docs::Heading @level="5" @mt0="true" @id="delete">
 			<Ascua::Prism::Inline @language="rust" @code="db.delete(resource)" />
 		</Docs::Heading>
 		<p>Deletes all records in a table, or a specific record, from the database.</p>

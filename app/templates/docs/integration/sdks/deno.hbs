@@ -15,7 +15,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Connect to SurrealDB</h3>
+	<Docs::Heading @level="3" @id="connect-to-surreal">Connect to SurrealDB</Docs::Heading>
 	<p>Create a new mod.ts file and add the following code to try out some basic operations using the SurrealDB SDK.</p>
 	<Code @name="docs/integration/libraries/deno/basic.js" />
 	<p>Then run your app from the command line with:</p>
@@ -27,7 +27,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>SDK methods</h3>
+	<Docs::Heading @level="3" @id="methods">SDK methods</Docs::Heading>
 	<p>The JavaScript SDK comes with a number of built-in functions.</p>
 </Layout::Text>
 
@@ -224,10 +224,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "connect"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.connect(url, options)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="connect"><Ascua::Prism::Inline @language="ts" @code="async db.connect(url, options)" /></Docs::Heading>
 		<p>Connects to a local or remote database endpoint.</p>
 		<Layout::Table>
 			<table>
@@ -304,10 +304,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "wait"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.wait()" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="wait"><Ascua::Prism::Inline @language="ts" @code="async db.wait()" /></Docs::Heading>
 		<p>Waits for the connection to the database to succeed.</p>
 		<Code @name="docs-integration-libraries-deno-wait.js">
 			await db.wait();
@@ -318,10 +318,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "close"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.close()" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="close"><Ascua::Prism::Inline @language="ts" @code="async db.close()" /></Docs::Heading>
 		<p>Closes the persistent connection to the database.</p>
 		<Code @name="docs-integration-libraries-deno-close.js">
 			await db.close();
@@ -332,10 +332,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "use"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="db.use({ ns, db })" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="use"><Ascua::Prism::Inline @language="ts" @code="db.use({ ns, db })" /></Docs::Heading>
 		<p>Switch to a specific namespace and database. If only the <code>ns</code> or <code>db</code> property is specified, the current connection details will be used to fill the other property.</p>
 		<Layout::Table>
 			<table>
@@ -376,10 +376,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "info"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.info<T>()" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="info"><Ascua::Prism::Inline @language="ts" @code="async db.info<T>()" /></Docs::Heading>
 		<p>This method returns the record of an authenticated scope user.</p>
 		<Code @name="docs-integration-libraries-javascript-info.js">
 			const user = await db.info();
@@ -390,10 +390,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signup"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.signup({ NS, DB, SC, [...] })" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signup"><Ascua::Prism::Inline @language="ts" @code="async db.signup({ NS, DB, SC, [...] })" /></Docs::Heading>
 		<p>Signs up to a specific authentication scope.</p>
 		<Layout::Table>
 			<table>
@@ -451,10 +451,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signin"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.signin({ ... })" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signin"><Ascua::Prism::Inline @language="ts" @code="async db.signin({ ... })" /></Docs::Heading>
 		<p>Signs in to a root, namespace, database or scope user.</p>
 		<Layout::Table>
 			<table>
@@ -551,10 +551,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "invalidate"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.invalidate()" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="invalidate"><Ascua::Prism::Inline @language="ts" @code="async db.invalidate()" /></Docs::Heading>
 		<p>Invalidates the authentication for the current connection.</p>
 		<Code @name="docs-integration-libraries-deno-invalidate.js">
 			await db.invalidate();
@@ -565,10 +565,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "authenticate"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.authenticate(token)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="authenticate"><Ascua::Prism::Inline @language="ts" @code="async db.authenticate(token)" /></Docs::Heading>
 		<p>Authenticates the current connection with a JWT token.</p>
 		<Layout::Table>
 			<table>
@@ -600,10 +600,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "let"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.let(key, val)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="let"><Ascua::Prism::Inline @language="ts" @code="async db.let(key, val)" /></Docs::Heading>
 		<p>Assigns a value as a parameter for this connection.</p>
 		<Layout::Table>
 			<table>
@@ -654,10 +654,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "unset"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.unset(key)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="unset"><Ascua::Prism::Inline @language="ts" @code="async db.unset(key)" /></Docs::Heading>
 		<p>Removes a parameter for this connection.</p>
 		<Layout::Table>
 			<table>
@@ -690,10 +690,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "live"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.live<T>(table, callback, diff)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="live"><Ascua::Prism::Inline @language="ts" @code="async db.live<T>(table, callback, diff)" /></Docs::Heading>
 		<p>Initiates a live query.</p>
 		<Layout::Table>
 			<table>
@@ -754,10 +754,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "listenLive"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.listenLive<T>(queryUuid, callback)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="listenLive"><Ascua::Prism::Inline @language="ts" @code="async db.listenLive<T>(queryUuid, callback)" /></Docs::Heading>
 		<p>Registers a callback function for a running live query.</p>
 		<Layout::Table>
 			<table>
@@ -808,10 +808,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "kill"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.kill(queryUuid)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="kill"><Ascua::Prism::Inline @language="ts" @code="async db.kill(queryUuid)" /></Docs::Heading>
 		<p>Kills a running live query by it's UUID</p>
 		<Layout::Table>
 			<table>
@@ -843,10 +843,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "query"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.query<T>(query, vars)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="query"><Ascua::Prism::Inline @language="ts" @code="async db.query<T>(query, vars)" /></Docs::Heading>
 		<p>Runs a set of SurrealQL statements against the database.</p>
 		<Layout::Table>
 			<table>
@@ -885,10 +885,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "select"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.select<T>(thing)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="select"><Ascua::Prism::Inline @language="ts" @code="async db.select<T>(thing)" /></Docs::Heading>
 		<p>Selects all records in a table, or a specific record, from the database.</p>
 		<Layout::Table>
 			<table>
@@ -922,10 +922,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "create"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.create<T, U>(thing, data)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="create"><Ascua::Prism::Inline @language="ts" @code="async db.create<T, U>(thing, data)" /></Docs::Heading>
 		<p>Creates a record in the database.</p>
 		<Layout::Table>
 			<table>
@@ -968,10 +968,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "insert"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.insert<T, U>(thing, data)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="insert"><Ascua::Prism::Inline @language="ts" @code="async db.insert<T, U>(thing, data)" /></Docs::Heading>
 		<p>Insers one or multiple records in the database.</p>
 		<Layout::Table>
 			<table>
@@ -1014,10 +1014,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "update"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.update<T, U>(thing, data)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="update"><Ascua::Prism::Inline @language="ts" @code="async db.update<T, U>(thing, data)" /></Docs::Heading>
 		<p>Updates all records in a table, or a specific record, in the database.</p>
 		<blockquote yellow text="Note">This function replaces the current document / record data with the specified data.</blockquote>
 		<Layout::Table>
@@ -1061,10 +1061,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "merge"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.merge<T, U>(thing, data)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="merge"><Ascua::Prism::Inline @language="ts" @code="async db.merge<T, U>(thing, data)" /></Docs::Heading>
 		<p>Modifies all records in a table, or a specific record, in the database.</p>
 		<blockquote yellow text="Note">This function merges the current document / record data with the specified data.</blockquote>
 		<Layout::Table>
@@ -1108,10 +1108,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "patch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.patch(thing, data)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="patch"><Ascua::Prism::Inline @language="ts" @code="async db.patch(thing, data)" /></Docs::Heading>
 		<p>Applies <Link @link="https://jsonpatch.com">JSON Patch</Link> changes to all records, or a specific record, in the database.</p>
 		<blockquote yellow text="Note">This function patches the current document / record data with the specified <Link @link="https://jsonpatch.com">JSON Patch</Link> data.</blockquote>
 		<Layout::Table>
@@ -1155,10 +1155,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "delete"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async db.delete<T>(thing)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="delete"><Ascua::Prism::Inline @language="ts" @code="async db.delete<T>(thing)" /></Docs::Heading>
 		<p>Deletes all records in a table, or a specific record, from the database.</p>
 		<Layout::Table>
 			<table>

@@ -154,10 +154,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "export"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>GET</code> <code>/export</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="export"><code>GET</code> <code>/export</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint exports all data for a specific Namespace and Database.</p>
 		<p>The following headers can be used to customise the query and the response.</p>
 		<Layout::Table>
@@ -212,10 +212,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "health"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>GET</code> <code>/health</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="health"><code>GET</code> <code>/health</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint checks whether the database server and storage engine are running.</p>
 		<p>The endpoint returns a <code>200</code> status code on success and a <code>500</code> status code on failure.</p>
 	</Layout::Text>
@@ -224,10 +224,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "import"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>POST</code> <code>/import</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="import"><code>POST</code> <code>/import</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint imports a set of SurrealQL queries into a specific Namespace and Database.</p>
 		<p>The following headers can be used to customise the query and the response.</p>
 		<Layout::Table>
@@ -282,10 +282,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "select-all"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>GET</code> <code>/key/:table</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="select-all"><code>GET</code> <code>/key/:table</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint selects all records in a specific table in the database.</p>
 		<p>The following headers can be used to customise the query and the response.</p>
 		<Layout::Table>
@@ -344,10 +344,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "create-all"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>POST</code> <code>/key/:table</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="create-all"><code>POST</code> <code>/key/:table</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint creates a record in a specific table in the database.</p>
 		<blockquote yellow>This HTTP endpoint expects the HTTP body to be a JSON or SurrealQL <Link @link="docs.surrealql.datamodel.objects"><code>object</code></Link>.</blockquote>
 		<p>The following headers can be used to customise the query and the response.</p>
@@ -407,10 +407,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "delete-all"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>DELETE</code> <code>/key/:table</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="delete-all"><code>DELETE</code> <code>/key/:table</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint deletes all records from the specified table in the database.</p>
 		<p>The following headers can be used to customise the query and the response.</p>
 		<Layout::Table>
@@ -469,10 +469,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "select-one"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>GET</code> <code>/key/:table/:id</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="select-one"><code>GET</code> <code>/key/:table/:id</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint selects a specific record from the database.</p>
 		<p>The following headers can be used to customise the query and the response.</p>
 		<Layout::Table>
@@ -531,10 +531,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "create-one"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>POST</code> <code>/key/:table/:id</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="create-one"><code>POST</code> <code>/key/:table/:id</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint creates a single specific record into the database.</p>
 		<blockquote yellow>This HTTP endpoint expects the HTTP body to be a JSON or SurrealQL <Link @link="docs.surrealql.datamodel.objects"><code>object</code></Link>.</blockquote>
 		<p>The following headers can be used to customise the query and the response.</p>
@@ -594,10 +594,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "update-one"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>PUT</code> <code>/key/:table/:id</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="update-one"><code>PUT</code> <code>/key/:table/:id</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint creates or updates a single specific record in the database.</p>
 		<blockquote yellow>This HTTP endpoint expects the HTTP body to be a JSON or SurrealQL <Link @link="docs.surrealql.datamodel.objects"><code>object</code></Link>.</blockquote>
 		<p>The following headers can be used to customise the query and the response.</p>
@@ -657,10 +657,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "modify-one"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>PATCH</code> <code>/key/:table/:id</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="modify-one"><code>PATCH</code> <code>/key/:table/:id</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint creates or updates a single specific record in the database. If the record already exists, then only the specified fields will be updated.</p>
 		<blockquote yellow>This HTTP endpoint expects the HTTP body to be a JSON or SurrealQL <Link @link="docs.surrealql.datamodel.objects"><code>object</code></Link>.</blockquote>
 		<p>The following headers can be used to customise the query and the response.</p>
@@ -720,10 +720,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "delete-one"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>DELETE</code> <code>/key/:table/:id</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="delete-one"><code>DELETE</code> <code>/key/:table/:id</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint deletes a single specific record from the database.</p>
 		<p>The following headers can be used to customise the query and the response.</p>
 		<Layout::Table>
@@ -782,10 +782,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signup"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>POST</code> <code>/signup</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signup"><code>POST</code> <code>/signup</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint is used to create an account inside the SurrealDB database server.</p>
 		<p>The following headers can be used to customise the query and the response.</p>
 		<Layout::Table>
@@ -835,10 +835,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signin"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>POST</code> <code>/signin</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signin"><code>POST</code> <code>/signin</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint is used to sign in a user of the SurrealDB database server.</p>
 		<p>The following headers can be used to customise the query and the response.</p>
 		<Layout::Table>
@@ -922,10 +922,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "sql"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>POST</code> <code>/sql</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="sql"><code>POST</code> <code>/sql</code> endpoint</Docs::Heading>
 		<p>The SQL endpoint enables advanced SurrealQL queries.</p>
 		<blockquote yellow>This HTTP endpoint expects the HTTP body to be a set of SurrealQL <Link @link="docs.surrealql.statements"><code>statements</code></Link>.</blockquote>
 		<p>The following headers can be used to customise the query and the response.</p>
@@ -1013,10 +1013,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "status"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>GET</code> <code>/status</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="status"><code>GET</code> <code>/status</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint checks whether the database web server is running, returning a <code>200</code> status code.</p>
 	</Layout::Text>
 
@@ -1024,10 +1024,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "version"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>GET</code> <code>/version</code> endpoint</h3>
+		<Docs::Heading @level="5" @mt0="true" @id="version"><code>GET</code> <code>/version</code> endpoint</Docs::Heading>
 		<p>This HTTP RESTful endpoint returns the version of the SurrealDB database server.</p>
 	</Layout::Text>
 

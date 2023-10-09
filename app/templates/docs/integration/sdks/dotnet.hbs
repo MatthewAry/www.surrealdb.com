@@ -19,7 +19,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Install the SDK</h3>
+	<Docs::Heading @level="3" @id="install">Install the SDK</Docs::Heading>
 	<p>
 		<ul>
 			<li>Create a new project using your favorite IDE (Visual Studio, JetBrains Rider, etc...)</li>
@@ -35,7 +35,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>Connect to SurrealDB</h3>
+	<Docs::Heading @level="3" @id="connect-to-surreal">Connect to SurrealDB</Docs::Heading>
 
 	<p>Let's start by creating a new console app.</p>
 	<Code @name="docs-integration-libraries-dotnet-new-console.bash">
@@ -56,7 +56,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3>SDK methods</h3>
+	<Docs::Heading @level="3" @id="methods">SDK methods</Docs::Heading>
 	<p>The .NET SDK comes with a number of built-in functions.</p>
 </Layout::Text>
 
@@ -257,10 +257,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "ctor"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="new SurrealDbClient(endpoint)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="ctor"><Ascua::Prism::Inline @language="csharp" @code="new SurrealDbClient(endpoint)" /></Docs::Heading>
 		<p>Creates a new client, detecting the right protocol from the endpoint.</p>
 		<Layout::Table>
 			<table>
@@ -299,10 +299,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "new-http"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="SurrealDbHttpClient.New(host)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="new-http"><Ascua::Prism::Inline @language="csharp" @code="SurrealDbHttpClient.New(host)" /></Docs::Heading>
 		<p>Initialises a client using HTTP protocol.</p>
 		<Layout::Table>
 			<table>
@@ -341,10 +341,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "new-https"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="SurrealDbHttpsClient.New(host)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="new-https"><Ascua::Prism::Inline @language="csharp" @code="SurrealDbHttpsClient.New(host)" /></Docs::Heading>
 		<p>Initialises a client using HTTPS protocol.</p>
 		<Layout::Table>
 			<table>
@@ -383,10 +383,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "new-ws"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="SurrealDbWsClient.New(host)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="new-ws"><Ascua::Prism::Inline @language="csharp" @code="SurrealDbWsClient.New(host)" /></Docs::Heading>
 		<p>Initialises a client using WS protocol.</p>
 		<Layout::Table>
 			<table>
@@ -452,10 +452,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "new-wss"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="SurrealDbWssClient.New(host)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="new-wss"><Ascua::Prism::Inline @language="csharp" @code="SurrealDbWssClient.New(host)" /></Docs::Heading>
 		<p>Initialises a client using WSS protocol.</p>
 		<Layout::Table>
 			<table>
@@ -521,10 +521,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "configure"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="db.Configure(ns, db, credentials)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="configure"><Ascua::Prism::Inline @language="csharp" @code="db.Configure(ns, db, credentials)" /></Docs::Heading>
 		<p>Configures the client to use a specific namespace and database, with credentials.</p>
 		<Layout::Table>
 			<table>
@@ -590,10 +590,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "connect"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Connect()" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="connect"><Ascua::Prism::Inline @language="csharp" @code="await db.Connect()" /></Docs::Heading>
 		<p>Connects the client to the underlying endpoint, also improving performance to avoid cold starts.</p>
 		<Layout::Table>
 			<table>
@@ -623,10 +623,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "use"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Use(ns, db)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="use"><Ascua::Prism::Inline @language="csharp" @code="await db.Use(ns, db)" /></Docs::Heading>
 		<p>Switch to a specific namespace and database.</p>
 		<Layout::Table>
 			<table>
@@ -676,10 +676,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signup"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.SignUp(credentials)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signup"><Ascua::Prism::Inline @language="csharp" @code="await db.SignUp(credentials)" /></Docs::Heading>
 		<p>Signs up to a specific authentication scope.</p>
 		<Layout::Table>
 			<table>
@@ -718,10 +718,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "signin"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.SignIn(credentials)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="signin"><Ascua::Prism::Inline @language="csharp" @code="await db.SignIn(credentials)" /></Docs::Heading>
 		<p>Signs in to a specific authentication scope.</p>
 		<Layout::Table>
 			<table>
@@ -760,10 +760,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "authenticate"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Authenticate(jwt)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="authenticate"><Ascua::Prism::Inline @language="csharp" @code="await db.Authenticate(jwt)" /></Docs::Heading>
 		<p>Authenticates the current connection with a JWT token.</p>
 		<Layout::Table>
 			<table>
@@ -802,10 +802,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "invalidate"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Invalidate()" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="invalidate"><Ascua::Prism::Inline @language="csharp" @code="await db.Invalidate()" /></Docs::Heading>
 		<p>Invalidates the authentication for the current connection.</p>
 		<Layout::Table>
 			<table>
@@ -835,10 +835,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "set"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Set(key, value)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="set"><Ascua::Prism::Inline @language="csharp" @code="await db.Set(key, value)" /></Docs::Heading>
 		<p>Assigns a value as a parameter for this connection.</p>
 		<Layout::Table>
 			<table>
@@ -886,10 +886,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "unset"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Unset(key)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="unset"><Ascua::Prism::Inline @language="csharp" @code="await db.Unset(key)" /></Docs::Heading>
 		<p>Removes a parameter for this connection.</p>
 		<Layout::Table>
 			<table>
@@ -928,10 +928,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "query"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Query(sql, params)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="query"><Ascua::Prism::Inline @language="csharp" @code="await db.Query(sql, params)" /></Docs::Heading>
 		<p>Runs a set of SurrealQL statements against the database.</p>
 		<Layout::Table>
 			<table>
@@ -979,10 +979,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "select"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Select(resource)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="select"><Ascua::Prism::Inline @language="csharp" @code="await db.Select(resource)" /></Docs::Heading>
 		<p>Selects all records in a table, or a specific record, from the database.</p>
 		<Layout::Table>
 			<table>
@@ -1021,10 +1021,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "create"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Create(resource, data)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="create"><Ascua::Prism::Inline @language="csharp" @code="await db.Create(resource, data)" /></Docs::Heading>
 		<p>Creates a record in the database.</p>
 		<Layout::Table>
 			<table>
@@ -1072,10 +1072,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "upsert"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Upsert(data)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="upsert"><Ascua::Prism::Inline @language="csharp" @code="await db.Upsert(data)" /></Docs::Heading>
 		<p>Creates or updates a specific record.</p>
 		<blockquote yellow text="Note">This function creates a new document / record or replaces the current one with the specified data.</blockquote>
 		<Layout::Table>
@@ -1115,10 +1115,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "patch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Merge(resource, data)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="merge"><Ascua::Prism::Inline @language="csharp" @code="await db.Merge(resource, data)" /></Docs::Heading>
 		<p>Modifies all records in a table, or a specific record.</p>
 		<Layout::Table>
 			<table>
@@ -1166,10 +1166,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "delete"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Delete(resource)" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="delete"><Ascua::Prism::Inline @language="csharp" @code="await db.Delete(resource)" /></Docs::Heading>
 		<p>Deletes all records in a table, or a specific record, from the database.</p>
 		<Layout::Table>
 			<table>
@@ -1208,10 +1208,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "version"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Version()" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="version"><Ascua::Prism::Inline @language="csharp" @code="await db.Version()" /></Docs::Heading>
 		<p>Retrieves the version of the SurrealDB instance.</p>
 		<Layout::Table>
 			<table>
@@ -1241,10 +1241,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "health"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="csharp" @code="await db.Health()" /></h3>
+		<Docs::Heading @level="5" @mt0="true" @id="health"><Ascua::Prism::Inline @language="csharp" @code="await db.Health()" /></Docs::Heading>
 		<p>Checks the status of the database server and storage engine.</p>
 		<Layout::Table>
 			<table>
@@ -1275,7 +1275,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3 id="dependency-injection">Dependency Injection</h3>
+	<Docs::Heading @level="4" @id="dependency-injection">Dependency Injection</Docs::Heading>
 
 	<p>The .NET SDK also support Dependency Injection to ease the use of the <code>SurrealDbClient</code> in your application.</p>
 
@@ -1287,19 +1287,19 @@
 	</Code>
 
 	<p>
-		Open <code>appsettings.Development.json</code> and replace everything in there with the following code. 
+		Open <code>appsettings.Development.json</code> and replace everything in there with the following code.
 		We have added a new <a href="#connection-strings">Connection String</a> called <code>SurrealDB</code> with the default configuration.
 	</p>
 	<Code @name="docs/integration/libraries/dotnet/dependency-injection/appsettings.json" />
 
 	<p>
-		Open <code>Program.cs</code> and replace everything in there with the following code. 
+		Open <code>Program.cs</code> and replace everything in there with the following code.
 		This code is using the <code>AddSurreal()</code> extension method to inject services automatically.
-		Notice that all we have to do is one line of code to configure the SurrealDB client 
+		Notice that all we have to do is one line of code to configure the SurrealDB client
 		with the previously set Connection String.
 	</p>
 	<blockquote yellow text="Note">
-		By default, this function will register both <code>ISurrealDbClient</code> and <code>SurrealDbClient</code> 
+		By default, this function will register both <code>ISurrealDbClient</code> and <code>SurrealDbClient</code>
 		using the <code>Singleton</code> service lifetime.
 	</blockquote>
 	<Code @name="docs/integration/libraries/dotnet/dependency-injection/program.cs" />
@@ -1319,7 +1319,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-	<h3 id="connection-strings">Connection Strings</h3>
+	<Docs::Heading @level="4" @id="connection-strings">Connection Strings</Docs::Heading>
 
 	<p>
 		Connection Strings are an easy way to configure your application to connect to a SurrealDB instance.
