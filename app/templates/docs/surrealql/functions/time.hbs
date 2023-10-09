@@ -219,10 +219,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "day"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::day</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="day">time::day</Docs::Heading>
 		<p>The <code>time::day</code> function extracts the day as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-day.surql" text="API Definition">
 			time::day(datetime) -> number
@@ -242,10 +242,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "epoch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::epoch</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="epoch">time::epoch</Docs::Heading>
 		<p>The <code>time::EPOCH</code> constant contains unix epoch timestamp as a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-epoch.surql" text="API Definition">
 			time::EPOCH -> datetime
@@ -265,10 +265,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "floor"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::floor</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="floor">time::floor</Docs::Heading>
 		<p>The <code>time::floor</code> function rounds a datetime down by a specific duration.</p>
 		<Code @name="docs-surrealql-functions-time-floor.surql" text="API Definition">
 			time::floor(datetime, duration) -> datetime
@@ -288,10 +288,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "format"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::format</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="format">time::format</Docs::Heading>
 		<p>The <code>time::format</code> function outputs a datetime according to a specific format.</p>
 		<Code @name="docs-surrealql-functions-time-format.surql" text="API Definition">
 			time::format(datetime, string) -> string
@@ -315,10 +315,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "group"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::group</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="group">time::group</Docs::Heading>
 		<p>The <code>time::group</code> function reduces and rounds a datetime down to a particular time interval. The second argument must be a string, and can be one of the following values: <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>minute</code>, <code>second</code>.</p>
 		<Code @name="docs-surrealql-functions-time-group.surql" text="API Definition">
 			time::group(datetime, string) -> datetime
@@ -338,10 +338,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "hour"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::hour</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="hour">time::hour</Docs::Heading>
 		<p>The <code>time::hour</code> function extracts the hour as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-hour.surql" text="API Definition">
 			time::hour(datetime) -> number
@@ -361,10 +361,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "max"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::max</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="max">time::max</Docs::Heading>
 		<p>The <code>time::max</code> function extracts the minutes as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-max.surql" text="API Definition">
 			time::max(array) -> datetime
@@ -384,10 +384,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "min"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::min</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="min">time::min</Docs::Heading>
 		<p>The <code>time::min</code> function extracts the minutes as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-min.surql" text="API Definition">
 			time::min(array) -> datetime
@@ -407,10 +407,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "minute"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::minute</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="minute">time::minute</Docs::Heading>
 		<p>The <code>time::minute</code> function extracts the minutes as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-minute.surql" text="API Definition">
 			time::minute(datetime) -> number
@@ -430,10 +430,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "month"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::month</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="month">time::month</Docs::Heading>
 		<p>The <code>time::month</code> function extracts the month as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-month.surql" text="API Definition">
 			time::month(datetime) -> number
@@ -453,10 +453,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "nano"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::nano</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="nano">time::nano</Docs::Heading>
 		<p>The <code>time::nano</code> function returns a datetime as an integer representing the number of nanoseconds since the UNIX epoch.</p>
 		<Code @name="docs-surrealql-functions-time-nano.surql" text="API Definition">
 			time::nano(datetime) -> number
@@ -476,10 +476,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "now"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::now</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="now">time::now</Docs::Heading>
 		<p>The <code>time::now</code> function returns the current datetime as an ISO8601 timestamp.</p>
 		<Code @name="docs-surrealql-functions-time-now.surql" text="API Definition">
 			time::now() -> datetime
@@ -490,10 +490,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "round"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::round</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="round">time::round</Docs::Heading>
 		<p>The <code>time::round</code> function rounds a datetime up by a specific duration.</p>
 		<Code @name="docs-surrealql-functions-time-round.surql" text="API Definition">
 			time::round(datetime, duration) -> datetime
@@ -513,10 +513,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "second"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::second</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="second">time::second</Docs::Heading>
 		<p>The <code>time::second</code> function extracts the second as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-second.surql" text="API Definition">
 			time::second(datetime) -> number
@@ -536,10 +536,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "timezone"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::timezone</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="timezone">time::timezone</Docs::Heading>
 		<p>The <code>time::timezone</code> function returns the current local timezone offset in hours.</p>
 		<Code @name="docs-surrealql-functions-time-timezone.surql" text="API Definition">
 			time::timezone() -> string
@@ -550,10 +550,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "unix"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::unix</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="unix">time::unix</Docs::Heading>
 		<p>The <code>time::unix</code> function returns a datetime as an integer representing the number of seconds since the UNIX epoch.</p>
 		<Code @name="docs-surrealql-functions-time-unix.surql" text="API Definition">
 			time::unix(datetime) -> number
@@ -573,10 +573,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "wday"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::wday</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="wday">time::wday</Docs::Heading>
 		<p>The <code>time::wday</code> function extracts the week day as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-wday.surql" text="API Definition">
 			time::wday(datetime) -> number
@@ -596,10 +596,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "week"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::week</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="week">time::week</Docs::Heading>
 		<p>The <code>time::week</code> function extracts the week as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-week.surql" text="API Definition">
 			time::week(datetime) -> number
@@ -619,10 +619,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "yday"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::yday</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="yday">time::yday</Docs::Heading>
 		<p>The <code>time::yday</code> function extracts the yday as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-yday.surql" text="API Definition">
 			time::yday(datetime) -> number
@@ -642,10 +642,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "year"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::year</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="year">time::year</Docs::Heading>
 		<p>The <code>time::year</code> function extracts the year as a number from a datetime.</p>
 		<Code @name="docs-surrealql-functions-time-year.surql" text="API Definition">
 			time::year(datetime) -> number
@@ -665,10 +665,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "from-micros"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::from::micros</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="from-micros">time::from::micros</Docs::Heading>
 		<p>The <code>time::from::micros</code> function calculates a datetime based on an amount of microseconds since January 1, 1970 0:00:00 UTC.</p>
 		<Code @name="docs-surrealql-functions-time-micros.surql" text="API Definition">
 			time::from::micros(number) -> datetime
@@ -688,10 +688,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "from-millis"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::from::millis</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="from-millis">time::from::millis</Docs::Heading>
 		<p>The <code>time::from::millis</code> function calculates a datetime based on an amount of milliseconds since January 1, 1970 0:00:00 UTC.</p>
 		<Code @name="docs-surrealql-functions-time-millis.surql" text="API Definition">
 			time::from::millis(number) -> datetime
@@ -711,10 +711,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "from-secs"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::from::secs</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="from-secs">time::from::secs</Docs::Heading>
 		<p>The <code>time::from::secs</code> function calculates a datetime based on an amount of seconds since January 1, 1970 0:00:00 UTC.</p>
 		<Code @name="docs-surrealql-functions-time-secs.surql" text="API Definition">
 			time::from::secs(number) -> datetime
@@ -734,10 +734,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "from-unix"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>time::from::unix</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="from-unix">time::from::unix</Docs::Heading>
 		<p>The <code>time::from::unix</code> function calculates a datetime based on an amount of seconds since January 1, 1970 0:00:00 UTC.</p>
 		<Code @name="docs-surrealql-functions-time-unix.surql" text="API Definition">
 			time::from::unix(number) -> datetime

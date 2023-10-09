@@ -35,10 +35,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "sleep"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>sleep</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="sleep"><code>sleep</code></Docs::Heading>
 		<p>The <code>sleep</code> function delays or pauses the execution of a query or a set of statements.</p>
 		<Code @name="docs-surrealql-functions-sleep.surql" text="API Definition">
 			sleep(duration) -> none
@@ -59,7 +59,7 @@
 <Layout::Gap mini />
 
 <Layout::Text text-l text-f>
-    <h3>See also</h3>
+    <Docs::Heading @level="4" @mt0="true" @id="see-also">See also</Docs::Heading>
     <p>Alternatively you may want to use the <LinkTo @route="docs.surrealql.statements.sleep"><code>SLEEP</code></LinkTo> statement.</p>
 </Layout::Text>
 

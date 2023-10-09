@@ -51,10 +51,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "score"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>search::score</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="score"><code>search::score</code></Docs::Heading>
 		<p>The <code>search::score</code> returns the relevance score corresponding to the given 'matches' predicate reference numbers.</p>
 		<Code @name="docs-surrealql-functions-search-score.surql" text="API Definition">
 				search::score(number) -> number
@@ -82,10 +82,10 @@
 
 <Layout::Gap mini />
 
-<Layout::Group {{waypoint "highlight"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>search::highlight</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="highlight"><code>search::highlight</code></Docs::Heading>
 		<p>The <code>search::highlight</code> highlights the matching keywords for the predicate reference number.</p>
 		<Code @name="docs-surrealql-functions-search-highlight.surql" text="API Definition">
 				search::highlight(string, string, number) -> string | string[]
@@ -111,10 +111,10 @@
 
 <Layout::Gap mini />
 
-<Layout::Group {{waypoint "offsets"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>search::offsets</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="offsets"><code>search::offsets</code></Docs::Heading>
 		<p>The <code>search::offsets</code> returns the position of the matching keywords for the predicate reference number.</p>
 		<Code @name="docs-surrealql-functions-search-offsets.surql" text="API Definition">
 				search::offsets(number) -> object

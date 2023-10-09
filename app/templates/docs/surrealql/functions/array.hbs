@@ -355,10 +355,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "add"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::add</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="add">array::add</Docs::Heading>
 		<p>The <code>array::add</code> function adds an item to an array only if it doesn't exist.</p>
 		<Code @name="docs-surrealql-functions-array-add.surql" text="API Definition">
 			array::add(array, value) -> array
@@ -378,10 +378,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "all"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::all</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="all">array::all</Docs::Heading>
 		<p>The <code>array::all</code> function checks whether all array values are truthy.</p>
 		<Code @name="docs-surrealql-functions-array-all.surql" text="API Definition">
 			array::all(array) -> bool
@@ -401,10 +401,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "any"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::any</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="any">array::any</Docs::Heading>
 		<p>The <code>array::any</code> function checks whether any array values are truthy.</p>
 		<Code @name="docs-surrealql-functions-array-any.surql" text="API Definition">
 			array::any(array) -> bool
@@ -424,10 +424,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "at"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::at</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="at">array::at</Docs::Heading>
 		<p>The <code>array::at</code> function returns value for <code>X</code> index, or in reverse for a negative index.</p>
 		<Code @name="docs-surrealql-functions-array-at.surql" text="API Definition">
 			array::at(array, index) -> any
@@ -456,10 +456,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "append"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::append</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="append">array::append</Docs::Heading>
 		<p>The <code>array::append</code> function appends a value to the end of an array.</p>
 		<Code @name="docs-surrealql-functions-array-append.surql" text="API Definition">
 			array::append(array, value) -> array
@@ -479,10 +479,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "boolean_and"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::boolean_and</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="boolean_and">array::boolean_and</Docs::Heading>
 		<p>The <code>array::boolean_and</code> Perform the <Link @link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND"><code>AND</code> bitwise operations</Link> on the input arrays per-element based on the element's truthiness. <br/> If one array is shorter than the other it is considered null and thus false. </p>
 		<Code @name="docs-surrealql-functions-array-boolean.surql" text="API Definition">
 			array::boolean_and(lh: Array, rh: Array)
@@ -511,10 +511,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "boolean_or"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::boolean_or</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="boolean_or">array::boolean_or</Docs::Heading>
 		<p>The <code>array::boolean_or</code>Perform the <Link @link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR"><code>OR</code> bitwise operations</Link> on the input arrays per-element based on the element's truthiness. <br/> It takes two arrays and if one array is shorter than the other or missing, the output is considered null and thus false.</p>
 		<Code @name="docs-surrealql-functions-array-boolean_or.surql" text="API Definition">
 			array::boolean_or(lh: Array, rh: Array)
@@ -543,10 +543,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "boolean_xor"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::boolean_xor</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="boolean_xor">array::boolean_xor</Docs::Heading>
 		<p>The <code>array::boolean_xor</code> Performs the <Link @link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR"><code>XOR</code> bitwise operations</Link>.</p>
 		<Code @name="docs-surrealql-functions-array-boolean_xor.surql" text="API Definition">
 			array::boolean_xor(lh: Array, rh: Array)
@@ -566,10 +566,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "boolean_not"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::boolean_not</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="boolean_not">array::boolean_not</Docs::Heading>
 		<p>The <code>array::boolean_not</code> Perform the <Link @link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_NOT"><code>NOT</code> bitwise operations</Link> on the input array(s) per-element based on the element's truthiness. <br/> It takes in one array and it returns false if its single operand can be converted to true.</p>
 		<Code @name="docs-surrealql-functions-array-boolean_not.surql" text="API Definition">
 			array::boolean_not(Array)
@@ -589,10 +589,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "combine"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::combine</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="combine">array::combine</Docs::Heading>
 		<p>The <code>array::combine</code> function combines all values from two arrays together, returning an array of arrays.</p>
 		<Code @name="docs-surrealql-functions-array-combine.surql" text="API Definition">
 			array::combine(array, array) -> array
@@ -612,10 +612,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "complement"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::complement</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="complement">array::complement</Docs::Heading>
 		<p>The <code>array::complement</code> function returns the complement of two arrays, returning a single array containing items which are not in the second array.</p>
 		<Code @name="docs-surrealql-functions-array-complement.surql" text="API Definition">
 			array::complement(array, array) -> array
@@ -635,10 +635,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "concat"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::concat</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="concat">array::concat</Docs::Heading>
 		<p>The <code>array::concat</code> function merges two arrays together, returning an array which may contain duplicate values. If you want to remove duplicate values from the resulting array, then use the <Link @link="#union"><code>array::union()</code></Link> function</p>
 		<Code @name="docs-surrealql-functions-array-concat.surql" text="API Definition">
 			array::concat(array, array) -> array
@@ -658,10 +658,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "clump"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::clump</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="clump">array::clump</Docs::Heading>
 		<p>The <code>array::clump</code> function returns the original array split into sub-arrays of <code>size</code>. Similar to <code>slice::chunks</code></p>
 		<Code @name="docs-surrealql-functions-array-clump.surql" text="API Definition">
 			array::clump(array, value) -> array
@@ -681,10 +681,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "difference"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::difference</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="difference">array::difference</Docs::Heading>
 		<p>The <code>array::difference</code> determines the difference between two arrays, returning a single array containing items which are not in both arrays.</p>
 		<Code @name="docs-surrealql-functions-array-difference.surql" text="API Definition">
 			array::difference(array, array) -> array
@@ -704,10 +704,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "distinct"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::distinct</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="distinct">array::distinct</Docs::Heading>
 		<p>The <code>array::distinct</code> function calculates the unique values in an array, returning a single array.</p>
 		<Code @name="docs-surrealql-functions-array-distinct.surql" text="API Definition">
 			array::distinct(array) -> array
@@ -727,10 +727,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "flatten"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::flatten</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="flatten">array::flatten</Docs::Heading>
 		<p>The <code>array::flatten</code> flattens an array of arrays, returning a new array with all sub-array elements concatenated into it.</p>
 		<Code @name="docs-surrealql-functions-array-flatten.surql" text="API Definition">
 			array::flatten(array) -> array
@@ -750,10 +750,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "find_index"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::find_index</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="find_index">array::find_index</Docs::Heading>
 		<p>The <code>array::find_index</code> Returns the index of the first occurrence of <code>value</code> in the array or <code>null</code> if <code>array</code> does not contain <code>value</code></p>
 		<Code @name="docs-surrealql-functions-array-flatten.surql" text="API Definition">
 			array::flatten(array, index) -> array
@@ -773,10 +773,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "filter_index"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::filter_index</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="filter_index">array::filter_index</Docs::Heading>
 		<p>The <code>array::filter_index</code> finds the indexes of all occurrences of all matching <code>values</code></p>
 		<Code @name="docs-surrealql-functions-array-filter_index.surql" text="API Definition">
 			array::filter_index(array, index) -> array
@@ -796,10 +796,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "first"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::first</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="first">array::first</Docs::Heading>
 		<p>The <code>array::first</code> function returns the first value from an array.</p>
 		<Code @name="docs-surrealql-functions-array-first.surql" text="API Definition">
 			array::first(array) -> any
@@ -819,10 +819,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "group"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::group</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="group">array::group</Docs::Heading>
 		<p>The <code>array::group</code> function flattens and returns the unique items in an array.</p>
 		<Code @name="docs-surrealql-functions-array-group.surql" text="API Definition">
 			array::group(array) -> array
@@ -842,10 +842,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "insert"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::insert</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="insert">array::insert</Docs::Heading>
 		<p>The <code>array::insert</code> function inserts a value into an array at a specific position.</p>
 		<Code @name="docs-surrealql-functions-array-insert.surql" text="API Definition">
 			array::insert(array, value, number) -> array
@@ -865,10 +865,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "intersect"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::intersect</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="intersect">array::intersect</Docs::Heading>
 		<p>The <code>array::intersect</code> function calculates the values which intersect two arrays, returning a single array containing the values which are in both arrays.</p>
 		<Code @name="docs-surrealql-functions-array-intersect.surql" text="API Definition">
 			array::intersect(array, array) -> array
@@ -888,10 +888,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "last"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::last</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="last">array::last</Docs::Heading>
 		<p>The <code>array::last</code> function returns the last value from an array.</p>
 		<Code @name="docs-surrealql-functions-array-last.surql" text="API Definition">
 			array::last(array) -> any
@@ -911,10 +911,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "len"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::len</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="len">array::len</Docs::Heading>
 		<p>The <code>array::len</code> function calculates the length of an array, returning a number. This function includes all items when counting the number of items in the array. If you want to only count truthy values, then use the <Link @link="docs.surrealql.functions.count"><code>count()</code></Link> function.</p>
 		<Code @name="docs-surrealql-functions-array-len.surql" text="API Definition">
 			array::len(array) -> number
@@ -934,10 +934,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "logical_and"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::logical_and</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="logical_and">array::logical_and</Docs::Heading>
 		<p>The <code>array::logical_and</code> performs the <Link @link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_AND"><code>AND</code> logical operations</Link> local but they return the element that represents the resulting truthiness similar to the above. Note that the functions prioritize the elements on the left hand. Also, in the event that neither element can represent the truthiness of the output, the resulting element is a boolean value of the truthiness.</p>
 		<Code @name="docs-surrealql-functions-array-logical_and.surql" text="API Definition">
 			array::logical_and(lh: Array, rh: Array)
@@ -966,10 +966,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "logical_or"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::logical_or</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="logical_or">array::logical_or</Docs::Heading>
 		<p>The <code>array::logical_or</code> Performs the <Link @link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR"><code>OR</code> logical operations</Link>. Note that the functions prioritize the elements on the left hand.</p>
 		<Code @name="docs-surrealql-functions-array-logical_or.surql" text="API Definition">
 			array::logical_or(lh: Array, rh: Array)
@@ -998,10 +998,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "logical_xor"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3> array::logical_xor </h3>
+		<Docs::Heading @level="4" @mt0="true" @id="logical_xor"> array::logical_xor </Docs::Heading>
 		<p>The <code>array::logical_xor</code> performs the <Link @link="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_OR"><code>XOR</code> logical operations</Link>.</p>
 		<Code @name="docs-surrealql-functions-array-logical.surql" text="API Definition">
 			array::logical_xor(lh: Array, rh: Array)
@@ -1030,10 +1030,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "matches"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::matches</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="matches">array::matches</Docs::Heading>
 		<p>The <code>array::matches</code> returns an array of boolenas</p>
 		<Code @name="docs-surrealql-functions-array-matches.surql" text="API Definition">
 			array::matches(Array,value)
@@ -1062,10 +1062,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "pop"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::pop</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="pop">array::pop</Docs::Heading>
 		<p>The <code>array::pop</code> function removes a value from the end of an array and returns it.</p>
 		<Code @name="docs-surrealql-functions-array-pop.surql" text="API Definition">
 			array::pop(array) -> array
@@ -1085,10 +1085,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "prepend"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::prepend</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="prepend">array::prepend</Docs::Heading>
 		<p>The <code>array::prepend</code> function prepends a value to the end of an array.</p>
 		<Code @name="docs-surrealql-functions-array-prepend.surql" text="API Definition">
 			array::prepend(array, value) -> array
@@ -1108,10 +1108,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "push"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::push</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="push">array::push</Docs::Heading>
 		<p>The <code>array::push</code> function appends a value to the end of an array.</p>
 		<Code @name="docs-surrealql-functions-array-push.surql" text="API Definition">
 			array::push(array, value) -> array
@@ -1131,10 +1131,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "remove"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::remove</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="remove">array::remove</Docs::Heading>
 		<p>The <code>array::remove</code> function removes an item from a specific position in an array.</p>
 		<Code @name="docs-surrealql-functions-array-remove.surql" text="API Definition">
 			array::remove(array, number) -> array
@@ -1154,10 +1154,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "reverse"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::reverse</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="reverse">array::reverse</Docs::Heading>
 		<p>The <code>array::reverse</code> function appends a value to the end of an array.</p>
 		<Code @name="docs-surrealql-functions-array-reverse.surql" text="API Definition">
 			array::reverse(array) -> array
@@ -1177,10 +1177,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "sort"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::sort</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="sort">array::sort</Docs::Heading>
 		<p>The <code>array::sort</code> function calculates the length of an array, returning a number. This function includes all items when counting the number of items in the array. If you want to only count truthy values, then use the <Link @link="docs.surrealql.functions.count"><code>count()</code></Link> function.</p>
 		<Code @name="docs-surrealql-functions-array-sort-1.surql" text="API Definition">
 			array::sort(array) -> array
@@ -1232,10 +1232,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "slice"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::slice</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="slice">array::slice</Docs::Heading>
 		<p>The <code>array::slice</code> returns a slice of an array, based on a starting position, and a length or negative position.</p>
 		<Code @name="docs-surrealql-functions-array-slice.surql" text="API Definition">
 			array::slice(array, start, len) -> array
@@ -1291,10 +1291,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "sort-asc"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::sort::asc</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="sort-asc">array::sort::asc</Docs::Heading>
 		<p>The <code>array::sort::asc</code> function is a shorthand convenience function for the <code>array::sort</code> function, to sort values in an array in ascending order.</p>
 		<Code @name="docs-surrealql-functions-array-sort-asc.surql" text="API Definition">
 			array::sort::asc(array) -> array
@@ -1314,10 +1314,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "sort-desc"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::sort::desc</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="sort-desc">array::sort::desc</Docs::Heading>
 		<p>The <code>array::sort::desc</code> function is a shorthand convenience function for the <code>array::sort</code> function, to sort values in an array in descending order.</p>
 		<Code @name="docs-surrealql-functions-array-sort-desc.surql" text="API Definition">
 			array::sort::desc(array) -> array
@@ -1337,10 +1337,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "transpose"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::transpose</h3>
+		<Docs::Heading @level="4" @mt0="true" @mt0="true" @id="transpose">array::transpose</Docs::Heading>
 		<p>The <code>array::transpose</code> is used to perform 2d array transposition but it's behavior in cases of arrays of differing sizes can be best described as taking in multiple arrays and 'layering' them on top of each other.</p>
 		<Code @name="docs-surrealql-functions-array-transpose.surql" text="API Definition">
 			array::union(array, array) -> array array
@@ -1360,10 +1360,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "union"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>array::union</h3>
+		<Docs::Heading @level="4" @mt0="true" @mt0="true" @id="union">array::union</Docs::Heading>
 		<p>The <code>array::union</code> function combines two arrays together, removing duplicate values, and returning a single array.</p>
 		<Code @name="docs-surrealql-functions-array-union.surql" text="API Definition">
 			array::union(array, array) -> array

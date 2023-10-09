@@ -75,10 +75,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "area"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>geo::area</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="area">geo::area</Docs::Heading>
 		<p>The <code>geo::area</code> function calculates the area of a geometry.</p>
 		<Code @name="docs-surrealql-functions-geo-area.surql" text="API Definition">
 			geo::area(geometry) -> number
@@ -114,10 +114,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "bearing"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>geo::bearing</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="bearing">geo::bearing</Docs::Heading>
 		<p>The <code>geo::bearing</code> function calculates the bearing between two geolocation points.</p>
 		<Code @name="docs-surrealql-functions-geo-bearing.surql" text="API Definition">
 			geo::bearing(point, point) -> number
@@ -146,10 +146,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "centroid"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>geo::centroid</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="centroid">geo::centroid</Docs::Heading>
 		<p>The <code>geo::centroid</code> function calculates the centroid between two geolocation points.</p>
 		<Code @name="docs-surrealql-functions-geo-centroid.surql" text="API Definition">
 			geo::centroid(geometry) -> number
@@ -191,10 +191,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "distance"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>geo::distance</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="distance">geo::distance</Docs::Heading>
 		<p>The <code>geo::distance</code> function calculates the haversine distance, in metres, between two geolocation points.</p>
 		<Code @name="docs-surrealql-functions-geo-distance.surql" text="API Definition">
 			geo::distance(point, point) -> number
@@ -223,10 +223,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "hash-decode"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>geo::hash::decode</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="hash-decode">geo::hash::decode</Docs::Heading>
 		<p>The <code>geo::hash::decode</code> function converts a geohash into a geolocation point.</p>
 		<Code @name="docs-surrealql-functions-geo-hash-decode.surql" text="API Definition">
 			geo::hash::decode(point) -> string
@@ -261,10 +261,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "hash-encode"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>geo::hash::encode</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="hash-encode">geo::hash::encode</Docs::Heading>
 		<p>The <code>geo::hash::encode</code> function converts a geolocation point into a geohash.</p>
 		<Code @name="docs-surrealql-functions-geo-hash-encode-1.surql" text="API Definition">
 			geo::hash::encode(point) -> string

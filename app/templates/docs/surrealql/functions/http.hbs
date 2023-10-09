@@ -75,10 +75,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "head"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>http::head</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="head"><code>http::head</code></Docs::Heading>
 		<p>The <code>http::head</code> function performs a remote HTTP <code>HEAD</code> request. The first parameter is the URL of the remote endpoint. If the response does not return a <code>2XX</code> status code, then the function will fail and return the error.</p>
 		<Code @name="docs-surrealql-functions-http-head-1.surql" text="API Definition">
 			http::head(string) -> null
@@ -113,10 +113,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "get"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>http::get</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="get"><code>http::get</code></Docs::Heading>
 		<p>The <code>http::get</code> function performs a remote HTTP <code>GET</code> request. The first parameter is the URL of the remote endpoint. If the response does not return a <code>2XX</code> status code, then the function will fail and return the error. If the remote endpoint returns an <code>application/json</code> content-type, then the response is parsed and returned as a value, otherwise the response is treated as text.</p>
 		<Code @name="docs-surrealql-functions-http-get-1.surql" text="API Definition">
 			http::get(string) -> value
@@ -151,10 +151,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "put"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>http::put</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="put"><code>http::put</code></Docs::Heading>
 		<p>The <code>http::put</code> function performs a remote HTTP <code>PUT</code> request. The first parameter is the URL of the remote endpoint, and the second parameter is the value to use as the request body, which will be converted to JSON. If the response does not return a <code>2XX</code> status code, then the function will fail and return the error. If the remote endpoint returns an <code>application/json</code> content-type, then the response is parsed and returned as a value, otherwise the response is treated as text.</p>
 		<Code @name="docs-surrealql-functions-http-put-1.surql" text="API Definition">
 			http::put(string, object) -> value
@@ -194,10 +194,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "post"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>http::post</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="post"><code>http::post</code></Docs::Heading>
 		<p>The <code>http::post</code> function performs a remote HTTP <code>POST</code> request. The first parameter is the URL of the remote endpoint, and the second parameter is the value to use as the request body, which will be converted to JSON. If the response does not return a <code>2XX</code> status code, then the function will fail and return the error. If the remote endpoint returns an <code>application/json</code> content-type, then the response is parsed and returned as a value, otherwise the response is treated as text.</p>
 		<Code @name="docs-surrealql-functions-http-post-1.surql" text="API Definition">
 			http::post(string, object) -> value
@@ -237,10 +237,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "patch"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>http::patch</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="patch"><code>http::patch</code></Docs::Heading>
 		<p>The <code>http::patch</code> function performs a remote HTTP <code>PATCH</code> request. The first parameter is the URL of the remote endpoint, and the second parameter is the value to use as the request body, which will be converted to JSON. If the response does not return a <code>2XX</code> status code, then the function will fail and return the error. If the remote endpoint returns an <code>application/json</code> content-type, then the response is parsed and returned as a value, otherwise the response is treated as text.</p>
 		<Code @name="docs-surrealql-functions-http-patch-1.surql" text="API Definition">
 			http::patch(string, object) -> value
@@ -280,10 +280,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "delete"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>http::delete</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="delete"><code>http::delete</code></Docs::Heading>
 		<p>The <code>http::delete</code> function performs a remote HTTP <code>DELETE</code> request. The first parameter is the URL of the remote endpoint. If the response does not return a <code>2XX</code> status code, then the function will fail and return the error. If the remote endpoint returns an <code>application/json</code> content-type, then the response is parsed and returned as a value, otherwise the response is treated as text.</p>
 		<Code @name="docs-surrealql-functions-http-delete-1.surql" text="API Definition">
 			http::delete(string) -> value

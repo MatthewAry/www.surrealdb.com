@@ -35,10 +35,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "count"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3>count</h3>
+		<Docs::Heading @level="4" @mt0="true" @id="count">count</Docs::Heading>
 		<p>The <code>count</code> function counts the number of times that the function is called. This is useful for returning the total number of rows in a <Link @link="docs.surrealql.statements.select"><code>SELECT</code></Link> statement with a <code>GROUP BY</code> clause.</p>
 		<Code @name="docs-surrealql-functions-count-1.surql" text="API Definition">
 			count() -> 1

@@ -43,10 +43,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "id"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>meta::id</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="id"><code>meta::id</code></Docs::Heading>
 		<p>The <code>meta::id</code> function extracts and returns the table id from a SurrealDB Record ID.</p>
 		<Code @name="docs-surrealql-functions-meta-id.surql" text="API Definition">
 			meta::id(record) -> value
@@ -66,10 +66,10 @@
 
 <Layout::Gap small />
 
-<Layout::Group {{waypoint "tb"}}>
+<Layout::Group>
 
 	<Layout::Text text-l text-f>
-		<h3><code>meta::tb</code></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="tb"><code>meta::tb</code></Docs::Heading>
 		<p>The <code>meta::tb</code> function extracts and returns the table name from a SurrelDB Record ID.</p>
 		<Code @name="docs-surrealql-functions-meta-tb.surql" text="API Definition">
 			meta::tb(record) -> string
