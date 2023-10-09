@@ -7,7 +7,7 @@
 </Crumb>
 
 <Layout::Text text-l text-f>
-	<h3>Built-in functions</h3>
+	<h2>Built-in functions</h2>
 	<p>Besides basic JavaScript utilities and <Link @link="docs.surrealql.functions.script.type-conversion">classes for SurrealQL types</Link>, there are a handful of utilities built into the embedded scripting functions.</p>
 </Layout::Text>
 
@@ -55,7 +55,7 @@
 <Layout::Group {{waypoint "fetch"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async fetch(resource, options)" /></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="fetch"><Ascua::Prism::Inline @language="ts" @code="async fetch(resource, options)" /></Docs::Heading>
 		<p>Full fledged fetch implementation closely matching the <Link @link="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">official specification</Link>.</p>
 		<blockquote yellow text="Note">
 			For complete documentation, please refer to the <Link @link="https://developer.mozilla.org/en-US/docs/Web/API/fetch">MDN documentation</Link>.
@@ -120,7 +120,7 @@
 <Layout::Group {{waypoint "query"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async query(surql)" /></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="query"><Ascua::Prism::Inline @language="ts" @code="async query(surql)" /></Docs::Heading>
 		<p>Run SurrealQL subqueries from within the embedded scripting functions.</p>
 		<blockquote yellow text="Note">
 			Only subqueries can be executed with the <code>query()</code> function. This means that only a single query can currently be executed, and that only CRUD operations are allowed.
@@ -179,7 +179,7 @@
 <Layout::Group {{waypoint "value"}}>
 
 	<Layout::Text text-l text-f>
-		<h3><Ascua::Prism::Inline @language="ts" @code="async value(variable)" /></h3>
+		<Docs::Heading @level="4" @mt0="true" @id="value"><Ascua::Prism::Inline @language="ts" @code="async value(variable)" /></Docs::Heading>
 		<p>Retrieve values for SurrealQL variables from within the embedded scripting functions.</p>
 		<Layout::Table>
 			<table>

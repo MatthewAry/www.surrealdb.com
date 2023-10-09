@@ -317,14 +317,18 @@ $doc-heading-styles: (
 	$icon-size: 1.5rem;
 	> a {
 		position: absolute;
+		display: flex;
 		left: -$icon-size * 1.5;
 		width: $icon-size;
 		height: inherit;
+		top: 0;
+		bottom: 0;
 		&:focus {
 			outline: none;
 		}
 	}
 	.link-icon {
+		align-self: center;
 		opacity: 0;
 		width: $icon-size;
 		height: $icon-size;
