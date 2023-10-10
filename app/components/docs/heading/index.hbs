@@ -1,0 +1,78 @@
+{{#if (eq @level '1')}}
+  {{#if @id}}
+	<h1 class="doc-heading{{if @mt0 ' mt-0' }}" {{waypoint @id}}>
+		<Docs::Heading::Link @id={{@id}} />
+		{{yield}}
+	</h1>
+		{{else}}
+	<h1 class="doc-heading{{if @mt0 ' mt-0' }}">
+		{{yield}}
+	</h1>
+  {{/if}}
+{{else if (eq @level '2')}}
+  {{#if @id}}
+	<h2 class="doc-heading{{if @mt0 ' mt-0' }}" {{waypoint @id}}>
+		<Docs::Heading::Link @id={{@id}} />
+		{{yield}}
+	</h2>
+		{{else}}
+	<h2 class="doc-heading{{if @mt0 ' mt-0' }}">
+		{{yield}}
+	</h2>
+  {{/if}}
+{{else if (eq @level '3')}}
+  {{#if @id}}
+	<h3 class="doc-heading{{if @mt0 ' mt-0' }}" {{waypoint @id}}>
+		<Docs::Heading::Link @id={{@id}} />
+		{{yield}}
+	</h3>
+		{{else}}
+	<h3 class="doc-heading{{if @mt0 ' mt-0' }}">
+		{{yield}}
+	</h3>
+  {{/if}}
+{{else if (eq @level '4')}}
+  {{#if @id}}
+	<h4 class="doc-heading{{if @mt0 ' mt-0' }}" {{waypoint @id}}>
+		<Docs::Heading::Link @id={{@id}} />
+		{{yield}}
+	</h4>
+		{{else}}
+	<h4 class="doc-heading{{if @mt0 ' mt-0' }}">
+		{{yield}}
+	</h4>
+  {{/if}}
+{{else if (eq @level '5')}}
+  {{#if @id}}
+	<h5 class="doc-heading{{if @mt0 ' mt-0' }}" {{waypoint @id}}>
+		<Docs::Heading::Link @id={{@id}} />
+		{{yield}}
+	</h5>
+		{{else}}
+	<h5 class="doc-heading{{if @mt0 ' mt-0' }}">
+		{{yield}}
+	</h5>
+  {{/if}}
+{{else if (eq @level '6')}}
+  {{#if @id}}
+	<h6 class="doc-heading{{if @mt0 ' mt-0' }}" {{waypoint @id}}>
+		<Docs::Heading::Link @id={{@id}} />
+		{{yield}}
+	</h6>
+		{{else}}
+	<h6 class="doc-heading{{if @mt0 ' mt-0' }}">
+		{{yield}}
+	</h6>
+  {{/if}}
+{{else}}
+  {{#if @id}}
+	<h1 class="doc-heading{{if @mt0 ' mt-0' }}" {{waypoint @id}}>
+		<Docs::Heading::Link @id={{@id}} />
+		{{yield}}
+	</h1>
+		{{else}}
+	<h1 class="doc-heading{{if @mt0 ' mt-0' }}">
+		{{yield}}
+	</h1>
+  {{/if}}
+{{/if}}

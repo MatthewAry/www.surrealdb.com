@@ -165,7 +165,7 @@ h4 {
 		}
 	}
 
-	
+
 
 }
 
@@ -273,6 +273,97 @@ h6 {
 
 }
 
+$doc-heading-styles: (
+  h1: (
+    font-size: 6rem,
+    font-weight: 500,
+  ),
+  h2: (
+    font-size: 3.75rem,
+    font-weight: 500,
+  ),
+  h3: (
+    font-size: 3rem,
+    font-weight: 500,
+  ),
+  h4: (
+    font-size: 2.25rem,
+    font-weight: 500,
+  ),
+  h5: (
+    font-size: 1.75rem,
+    font-weight: 500,
+  ),
+  h6: (
+    font-size: 1.25rem,
+    font-weight: 500,
+	letter-spacing: .0125em,
+  ),
+);
+
+@each $heading, $styles in $doc-heading-styles {
+  #{$heading} {
+	  &.doc-heading {
+		@each $property, $value in $styles {
+			#{$property}: $value;
+		}
+
+    }
+  }
+}
+.doc-heading {
+	margin-bottom: 12px !important;
+	margin-top: 24px !important;
+	align-items: center;
+	position: relative;
+	$icon-size: 1.5rem;
+	> a {
+		position: absolute;
+		display: flex;
+		left: -$icon-size * 1.5;
+		width: $icon-size;
+		height: inherit;
+		top: 0;
+		bottom: 0;
+		&:focus {
+			outline: none;
+		}
+	}
+	.link-icon {
+		align-self: center;
+		opacity: 0;
+		width: $icon-size;
+		height: $icon-size;
+		transition: opacity 0.3s;
+	}
+	&:hover {
+		.link-icon {
+			opacity: 1;
+		}
+	}
+	.copy-tooltip {
+		color: #fff;
+		position: absolute;
+		z-index: 30;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%) translateY(100%);
+		font-size: 16px;
+
+		background-color: #333; /* Dark background color */
+		border-radius: 4px;
+		padding: 8px 12px;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+	.copy-tooltip__show {
+		opacity: 1;
+	}
+	&.mt-0 {
+		margin-top: 0 !important;
+	}
+}
+
 g {
 		width: 70%;
 		display: block;
@@ -290,7 +381,7 @@ g {
 		background: linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
 		background: -moz-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
 		background: -webkit-linear-gradient(-60deg, rgba(135, 0, 255, 1) 0%, rgba(255, 0, 158, 1) 100%);
-	
+
 		span[gradient] {
 		border-radius: 5rem;
 		padding-left: 1.5rem;
@@ -299,33 +390,33 @@ g {
 		padding-bottom: 0.5rem;
 		border: 1px solid #fff;
 		}
-	
+
 		img[inline] {
 			height: 45px;
 		}
-	
+
 		i {
 			vertical-align: middle;
 		}
-	
+
 		@include media(max-width-1449) {
 			font-size: 46px;
-	
+
 			img[inline] {
 				height: 34px;
 			}
 		}
-	
+
 		@include media(max-width-600) {
 			width: 100%;
 			font-size: 38px;
 			margin-bottom: 0px;
-	
+
 			img[inline] {
 				height: 28px;
 			}
 		}
-	
+
 	}
 
 b {
@@ -344,7 +435,7 @@ b {
 	i {
 		vertical-align: middle;
 	}
-	
+
 	}
 
 li {
